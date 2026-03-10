@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE BOX Level Test — 내 영어 레벨 진단</title>
+  <meta name="description" content="THE BOX 영어 레벨 진단 — 총 50문항으로 내 레벨을 확인해보세요.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📦</text></svg>">
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* ===== Level Test 전용 스타일 ===== */
+
+    /* 카드 리스트 - 단일 열로 강제 정렬 (styles.css grid 오버라이드) */
+    .card-list,
+    #lv1Cards,
+    #lv2Cards,
+    #lv3Cards,
+    #lv4Cards {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 20px;
+      grid-template-columns: none !important;
+    }
+
+    /* input-card = level-test.js가 생성하는 카드 클래스 */
+    .input-card {
+      background: white;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 24px 26px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .input-card:hover {
+      border-color: #2D5BFF;
+      box-shadow: 0 4px 14px rgba(45, 91, 255, 0.1);
+    }
+
+    .input-card--correct {
+      border-color: #10B981 !important;
+      background: #F0FDF4 !important;
+    }
+
+    .input-card--wrong {
+      border-color: #EF4444 !important;
+      background: #FEF2F2 !important;
+    }
+
+    /* q-ko: 문제 텍스트 */
+    .q-ko {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #111;
+      line-height: 1.55;
+      margin: 10px 0 18px;
+      word-break: keep-all;
+    }
+
+    /* input-card__feedback */
+    .input-card__feedback {
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      background: #f8f9fa;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    .status-correct {
+      color: #059669;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .status-wrong {
+      color: #DC2626;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .wrong-comparison {
+      margin-top: 8px;
+    }
+
+    .label {
+      font-size: 0.78rem;
+      color: #999;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .user-answer {
+      color: #EF4444;
+      font-weight: 600;
+    }
+
+    .correct-answer-row {
+      color: #059669;
+      font-weight: 600;
+    }
+
+    .answer-detail {
+      margin-top: 10px;
+      color: #555;
+    }
+
+    .explain-row {
+      font-size: 0.88rem;
+      color: #666;
+      border-left: 3px solid #2D5BFF;
+      padding-left: 10px;
+      margin-top: 8px;
+    }
+
+    /* mc-options */
+    .mc-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .mc-option {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      background: white;
+      cursor: pointer;
+      font-size: 0.95rem;
+      text-align: left;
+      transition: all 0.15s;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .mc-option:hover {
+      border-color: #2D5BFF;
+      background: #F0F5FF;
+      transform: translateX(3px);
+    }
+
+    .mc-option.is-selected {
+      border-color: #2D5BFF;
+      background: #EEF3FF;
+    }
+
+    .mc-no {
+      flex: 0 0 auto;
+      font-weight: 800;
+      color: #2D5BFF;
+      min-width: 20px;
+    }
+
+    .mc-text {
+      flex: 1;
+      color: #333;
+    }
+
+    /* multi-check */
+    .mc-checklist {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .mc-check {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px 16px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      background: white;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.15s;
+    }
+
+    .mc-check:hover {
+      border-color: #2D5BFF;
+      background: #F0F5FF;
+    }
+
+    .mc-check.is-selected {
+      border-color: #2D5BFF;
+      background: #EEF3FF;
+    }
+
+    .mc-box {
+      display: none !important;
+    }
+
+    .mc-multi-note {
+      font-size: 0.82rem;
+      color: #888;
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* score-board: 현재 레벨 배지 */
+    .score-board {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: white;
+      border: 1.5px solid #e5e7eb;
+      padding: 12px 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+      margin-top: 18px;
+    }
+
+    .score-label {
+      font-size: 0.88rem;
+      color: #888;
+      font-weight: 500;
+    }
+
+    .score-value {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #2D5BFF;
+      background: #EEF3FF;
+      padding: 4px 14px;
+      border-radius: 99px;
+      min-width: 60px;
+      text-align: center;
+      transition: all 0.4s;
+    }
+
+    .btn-reset {
+      cursor: pointer;
+      padding: 8px 16px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      background: white;
+      color: #666;
+      transition: all 0.15s;
+    }
+
+    .btn-reset:hover {
+      border-color: #EF4444;
+      color: #EF4444;
+      background: #FEF2F2;
+    }
+
+    /* test-header */
+    .test-header {
+      margin-bottom: 28px;
+    }
+
+    .count-badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      background: #EEF3FF;
+      color: #2D5BFF;
+      padding: 3px 10px;
+      border-radius: 99px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .test-desc {
+      color: #666;
+      font-size: 0.95rem;
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    /* 문제 카드 스타일 */
+    .question-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 24px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    }
+
+    .question-card:hover {
+      border-color: #2D5BFF;
+      box-shadow: 0 4px 12px rgba(45, 91, 255, 0.1);
+    }
+
+    /* 문제 텍스트 */
+    .q-text {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #111;
+      margin: 0 0 20px 0;
+      line-height: 1.5;
+    }
+
+    /* 선택지 옵션 컨테이너 */
+    .mc-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    /* 개별 선택지 - 공통 스타일 */
+    .mc-option,
+    .mc-check {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px 18px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      background: white;
+      cursor: pointer;
+      font-size: 0.95rem;
+      text-align: left;
+      transition: all 0.2s ease;
+    }
+
+    .mc-option:hover,
+    .mc-check:hover {
+      border-color: #2D5BFF;
+      background: #F0F5FF;
+      transform: translateX(4px);
+    }
+
+    .mc-option.is-selected,
+    .mc-check.is-selected {
+      border-color: #2D5BFF;
+      background: #F0F5FF;
+    }
+
+    .mc-no {
+      flex: 0 0 auto;
+      font-weight: 800;
+      color: #2D5BFF;
+      min-width: 24px;
+    }
+
+    .mc-text {
+      flex: 1 1 auto;
+      color: #333;
+    }
+
+    /* 체크박스 숨기기 */
+    .mc-box {
+      display: none !important;
+    }
+
+    /* 입력형 답변창 */
+    .answer-input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px 16px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      margin-top: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .answer-input:focus {
+      outline: none;
+      border-color: #2D5BFF;
+      box-shadow: 0 0 0 3px rgba(45, 91, 255, 0.1);
+    }
+
+    /* 해설 노트 */
+    .q-note {
+      font-size: 0.9rem;
+      color: #666;
+      background: #f9fafb;
+      padding: 12px 16px;
+      border-left: 3px solid #2D5BFF;
+      border-radius: 6px;
+      margin-top: 16px;
+      line-height: 1.5;
+      display: none;
+      /* 처음에 숨김 - 채점 후 표시 */
+    }
+
+    /* 채점 후 정답 해설 표시 */
+    .question-card.correct .q-note,
+    .question-card.wrong .q-note,
+    .input-card.input-card--correct .q-note,
+    .input-card.input-card--wrong .q-note {
+      display: block;
+    }
+
+    /* 채점 버튼 */
+    .btn.btn--primary {
+      font-size: 1.05rem;
+      padding: 15px 40px;
+    }
+
+    /* 결과 배너 */
+    .result-note {
+      line-height: 1.6;
+      font-size: 1rem;
+    }
+
+    /* 점수 보드 */
+    .score-board {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .btn-reset {
+      cursor: pointer;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+
+    .btn-reset:hover {
+      opacity: 0.8;
+    }
+
+    /* 모바일 최적화 */
+    @media (max-width: 768px) {
+      .question-card {
+        padding: 18px;
+      }
+
+      .q-text {
+        font-size: 1rem;
+      }
+
+      .mc-option {
+        padding: 14px 14px;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav id="topbar" class="topbar">
+    <div class="container topbar__inner">
+      <a href="index.html" class="logo">THE BOX</a>
+      <div class="topbar__actions">
+        <a href="programs.html" class="btn btn--secondary">시스템 안내</a>
+        <a href="study.html" class="btn btn--secondary">스터디</a>
+        <a href="academy.html" class="btn btn--secondary">아카데미</a>
+        <a href="https://m.booking.naver.com/booking/13/bizes/839473" class="btn btn--primary" target="_blank">상담 예약</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="메뉴 열기">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 12h18M3 6h18M3 18h18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+  <div class="mobile-nav-panel" id="mobileNav">
+    <div class="mobile-nav-panel__header">
+      <a href="index.html" class="logo">THE BOX</a>
+      <button class="mobile-nav-close" id="mobileNavClose" aria-label="메뉴 닫기">✕</button>
+    </div>
+    <div class="mobile-nav-panel__links">
+      <a href="index.html">🏠 홈</a>
+      <a href="programs.html">🗺 시스템 안내</a>
+      <a href="study.html">🗣️ 원어민 스터디</a>
+      <a href="academy.html">📘 아카데미</a>
+      <a href="level-test.html" class="active">📝 레벨 테스트</a>
+    </div>
+    <div class="mobile-nav-panel__cta">
+      <a href="https://m.booking.naver.com/booking/13/bizes/839473" target="_blank">⚡ 상담 예약하기</a>
+    </div>
+  </div>
+
+  <header class="page-hero">
+    <div class="container">
+      <div class="page-hero__badge reveal">LEVEL TEST</div>
+      <h1 class="reveal">TheBox Level Test</h1>
+      <p class="reveal subtitle">
+        한국어 문장을 보고 영어로 입력하세요. <strong>비슷한 표현도 일부 정답</strong>으로 인정됩니다.<br>
+        각 단계별로 채점하면 현재 레벨에 맞는 조언을 받을 수 있어요.<br>
+        <span class="muted small">* 편한 속도로 진행하세요. Lv.1부터 시작합니다.</span>
+      </p>
+
+      <div class="score-board reveal" style="margin-top:18px">
+        <span class="score-label">현재 레벨</span>
+        <span class="score-value" id="currentLevel">Lv.1</span>
+        <button class="btn-reset" id="resetAll">초기화</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div id="resultBanner" class="result-banner" style="display:none"></div>
+  </div>
+
+  <section class="section" id="lv1Section">
+    <div class="container">
+      <div class="test-header reveal">
+        <h2 class="section-title">🧱 Lv.1 왕기초 <span class="count-badge">10문항</span></h2>
+        <p class="test-desc">문장 뼈대(주어-동사-기본 시제)가 바로 나오는지 확인합니다.</p>
+      </div>
+      <div class="card-list" id="lv1Cards"></div>
+      <div style="text-align: center; margin-top: 40px; padding: 20px;">
+        <button class="btn btn--primary" id="nextLv1" style="font-size: 1.05rem; padding: 15px 40px;">✅ 채점 후 다음
+          단계</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="lv2Section" style="display:none;">
+    <div class="container">
+      <div class="test-header reveal">
+        <h2 class="section-title">🟢 Lv.2 기초 <span class="count-badge">15문항</span></h2>
+        <p class="test-desc">전치사/관사/동명사·to/빈도부사/기초 표현까지 “대화형 문장”으로 체크합니다.</p>
+      </div>
+      <div class="card-list" id="lv2Cards"></div>
+      <div style="text-align: center; margin-top: 40px; padding: 20px;">
+        <button class="btn btn--primary" id="nextLv2" style="font-size: 1.05rem; padding: 15px 40px;">✅ 채점 후 다음
+          단계</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="lv3Section" style="display:none;">
+    <div class="container">
+      <div class="test-header reveal">
+        <h2 class="section-title">🟡 Lv.3 중급 <span class="count-badge">15문항</span></h2>
+        <p class="test-desc">현재완료/조동사 뉘앙스/수동태·관계대명사/헷갈리는 선택지를 중심으로 봅니다.</p>
+      </div>
+      <div class="card-list" id="lv3Cards"></div>
+      <div style="text-align: center; margin-top: 40px; padding: 20px;">
+        <button class="btn btn--primary" id="nextLv3" style="font-size: 1.05rem; padding: 15px 40px;">✅ 채점 후 다음
+          단계</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-light" id="lv4Section" style="display:none;">
+    <div class="container">
+      <div class="test-header reveal">
+        <h2 class="section-title">🔵 Lv.4 중상급 <span class="count-badge">10문항</span></h2>
+        <p class="test-desc">가정법/조건절/used to/would rather/구동사 등 “실전에서 자연스럽게” 쓰는지 확인합니다.</p>
+      </div>
+      <div class="card-list" id="lv4Cards"></div>
+      <div style="text-align: center; margin-top: 40px; padding: 20px;">
+        <button class="btn btn--primary" id="completeLv4" style="font-size: 1.05rem; padding: 15px 40px;">✅ 최종
+          채점</button>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#111;padding:48px 0;color:#aaa">
+    <div class="container footer__inner">
+      <div class="footer__brand" style="color:#fff">THE <span style="color:#ef4444">BOX</span></div>
+      <nav class="footer__nav">
+        <a href="index.html" style="color:#aaa">홈</a>
+        <a href="programs.html" style="color:#aaa">시스템 안내</a>
+        <a href="study.html" style="color:#aaa">스터디</a>
+        <a href="academy.html" style="color:#aaa">아카데미</a>
+        <a href="level-test.html" style="color:#aaa">레벨 테스트</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://www.instagram.com/thebox_busan" target="_blank" rel="noopener" aria-label="인스타그램"
+          style="color:#aaa">📸</a>
+        <a href="https://m.booking.naver.com/booking/13/bizes/839473" target="_blank" rel="noopener" aria-label="네이버 예약"
+          style="color:#aaa">📅</a>
+      </div>
+      <p class="footer__info" style="color:#666">부산 부산진구 서면 | THE BOX Busan English Community</p>
+      <p class="muted small" style="color:#555">© 2026 THEBOX. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div class="sticky-cta" aria-label="빠른 이동 버튼">
+    <a class="btn-primary" href="https://m.booking.naver.com/booking/13/bizes/839473" target="_blank" rel="noopener">⚡
+      지금 예약하기</a>
+    <a class="btn-outline" href="programs.html">🗺 시스템 안내</a>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+      if ("IntersectionObserver" in window) {
+        const obs = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add("is-visible"); obs.unobserve(e.target); }
+          });
+        }, { threshold: 0.1 });
+        document.querySelectorAll(".reveal").forEach(el => obs.observe(el));
+      }
+    })();
+  </script>
+
+  <script src="level-test.js"></script>
+  <script src="level-test-modal.js"></script>
+  <script>
+    (function () {
+      const btn = document.getElementById('mobileMenuBtn');
+      const overlay = document.getElementById('mobileOverlay');
+      const panel = document.getElementById('mobileNav');
+      const close = document.getElementById('mobileNavClose');
+      if (!btn || !panel) return;
+      function open() { overlay.classList.add('is-open'); panel.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
+      function shut() { overlay.classList.remove('is-open'); panel.classList.remove('is-open'); document.body.style.overflow = ''; }
+      btn.addEventListener('click', open);
+      overlay.addEventListener('click', shut);
+      close.addEventListener('click', shut);
+      panel.querySelectorAll('a').forEach(a => a.addEventListener('click', shut));
+    })();
+  </script>
+</body>
+
+</html>
