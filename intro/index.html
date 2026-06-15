@@ -1261,27 +1261,35 @@
     </div>
 
     <!-- WHY THE BOX -->
-<!-- ===== intro 문제→해결 (first/ 이식): "왜 작아질까" 3진단 + 다크 더박스 솔루션 ===== -->
+<!-- ===== intro 문제→해결 (제목 타이핑 + 카드 스택 + 다크 솔루션) ===== -->
 <section class="ps">
   <div class="ps-wrap">
     <div class="ps-head">
-      <h2 class="ps-title"><span class="ps-mk">10년을 공부</span>했는데,<br>왜 외국인 앞에선 작아질까요?</h2>
+      <span class="ps-eyebrow">THE PROBLEM</span>
+      <h2 class="ps-title">10년을 공부했는데,<br>왜 외국인 앞에선 <span class="ps-type" id="psType">&nbsp;</span><span class="ps-cur" aria-hidden="true"></span></h2>
     </div>
 
-    <div class="ps-list">
-      <div class="ps-item"><span class="ps-emo">🧠</span><p><b>과잉 이론</b> — 문법 문제는 푸는데, “어제 뭐 했어?” “배 안 고파?”는 3초 안에 안 나온다.</p></div>
-      <div class="ps-item"><span class="ps-emo">😶</span><p><b>입력 부재</b> — 머릿속 한국어를 영어로 번역하느라 대화 타이밍을 놓친다.</p></div>
-      <div class="ps-item"><span class="ps-emo">😰</span><p><b>심리적 장벽</b> — “틀리면 어떡하지?”라는 불안감이 내 입을 막는다.</p></div>
+    <div class="ps-stack">
+      <article class="ps-pcard" style="top:108px;z-index:1">
+        <div class="ps-pc-tx"><span class="ps-pc-tag">PROBLEM 01</span><h3>과잉 이론</h3><p>문법 문제는 푸는데, “어제 뭐 했어?” “배 안 고파?”는 3초 안에 안 나와요.</p></div>
+        <div class="ps-pc-vis"><span class="ps-pc-emo">🧠</span><span class="ps-pc-no">01</span></div>
+      </article>
+      <article class="ps-pcard" style="top:170px;z-index:2">
+        <div class="ps-pc-tx"><span class="ps-pc-tag">PROBLEM 02</span><h3>입력 부재</h3><p>머릿속 한국어를 영어로 번역하느라, 대화 타이밍을 자꾸 놓쳐요.</p></div>
+        <div class="ps-pc-vis"><span class="ps-pc-emo">😶</span><span class="ps-pc-no">02</span></div>
+      </article>
+      <article class="ps-pcard" style="top:232px;z-index:3">
+        <div class="ps-pc-tx"><span class="ps-pc-tag">PROBLEM 03</span><h3>심리적 장벽</h3><p>“틀리면 어떡하지?”라는 불안감이 내 입을 막아버려요.</p></div>
+        <div class="ps-pc-vis"><span class="ps-pc-emo">😰</span><span class="ps-pc-no">03</span></div>
+      </article>
     </div>
 
     <p class="ps-impact">이건 능력 부족이 아닙니다.<br><b class="ps-hl">제대로 된 회화 훈련을 받지 못했기 때문</b>입니다.</p>
 
-    <!-- 다크 솔루션 카드 -->
     <div class="ps-sol">
       <p class="ps-sol-eyebrow">THE BOX SOLUTION</p>
       <h3 class="ps-sol-title"><span class="ps-sol-mk">더박스</span>에서 해결됩니다.</h3>
       <p class="ps-sol-sub">나에게 맞는 시스템을 충분히 활용하면, 영어가 생활이 됩니다.</p>
-
       <div class="ps-tracks">
         <div class="ps-track ps-track--aca">
           <div class="ps-track-emo">📘</div>
@@ -1296,7 +1304,6 @@
           <div class="ps-track-list"><span>✓ 원어민과 90분 대화</span><span>✓ 자연스러운 교정</span><span>✓ 자신감 완성</span></div>
         </div>
       </div>
-
       <div class="ps-result">
         <span class="ps-flag">🇬🇧</span>
         <div class="ps-result-tx">
@@ -1308,19 +1315,26 @@
   </div>
 </section>
 <style>
-.ps{background:#fff;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.ps{background:#fff;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f;overflow:visible}
 .ps *{box-sizing:border-box}
-.ps-wrap{max-width:820px;margin:0 auto}
-.ps-head{text-align:center;margin-bottom:46px}
-.ps-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;line-height:1.35;margin:0;color:#0c1322}
-.ps-mk{background:linear-gradient(transparent 58%,#ffe07a 58%);padding:0 2px;border-radius:2px}
-.ps-list{display:flex;flex-direction:column;gap:0;max-width:680px;margin:0 auto}
-.ps-item{display:flex;gap:14px;align-items:flex-start;padding:22px 4px;border-bottom:1px solid #eef0f4}
-.ps-item:first-child{border-top:1px solid #eef0f4}
-.ps-emo{font-size:24px;flex:0 0 auto;line-height:1.4}
-.ps-item p{margin:0;font-size:16.5px;line-height:1.6;color:#3a4356}
-.ps-item b{color:#10131a;font-weight:800}
-.ps-impact{text-align:center;font-size:20px;line-height:1.7;font-weight:600;color:#10131a;margin:42px auto 0}
+.ps-wrap{max-width:840px;margin:0 auto}
+.ps-head{text-align:center;margin-bottom:54px}
+.ps-eyebrow{display:inline-block;background:#fdecec;color:#dc2626;font-size:12px;font-weight:800;letter-spacing:.14em;padding:7px 16px;border-radius:999px;margin-bottom:20px}
+.ps-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;line-height:1.4;margin:0;color:#0c1322}
+.ps-type{color:#ef4444}
+.ps-cur{display:inline-block;width:3px;height:1.05em;background:#ef4444;margin-left:1px;vertical-align:-.16em;animation:pscur 1.05s steps(1) infinite}
+@keyframes pscur{50%{opacity:0}}
+/* 카드 스택 (스크롤 시 쌓임) */
+.ps-stack{margin:0 auto;max-width:780px}
+.ps-pcard{position:sticky;display:grid;grid-template-columns:1fr 230px;gap:0;background:#fff;border:1px solid #e9ebf1;border-radius:22px;box-shadow:0 18px 44px rgba(20,30,60,.13);overflow:hidden;margin-bottom:34px;min-height:210px}
+.ps-pc-tx{padding:34px 32px;display:flex;flex-direction:column;justify-content:center}
+.ps-pc-tag{display:inline-block;width:fit-content;background:#f3f4f6;color:#8a93a3;font-size:11.5px;font-weight:800;letter-spacing:.1em;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.ps-pc-tx h3{font-size:25px;font-weight:800;letter-spacing:-.6px;margin:0 0 10px;color:#10131a}
+.ps-pc-tx p{font-size:15.5px;line-height:1.62;color:#52607a;margin:0}
+.ps-pc-vis{position:relative;background:linear-gradient(135deg,#15151d 0%,#241420 100%);display:flex;align-items:center;justify-content:center}
+.ps-pc-emo{font-size:52px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.4))}
+.ps-pc-no{position:absolute;bottom:10px;right:18px;color:rgba(255,255,255,.16);font-size:62px;font-weight:900;line-height:1}
+.ps-impact{text-align:center;font-size:20px;line-height:1.7;font-weight:600;color:#10131a;margin:54px auto 0}
 .ps-hl{background:linear-gradient(transparent 55%,#ffe07a 55%);font-weight:800;padding:0 3px}
 /* 다크 솔루션 */
 .ps-sol{margin:50px auto 0;background:linear-gradient(135deg,#0f0f1a 0%,#1e1b3a 100%);border-radius:28px;padding:48px 40px;text-align:center}
@@ -1345,13 +1359,33 @@
 .ps-result-t{color:#fff;font-weight:800;font-size:15px}
 .ps-result-d{color:rgba(255,255,255,.55);font-size:13px;margin-top:2px}
 @media(max-width:680px){
-  .ps{padding:64px 16px}.ps-title{font-size:26px}
+  .ps{padding:64px 16px}.ps-title{font-size:25px}
+  .ps-pcard{grid-template-columns:1fr;min-height:0}
+  .ps-pc-vis{height:96px;order:-1}.ps-pc-emo{font-size:40px}.ps-pc-no{font-size:46px}
+  .ps-pc-tx{padding:24px 22px}.ps-pc-tx h3{font-size:21px}
+  .ps-pcard{position:static;margin-bottom:16px}
   .ps-impact{font-size:17px}
   .ps-sol{padding:36px 22px;border-radius:22px}.ps-sol-title{font-size:22px}
   .ps-tracks{grid-template-columns:1fr;gap:12px}
   .ps-result{flex-direction:column;text-align:center}.ps-result-tx{text-align:center}
 }
 </style>
+<script>
+(function(){
+  function init(){
+    var el=document.getElementById('psType'); if(!el||el.dataset.on) return; el.dataset.on='1';
+    var arr=["작아질까요?","얼어붙을까요?","머릿속이 하얘질까요?","말문이 막힐까요?"];
+    var i=0,j=0,del=false;
+    (function t(){
+      var p=arr[i]; el.textContent=del?p.slice(0,j-1):p.slice(0,j+1); j+=del?-1:1;
+      var d=del?42:100;
+      if(!del&&j===p.length){del=true;d=1700;} else if(del&&j===0){del=false;i=(i+1)%arr.length;d=320;}
+      setTimeout(t,d);
+    })();
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
 <!-- ===== /문제→해결 ===== -->
 
 <!-- ===== intro '왜 더박스' 디자인 G: 클린 에디토리얼 (실사진 좌우 교차, 4줄) ===== -->
@@ -1433,6 +1467,110 @@
 }
 </style>
 <!-- ===== /G 에디토리얼 (4줄) ===== -->
+
+<!-- ===== intro 'THE BOX 시스템' 3D 커버플로우 캐러셀 (옆으로 돌아가는 카드) ===== -->
+<section class="sx">
+  <div class="sx-head">
+    <p class="sx-eyebrow">THE BOX SYSTEM</p>
+    <h2 class="sx-title">더박스는 이렇게 <span class="sx-hl">영어를 바꿉니다</span></h2>
+    <p class="sx-sub">배우고 → 실전 → 생활까지. 카드를 넘겨보세요.</p>
+  </div>
+
+  <div class="sx-wrap">
+    <div class="sx-stage" id="sxStage">
+      <article class="sx-card">
+        <div class="sx-img" style="background-image:url('../first/images/academy/academy_main.jpg')"><span class="sx-cat">ACADEMY</span><span class="sx-num">01</span></div>
+        <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">영어 회로 만들기</h3><p class="sx-desc">문장 구조부터 탄탄하게, 말 멈춤을 줄여요.</p><div class="sx-step">STEP 01</div></div>
+      </article>
+      <article class="sx-card">
+        <div class="sx-img" style="background-image:url('../first/images/study/session11.jpg')"><span class="sx-cat">NATIVE STUDY</span><span class="sx-num">02</span></div>
+        <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">원어민과 90분 실전</h3><p class="sx-desc">소그룹 대화량으로 자신감까지 한 번에.</p><div class="sx-step">STEP 02</div></div>
+      </article>
+      <article class="sx-card">
+        <div class="sx-img" style="background-image:url('../first/images/study/party2.jpg')"><span class="sx-cat">COMMUNITY</span><span class="sx-num">03</span></div>
+        <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">파티·아웃팅·이벤트</h3><p class="sx-desc">수업 밖에서도 영어가 생활이 됩니다.</p><div class="sx-step">STEP 03</div></div>
+      </article>
+      <article class="sx-card">
+        <div class="sx-img" style="background-image:url('../first/images/study/study_main.JPG')"><span class="sx-cat">VALUE</span><span class="sx-num">04</span></div>
+        <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">어학연수 1/10 비용</h3><p class="sx-desc">월 10만원대로 같은 환경을 그대로.</p><div class="sx-step">STEP 04</div></div>
+      </article>
+      <article class="sx-card">
+        <div class="sx-img" style="background-image:url('../first/images/study/together.jpg')"><span class="sx-cat">REVIEWS</span><span class="sx-num">05</span></div>
+        <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">실제 멤버 ★4.9</h3><p class="sx-desc">검증된 40여 명의 생생한 후기.</p><div class="sx-step">STEP 05</div></div>
+      </article>
+    </div>
+    <button class="sx-arrow sx-prev" id="sxPrev" aria-label="이전 카드">‹</button>
+    <button class="sx-arrow sx-next" id="sxNext" aria-label="다음 카드">›</button>
+  </div>
+  <div class="sx-dots" id="sxDots"><span></span><span></span><span></span><span></span><span></span></div>
+</section>
+<style>
+.sx{background:#0d0e13;padding:96px 16px 86px;font-family:'Pretendard',-apple-system,sans-serif;overflow:hidden}
+.sx *{box-sizing:border-box}
+.sx-head{text-align:center;max-width:760px;margin:0 auto 44px}
+.sx-eyebrow{color:#f87171;font-weight:800;font-size:13px;letter-spacing:.18em;margin:0 0 12px}
+.sx-title{font-size:34px;font-weight:800;letter-spacing:-1.2px;margin:0 0 12px;color:#fff}
+.sx-hl{position:relative;white-space:nowrap;color:#fff}
+.sx-hl::after{content:"";position:absolute;left:-2px;right:-2px;bottom:-6px;height:9px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='12'><path d='M4,8 C60,2 120,11 175,5 C195,3 210,7 216,6' fill='none' stroke='%23ef4444' stroke-width='3.6' stroke-linecap='round'/></svg>") no-repeat center/100% 100%}
+.sx-sub{color:rgba(255,255,255,.55);font-size:16px;line-height:1.7;margin:0}
+.sx-wrap{position:relative;max-width:1000px;margin:0 auto}
+.sx-stage{position:relative;height:430px;perspective:1500px;transform-style:preserve-3d}
+.sx-card{position:absolute;left:50%;top:50%;width:320px;height:392px;border-radius:20px;overflow:hidden;background:#16171f;border:1px solid rgba(255,255,255,.09);box-shadow:0 30px 60px rgba(0,0,0,.45);transition:transform .6s cubic-bezier(.2,.7,.2,1),opacity .55s;will-change:transform;cursor:pointer}
+.sx-img{height:210px;background:#1c1015 center/cover no-repeat;position:relative}
+.sx-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,14,19,0) 40%,rgba(13,14,19,.55) 100%)}
+.sx-cat{position:absolute;top:13px;left:13px;z-index:2;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.12em;padding:6px 11px;border-radius:7px}
+.sx-num{position:absolute;top:11px;right:14px;z-index:2;color:rgba(255,255,255,.85);font-size:15px;font-weight:800;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+.sx-body{padding:20px 20px;position:relative;height:182px}
+.sx-brand{color:#f87171;font-size:10.5px;font-weight:800;letter-spacing:.1em;margin-bottom:9px}
+.sx-ctitle{color:#fff;font-size:20px;font-weight:800;margin:0 0 9px;letter-spacing:-.4px}
+.sx-desc{color:rgba(255,255,255,.62);font-size:13.5px;line-height:1.55;margin:0}
+.sx-step{position:absolute;bottom:16px;left:20px;color:rgba(255,255,255,.4);font-size:11px;font-weight:700;letter-spacing:.12em}
+.sx-arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;background:#1b1c24;border:1px solid rgba(255,255,255,.15);color:#fff;font-size:26px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:50;transition:background .15s,transform .15s}
+.sx-arrow:hover{background:#ef4444;transform:translateY(-50%) scale(1.06)}
+.sx-prev{left:0}.sx-next{right:0}
+.sx-dots{display:flex;gap:8px;justify-content:center;margin-top:26px}
+.sx-dots span{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.25);transition:background .3s,width .3s;cursor:pointer}
+.sx-dots span.on{background:#ef4444;width:22px;border-radius:99px}
+@media(max-width:680px){
+  .sx{padding:64px 12px 60px}.sx-title{font-size:25px}
+  .sx-stage{height:400px}.sx-card{width:250px;height:360px}.sx-img{height:175px}.sx-body{height:185px}
+  .sx-arrow{width:40px;height:40px;font-size:22px}
+}
+</style>
+<script>
+(function(){
+  function init(){
+    var stage=document.getElementById('sxStage'); if(!stage||stage.dataset.on) return; stage.dataset.on='1';
+    var cards=[].slice.call(stage.querySelectorAll('.sx-card')), n=cards.length, cur=0;
+    var dots=[].slice.call(document.querySelectorAll('#sxDots span'));
+    function gap(){ return window.innerWidth<680?142:200; }
+    function layout(){
+      var g=gap();
+      cards.forEach(function(c,idx){
+        var off=idx-cur; if(off>n/2)off-=n; if(off<-n/2)off+=n; var a=Math.abs(off);
+        var tx=off*g, ry=off*-38, sc=a===0?1:(a===1?.83:.68);
+        c.style.transform='translate(-50%,-50%) translateX('+tx+'px) rotateY('+ry+'deg) scale('+sc+')';
+        c.style.zIndex=String(100-a);
+        c.style.opacity=a>2?'0':(a===0?'1':(a===1?'.58':'.28'));
+        c.style.pointerEvents=a<=1?'auto':'none';
+      });
+      dots.forEach(function(d,idx){ d.className=idx===cur?'on':''; });
+    }
+    function go(d){ cur=(cur+d+n)%n; layout(); }
+    cards.forEach(function(c,idx){ c.addEventListener('click',function(){ if(idx!==cur){cur=idx;layout();} }); });
+    dots.forEach(function(d,idx){ d.addEventListener('click',function(){ cur=idx; layout(); }); });
+    document.getElementById('sxPrev').onclick=function(){go(-1)};
+    document.getElementById('sxNext').onclick=function(){go(1)};
+    layout();
+    var au=setInterval(function(){go(1)},3000);
+    var wrap=stage.closest('.sx');
+    wrap.addEventListener('mouseenter',function(){clearInterval(au);});
+    window.addEventListener('resize',layout);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+<!-- ===== /THE BOX 시스템 캐러셀 ===== -->
 
 
     <!-- YOUR FIRST & LAST STOP -->
