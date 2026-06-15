@@ -2,7 +2,7 @@
     --bg-color: #FFFFFF;
     --text-main: #111111;
     --text-sub: #555555;
-    --primary: #2D5BFF;
+    --primary: #ef4444;
     --card-bg: #F8F9FA;
     --ease-gravity: cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -174,7 +174,7 @@ body {
 
 .highlight-card {
     border: 2px solid var(--primary);
-    background: #F0F5FF;
+    background: #fff5f5;
 }
 
 .badge {
@@ -400,7 +400,7 @@ a.btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: #F0F5FF;
+    background: #fff5f5;
     padding: 12px 24px;
     border-radius: 50px;
     margin-top: 10px;
@@ -575,13 +575,13 @@ a.btn {
 }
 
 .card--wrong .flip-card__front {
-    border-color: #2D5BFF;
+    border-color: #ef4444;
     background: #fef2f2;
 }
 
 /* ===== CTA Section ===== */
 .cta-section {
-    background: linear-gradient(135deg, #F0F5FF 0%, #FAFAFA 100%);
+    background: linear-gradient(135deg, #fff5f5 0%, #FAFAFA 100%);
 }
 
 /* ===== Programs Page ===== */
@@ -701,7 +701,7 @@ a.btn {
 /* ===== Combo Visual ===== */
 .combo-badge {
     display: inline-block;
-    background: linear-gradient(135deg, var(--primary), #6366f1);
+    background: linear-gradient(135deg, var(--primary), #dc2626);
     color: white;
     padding: 8px 24px;
     border-radius: 30px;
@@ -750,7 +750,7 @@ a.btn {
 
 .result-step {
     border: 2px solid var(--primary);
-    background: #F0F5FF;
+    background: #fff5f5;
 }
 
 /* ===== Footer ===== */
@@ -855,7 +855,7 @@ a.btn {
 }
 
 .input-card--wrong {
-    border-color: #2D5BFF;
+    border-color: #ef4444;
     background: #fef2f2;
 }
 
@@ -1065,7 +1065,7 @@ a.btn {
 
 /* ===== Info Banner ===== */
 .info-banner {
-    background: #F0F5FF;
+    background: #fff5f5;
     border-radius: 16px;
     padding: 24px 30px;
     border-left: 4px solid var(--primary);
@@ -1254,7 +1254,7 @@ a.btn {
 
 .level-bar>div {
     height: 100%;
-    background: linear-gradient(90deg, var(--primary), #6366f1);
+    background: linear-gradient(90deg, var(--primary), #dc2626);
     border-radius: 4px;
 }
 
@@ -1305,7 +1305,7 @@ a.btn {
 
 /* ===== Primary Gradient ===== */
 .bg-primary-gradient {
-    background: linear-gradient(135deg, var(--primary) 0%, #6366f1 100%);
+    background: linear-gradient(135deg, var(--primary) 0%, #dc2626 100%);
     color: white;
 }
 
@@ -1371,12 +1371,12 @@ a.btn {
 
 .grammar-tag-lg {
     padding: 10px 20px;
-    background: #F0F5FF;
+    background: #fff5f5;
     border-radius: 50px;
     font-size: 0.95rem;
     font-weight: 600;
     color: var(--primary);
-    border: 1px solid rgba(45, 91, 255, 0.15);
+    border: 1px solid rgba(239, 68, 68, 0.15);
 }
 
 /* ===== Before/After ===== */
@@ -1511,7 +1511,7 @@ a.btn {
     font-weight: 600;
     margin: 0;
     padding: 12px;
-    background: #F0F5FF;
+    background: #fff5f5;
     border-radius: 12px;
 }
 
@@ -1541,7 +1541,7 @@ a.btn {
     border-radius: 20px;
     font-size: 0.8rem;
     font-weight: 700;
-    background: #F0F5FF;
+    background: #fff5f5;
     color: var(--primary);
     margin-bottom: 12px;
 }
@@ -1916,7 +1916,7 @@ a.btn {
 
 .mc-option:hover:not(:disabled) {
     border-color: var(--primary);
-    background: #F0F5FF;
+    background: #fff5f5;
 }
 
 .mc-option:disabled {
@@ -1932,7 +1932,7 @@ a.btn {
 }
 
 .mc-option--wrong {
-    border-color: #2D5BFF !important;
+    border-color: #ef4444 !important;
     background: #fef2f2 !important;
     text-decoration: line-through;
     opacity: 1 !important;
@@ -2287,7 +2287,7 @@ a.btn {
 }
 
 .mobile-nav-panel__links a.active {
-    background: #F0F5FF;
+    background: #fff5f5;
     color: var(--primary);
 }
 
@@ -2406,13 +2406,13 @@ a.btn {
 
 /* ===== Live Alert Banner ===== */
 .live-alert-banner {
-    background: linear-gradient(135deg, #2D5BFF 0%, #1e40af 100%);
+    background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
     color: #fff;
     text-align: center;
     padding: 0;
     position: relative;
     z-index: 1002;
-    box-shadow: 0 4px 12px rgba(45, 91, 255, 0.3);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
     animation: slideDown 0.5s ease-out;
 }
 
@@ -2494,7 +2494,7 @@ a.btn {
 
 .roadmap-step {
     background: #fff;
-    border-left: 6px solid var(--step-color, #3b82f6);
+    border-left: 6px solid var(--step-color, #ef4444);
     border-radius: 16px;
     padding: 30px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -2508,7 +2508,7 @@ a.btn {
 
 .roadmap-number {
     display: inline-block;
-    background: var(--step-color, #3b82f6);
+    background: var(--step-color, #ef4444);
     color: #fff;
     font-weight: 800;
     font-size: 0.9rem;
@@ -2524,7 +2524,7 @@ a.btn {
 }
 
 .roadmap-level {
-    color: var(--step-color, #3b82f6);
+    color: var(--step-color, #ef4444);
     font-weight: 700;
     font-size: 1.05rem;
     margin: 0 0 12px 0;
