@@ -209,7 +209,7 @@
         var steps=[].slice.call(flow.querySelectorAll('.ss-step'));
         steps.forEach(function(s){var tm=s.querySelector('.ss-time');if(tm){var b=document.createElement('span');b.className='ss-now';b.textContent='▶ 진행중';tm.insertAdjacentElement('afterend',b);}});
         var p=0,timer=null;
-        function tick(){ p=(p+0.4)%104; var pp=Math.min(p,100); fill.style.width=pp+'%';
+        function tick(){ p=(p+0.62)%104; var pp=Math.min(p,100); fill.style.width=pp+'%';
           var act=pp<50?0:(pp<56?1:2); steps.forEach(function(s,i){ s.classList.toggle('ss-active', i===act); }); }
         function start(){ if(timer)return; flow.classList.add('ss-go'); timer=setInterval(tick,40); tick(); }
         if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting&&e.intersectionRatio>=0.25){ start(); io.disconnect(); } });},{threshold:[0,0.25]}); io.observe(flow); }
@@ -262,7 +262,7 @@
       var chat=document.getElementById('scChat'); if(!chat) return;
       var body=document.getElementById('scBody'), msgs=[].slice.call(body.querySelectorAll('.sc-msg')), timers=[];
       function reset(){ timers.forEach(clearTimeout); timers=[]; msgs.forEach(function(m){m.classList.remove('show');}); body.scrollTop=0; }
-      function play(){ reset(); msgs.forEach(function(m,i){ timers.push(setTimeout(function(){ m.classList.add('show'); body.scrollTop=body.scrollHeight; }, 120+i*950)); }); timers.push(setTimeout(play, 120+msgs.length*950+3800)); }
+      function play(){ reset(); msgs.forEach(function(m,i){ timers.push(setTimeout(function(){ m.classList.add('show'); body.scrollTop=body.scrollHeight; }, 80+i*680)); }); timers.push(setTimeout(play, 80+msgs.length*680+3500)); }
       if('IntersectionObserver' in window){ var started=false;
         var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting&&e.intersectionRatio>=0.12&&!started){ started=true; play(); } });},{threshold:[0,0.12],rootMargin:'0px 0px 12% 0px'});
         io.observe(chat);
