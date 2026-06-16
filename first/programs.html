@@ -153,6 +153,30 @@
 .pg-tbl td{color:var(--mut);font-weight:600}
 .pg-tbl tr:last-child th,.pg-tbl tr:last-child td{border-bottom:0}
 
+/* ── PROGRAMS scene (intro 재사용) ── */
+.pgp-sec{background:#fff;padding:104px 24px}
+.pgp-head{text-align:left}
+.pgp-eye{color:var(--red);font-weight:800;font-size:13px;letter-spacing:.2em;margin:0 0 14px}
+.pgp-title{font-size:42px;font-weight:800;letter-spacing:-1.5px;line-height:1.2;margin:0 0 14px;color:var(--ink)}
+.pgp-desc{color:var(--mut);font-size:18px;margin:0 0 18px}
+.pgp-divider{width:64px;height:4px;background:var(--red);border-radius:2px}
+.pgp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:26px;margin-top:46px}
+.pgp-card{border-radius:20px;overflow:hidden;background:#fff;border:1px solid var(--ln);box-shadow:0 16px 40px rgba(20,23,31,.06);transition:transform .3s ease,box-shadow .3s ease}
+.pgp-card:hover{transform:translateY(-6px);box-shadow:0 26px 56px rgba(20,23,31,.12)}
+.pgp-img{width:100%;height:240px;position:relative;overflow:hidden;background:#f0f0f0}
+.pgp-img img{width:100%;height:100%;object-fit:cover;object-position:center 58%;display:block}
+.pgp-imglb{position:absolute;top:16px;left:16px;background:rgba(0,0,0,.6);color:#fff;font-size:12px;padding:5px 12px;border-radius:20px;font-weight:600}
+.pgp-body{padding:28px;background:#fff}
+.pgp-tag{font-size:11px;font-weight:700;letter-spacing:.12em;color:var(--red);margin-bottom:9px}
+.pgp-body h3{font-size:22px;font-weight:800;margin:0 0 12px;letter-spacing:-.4px;line-height:1.4;background-image:linear-gradient(#ffe066,#ffe066);background-repeat:no-repeat;background-position:0 86%;background-size:0% 40%;transition:background-size .6s cubic-bezier(.4,0,.2,1) .25s;border-radius:2px}
+.pgp-card.pg-in .pgp-body h3{background-size:100% 40%}
+.pgp-body p{font-size:15px;color:#555;line-height:1.7;margin:0 0 20px;word-break:keep-all}
+.pgp-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.pgp-mtag{background:#f1f3f7;color:#444;font-size:13px;font-weight:600;padding:6px 14px;border-radius:20px}
+.pgp-link{color:var(--red);font-weight:800;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap .2s ease}
+.pgp-link:hover{gap:10px}
+.pgp-tip{margin:32px 0 0;padding:22px 24px;background:#fff8f8;border-radius:14px;border:1px solid #ffd6d6;font-size:14.5px;color:#555;line-height:1.7;text-align:center;word-break:keep-all}
+.pgp-tip strong{color:var(--red)}
 /* ── ROADMAP ── */
 .pg-road{background:var(--bg);padding:104px 24px}
 .pg-road-list{max-width:760px;margin:0 auto;position:relative;padding-left:20px}
@@ -206,7 +230,7 @@
 .pg-btn-ow:hover{background:rgba(255,255,255,.12);transform:translateY(-2px)}
 
 @media(max-width:860px){
-  .pg-h1{font-size:36px}.pg-h2{font-size:28px}.pg-lead{font-size:17px}
+  .pg-h1{font-size:36px}.pg-h2{font-size:28px}.pg-lead{font-size:17px}.pgp-title{font-size:30px}
   .pg-vs-grid{grid-template-columns:1fr}
   .pg-why-item{grid-template-columns:60px 1fr}.pg-why-no{font-size:34px}
   .pg-lv-row{flex-wrap:wrap;gap:12px}.pg-lv-arrow{display:none}.pg-lv-rec{margin-left:auto}
@@ -219,6 +243,7 @@
   .pg-ba-txt{background-position:0 0!important}
   .pg-cv-line{stroke-dashoffset:0!important}.pg-cv-dot{opacity:1!important}
   .pg-fl{stroke-dashoffset:0!important}.pg-fn{opacity:1!important}
+  .pgp-body h3{background-size:100% 40%}
 }
 </style>
 
@@ -324,52 +349,38 @@
   </div>
 </section>
 
-<!-- ACADEMY vs STUDY -->
-<section class="pg-vs">
+<!-- PROGRAMS (아카데미 vs 스터디 — intro 장면 재사용) -->
+<section class="pgp-sec">
   <div class="pg-wrap">
-    <p class="pg-eyebrow">ACADEMY vs STUDY</p>
-    <h2 class="pg-h2">아카데미와 스터디, 이렇게 다릅니다</h2>
-    <p class="pg-sub">하나는 '레시피', 하나는 '경험치'. 둘 다 필요하지만 순서가 있어요.</p>
-    <div class="pg-vs-grid">
-      <article class="pg-vs-card pg-vs-red pg-reveal">
-        <div class="pg-vs-photo" style="background-image:url('images/academy/academy_main.jpg')"><span class="pg-vs-cat">ACADEMY</span></div>
-        <div class="pg-vs-cbody">
-          <h3>영어 <em>레시피</em>를 익힌다</h3>
-          <p>문장 구조·문법·표현을 체계적으로. 말의 '재료'를 만드는 단계예요.</p>
-          <ul class="pg-vs-ul">
-            <li>주 2회 90분 소그룹 수업</li>
-            <li>왕초보·초급에 최적</li>
-            <li>버벅임의 근본 원인을 교정</li>
-          </ul>
-        </div>
-      </article>
-      <article class="pg-vs-card pg-vs-grn pg-reveal">
-        <div class="pg-vs-photo" style="background-image:url('images/study/session3.jpg')"><span class="pg-vs-cat">NATIVE STUDY</span></div>
-        <div class="pg-vs-cbody">
-          <h3>실전 <em>경험치</em>를 쌓는다</h3>
-          <p>원어민과 직접 대화하며 배운 걸 써먹는 단계. 자신감과 순발력이 붙어요.</p>
-          <ul class="pg-vs-ul">
-            <li>원어민 1명당 한국인 4~5명</li>
-            <li>중급 이상에 최적</li>
-            <li>실제 대화량으로 유창성 폭발</li>
-          </ul>
-        </div>
-      </article>
+    <div class="pgp-head pg-reveal">
+      <p class="pgp-eye">PROGRAMS</p>
+      <h2 class="pgp-title">나에게 맞는<br>가장 완벽한 시작점</h2>
+      <p class="pgp-desc">기초부터 잡든, 바로 대화에 뛰어들든.</p>
+      <div class="pgp-divider"></div>
     </div>
-    <p class="pg-vs-truth">중요한 건 <span class="pg-uline">순서</span>입니다 — 레시피 없이 실전부터 하면, 틀린 표현만 굳어져요.</p>
-    <div class="pg-tbl pg-reveal">
-      <table>
-        <thead><tr><th class="pg-th-k"></th><th class="pg-th-a">아카데미</th><th class="pg-th-s">스터디</th></tr></thead>
-        <tbody>
-          <tr><th>학습 방식</th><td>배우고 익힌다</td><td>써먹고 경험한다</td></tr>
-          <tr><th>학습 형태</th><td>강사 주도 90분 수업</td><td>원어민과 자유 대화</td></tr>
-          <tr><th>강점</th><td>문장·문법·정확도</td><td>유창성·자신감·순발력</td></tr>
-          <tr><th>대상 레벨</th><td>왕초보 ~ 중급</td><td>중급 ~ 고급</td></tr>
-          <tr><th>분위기</th><td>차분하게 집중</td><td>활기찬 실전</td></tr>
-          <tr><th>시간</th><td>주 2회 · 90분</td><td>회당 90분 · 횟수 선택</td></tr>
-        </tbody>
-      </table>
+    <div class="pgp-grid">
+      <div class="pgp-card pg-reveal">
+        <div class="pgp-img"><span class="pgp-imglb">📸 아카데미 수업</span><img src="../intro/program/academy_class.JPG" alt="아카데미 수업 사진" loading="lazy"></div>
+        <div class="pgp-body">
+          <div class="pgp-tag">ACADEMY · 아카데미</div>
+          <h3>말은 알겠는데 입이 안 떨어지는 분들</h3>
+          <p>말이 멈추는 이유, 번역 습관에 있어요. 머릿속에서 한국어를 영어로 번역하다 말이 멈추는 분들에게 맞는 루트예요. 영어로 바로 생각하는 뇌 회로를 만들어서, 말이 자동으로 나오는 상태를 만들어드려요.</p>
+          <div class="pgp-meta"><span class="pgp-mtag">주 2회</span><span class="pgp-mtag">패턴 출력 훈련</span><span class="pgp-mtag">숙제 + 피드백</span><span class="pgp-mtag">왕기초 ~ 중급</span></div>
+          <a href="academy.html" class="pgp-link">📘 아카데미 자세히 보기 →</a>
+        </div>
+      </div>
+      <div class="pgp-card pg-reveal">
+        <div class="pgp-img"><span class="pgp-imglb">📸 원어민 스터디 현장</span><img src="../intro/program/native_study.JPG" alt="원어민 스터디 현장 사진" loading="lazy"></div>
+        <div class="pgp-body">
+          <div class="pgp-tag">NATIVE STUDY · 원어민 스터디</div>
+          <h3>일단 부딪혀보고 싶은 분들</h3>
+          <p>진짜 영어권 원어민과 직접 대화하세요. 영어권 원어민과 한국인 소그룹 실전 대화. 틀려도 괜찮은 분위기에서 많이 말하고, 자연스럽게 교정받으면서 체득해요.</p>
+          <div class="pgp-meta"><span class="pgp-mtag">레벨별 운영</span><span class="pgp-mtag">영어권 원어민</span><span class="pgp-mtag">소규모 소그룹</span></div>
+          <a href="study.html" class="pgp-link">🗣️ 스터디 자세히 보기 →</a>
+        </div>
+      </div>
     </div>
+    <div class="pgp-tip pg-reveal">💡 <strong>어떤 선택이든 정답이에요.</strong><br>기초가 필요하다면 아카데미부터, 당장 실전 대화가 하고 싶다면 스터디부터 — 나의 목표와 현재 상황에 맞게 골라요.</div>
   </div>
 </section>
 
