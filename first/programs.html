@@ -206,36 +206,41 @@
 .pgp-cmp-h{text-align:center;font-size:15px;font-weight:800;letter-spacing:.04em;color:var(--mut);margin:0 0 18px}
 /* ── ROADMAP ── */
 .pg-road{background:var(--bg);padding:104px 24px}
-.pg-road-list{max-width:760px;margin:0 auto;position:relative;padding-left:20px}
-.pg-road-list::before{content:"";position:absolute;left:33px;top:14px;bottom:30px;width:2px;background:linear-gradient(180deg,var(--red),#f59e0b,var(--grn))}
-.pg-phase{position:relative;padding:0 0 36px 78px}
-.pg-phase-dot{position:absolute;left:0;top:0;width:68px;height:68px;border-radius:50%;background:#fff;border:2px solid var(--ln);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:20px;line-height:1;color:var(--ink);z-index:2;box-shadow:0 6px 16px rgba(20,23,31,.07)}
-.pg-phase-dot small{font-size:10.5px;font-weight:700;color:var(--mut);margin-top:2px}
+.pg-road-h{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px;align-items:stretch}
+.pg-phase{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--ln);border-radius:18px;padding:20px 18px 18px;box-shadow:0 10px 28px rgba(20,23,31,.06)}
+.pg-phase-dot{width:58px;height:58px;border-radius:50%;background:#fff;border:2px solid var(--ln);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:17px;line-height:1;color:var(--ink);margin-bottom:13px;box-shadow:0 6px 16px rgba(20,23,31,.07)}
+.pg-phase-dot small{font-size:9.5px;font-weight:700;color:var(--mut);margin-top:2px}
 .pg-phase:nth-child(1) .pg-phase-dot{border-color:var(--red);color:var(--red)}
 .pg-phase:nth-child(2) .pg-phase-dot{border-color:#f87171;color:#ef5350}
 .pg-phase:nth-child(3) .pg-phase-dot{border-color:#f59e0b;color:#e08c0b}
 .pg-phase:nth-child(4) .pg-phase-dot{border-color:var(--grn);color:var(--grn-d)}
-.pg-phase-tag{display:inline-block;font-size:12.5px;font-weight:800;color:var(--red-deep);background:#fdeaea;padding:5px 12px;border-radius:8px;margin-bottom:10px}
+.pg-phase-tag{align-self:flex-start;display:inline-block;font-size:11.5px;font-weight:800;color:var(--red-deep);background:#fdeaea;padding:4px 11px;border-radius:8px;margin-bottom:9px}
 .pg-phase:nth-child(3) .pg-phase-tag{color:#92600a;background:#fdf0d8}
 .pg-phase:nth-child(4) .pg-phase-tag{color:var(--grn-d);background:#e7f7f1}
-.pg-phase h3{font-size:20px;font-weight:800;letter-spacing:-.4px;margin:0 0 16px;word-break:keep-all}
-.pg-ba{background:#fff;border:1px solid var(--ln);border-radius:16px;padding:16px 20px}
-.pg-ba-ko{font-size:14px;font-weight:700;color:var(--mut);margin:0 0 13px;padding-bottom:12px;border-bottom:1px solid #f0f1f5;word-break:keep-all}
-.pg-ba-ko span{display:inline-block;color:#aeb4c0;font-weight:700;font-size:11px;letter-spacing:.06em;background:#f4f5f8;padding:3px 8px;border-radius:6px;margin-right:8px;vertical-align:1.5px}
-.pg-ba-line{display:flex;align-items:center;gap:12px;min-height:36px}
-.pg-ba-ic{position:relative;flex:none;width:26px;height:26px}
-.pg-ba-ic i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:900;font-size:13px;border-radius:50%;transition:opacity .45s ease}
+.pg-phase h3{font-size:16px;font-weight:800;letter-spacing:-.3px;margin:0 0 14px;word-break:keep-all;line-height:1.35;min-height:43px}
+.pg-ba-ko{font-size:13px;font-weight:700;color:var(--mut);margin:0 0 11px;padding-bottom:10px;border-bottom:1px solid #f0f1f5;word-break:keep-all}
+.pg-ba-ko span{display:block;color:#aeb4c0;font-weight:700;font-size:10px;letter-spacing:.05em;margin-bottom:3px}
+.pg-ba-line{display:flex;align-items:flex-start;gap:9px;min-height:46px}
+.pg-ba-ic{position:relative;flex:none;width:23px;height:23px;margin-top:1px}
+.pg-ba-ic i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:900;font-size:12px;border-radius:50%;transition:opacity .45s ease}
 .pg-ba-ic .x{color:#d4574f;background:#fdeaea}
 .pg-ba-ic .v{color:var(--grn-d);background:#e7f7f1;opacity:0}
 .pg-ba-box{position:relative;flex:1;min-width:0}
-.pg-ba-wrong{display:inline-block;font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:18px;color:#9aa3b2;white-space:nowrap;letter-spacing:.1px}
-.pg-ba-wrong .ch{display:inline-block;white-space:pre;transition:transform .6s cubic-bezier(.22,.61,.36,1),opacity .45s ease .08s,filter .55s ease}
-.pg-ba-right{position:absolute;left:0;top:50%;transform:translateY(-50%) translateY(9px);white-space:nowrap;font-family:'Fraunces',serif;font-weight:900;font-size:18px;color:var(--ink);letter-spacing:.1px;opacity:0;transition:opacity .55s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
-.pg-phase.pg-in .pg-ba-ic .x{opacity:0;transition-delay:1.75s}
-.pg-phase.pg-in .pg-ba-ic .v{opacity:1;transition-delay:1.88s}
-.pg-phase.pg-in .pg-ba-wrong{animation:pgShake .34s cubic-bezier(.36,.07,.19,.97) 1.3s}
-.pg-phase.pg-in .pg-ba-wrong .ch{transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(.6);opacity:0;filter:blur(2px)}
-.pg-phase.pg-in .pg-ba-right{opacity:1;transform:translateY(-50%) translateY(0);transition-delay:2.1s}
+.pg-ba-wrong{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:14.5px;color:#9aa3b2;line-height:1.4;letter-spacing:.1px}
+.pg-ba-wrong .ch{display:inline-block;white-space:pre;transition:transform .62s cubic-bezier(.3,.5,.4,1),opacity .5s ease,filter .55s ease}
+.pg-ba-right{position:absolute;left:0;top:0;font-family:'Fraunces',serif;font-weight:900;font-size:15px;color:var(--ink);line-height:1.4;letter-spacing:.1px;opacity:0;transform:translateY(8px);transition:opacity .5s ease,transform .55s cubic-bezier(.2,.7,.2,1)}
+.pg-ba-why{margin-top:13px;background:#f7f8fb;border-radius:10px;padding:10px 12px;font-size:11.5px;color:var(--mut);line-height:1.55;word-break:keep-all;opacity:0;transform:translateY(5px);transition:opacity .5s ease,transform .5s ease}
+.pg-ba-why b{font-weight:800}
+.pg-phase.pg-in .pg-ba-ic .x{opacity:0;transition-delay:2.5s}
+.pg-phase.pg-in .pg-ba-ic .v{opacity:1;transition-delay:2.62s}
+.pg-phase.pg-in .pg-ba-wrong{animation:pgShake .34s cubic-bezier(.36,.07,.19,.97) 2.05s}
+.pg-phase.pg-in .pg-ba-wrong .ch{transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(.55);opacity:0;filter:blur(2px)}
+.pg-phase.pg-in .pg-ba-right{opacity:1;transform:none;transition-delay:2.9s}
+.pg-phase.pg-in .pg-ba-why{opacity:1;transform:none;transition-delay:3.4s}
+@media(max-width:860px){
+.pg-road-h{display:flex;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;gap:13px;padding:6px 2px 16px;-webkit-overflow-scrolling:touch}
+.pg-phase{flex:0 0 80%;scroll-snap-align:start}
+}
 @keyframes pgShake{12%{transform:translateX(-2.5px)}28%{transform:translateX(3px)}44%{transform:translateX(-3px)}60%{transform:translateX(2.5px)}76%{transform:translateX(-1.5px)}92%{transform:translateX(1px)}}
 
 /* ── GROWTH CURVE ── */
@@ -274,7 +279,7 @@
 }
 @media(prefers-reduced-motion:reduce){
   .pg-reveal{opacity:1;transform:none}
-  .pg-ba-wrong{display:none}.pg-ba-right{position:static;opacity:1;transform:none}.pg-ba-ic .x{opacity:0}.pg-ba-ic .v{opacity:1}
+  .pg-ba-wrong{display:none}.pg-ba-right{position:static;opacity:1;transform:none}.pg-ba-why{opacity:1;transform:none}.pg-ba-ic .x{opacity:0}.pg-ba-ic .v{opacity:1}
   .pg-cv-line{stroke-dashoffset:0!important}.pg-cv-dot{opacity:1!important}
   .pg-fl{stroke-dashoffset:0!important}.pg-fn{opacity:1!important}
   .pgp-body h3{background-size:100% 40%}
@@ -499,53 +504,57 @@
     <p class="pg-eyebrow">10-MONTH ROADMAP</p>
     <h2 class="pg-h2">10개월, 영어가 이렇게 바뀝니다</h2>
     <p class="pg-sub">아카데미로 토대를 만들고 스터디로 실전. 단계마다 더듬던 영어가 부서지고, 자연스러운 표현으로 다시 써져요.</p>
-    <div class="pg-road-list">
-      <div class="pg-phase pg-reveal">
+    <div class="pg-road-h">
+      <div class="pg-phase">
         <div class="pg-phase-dot">1–3<small>개월</small></div>
         <span class="pg-phase-tag">영어 회로 공사</span>
         <h3>'문장'이라는 개념이 생깁니다</h3>
         <div class="pg-ba">
-          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"어제 회사에 지각했어"</div>
+          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"어제 친구 만났어"</div>
           <div class="pg-ba-line">
             <span class="pg-ba-ic"><i class="x">✕</i><i class="v">✓</i></span>
-            <span class="pg-ba-box"><span class="pg-ba-wrong">"Work… yesterday… I… late…?"</span><span class="pg-ba-right">"I was running late for work yesterday."</span></span>
+            <span class="pg-ba-box"><span class="pg-ba-wrong">"Friend… yesterday… I…?"</span><span class="pg-ba-right">"I met a friend yesterday."</span></span>
           </div>
+          <div class="pg-ba-why"><b style="color:#b91c1c">왜?</b> 단어만 나열하면 못 알아들어요. <b>주어+동사</b> 순서를 갖춰야 ‘문장’이 됩니다.</div>
         </div>
       </div>
-      <div class="pg-phase pg-reveal">
+      <div class="pg-phase">
         <div class="pg-phase-dot">4–6<small>개월</small></div>
         <span class="pg-phase-tag">디테일 교정</span>
         <h3>콩글리쉬 습관이 차단됩니다</h3>
         <div class="pg-ba">
-          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"오늘 몸이 좀 안 좋아"</div>
+          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"나 약속 있어"</div>
           <div class="pg-ba-line">
             <span class="pg-ba-ic"><i class="x">✕</i><i class="v">✓</i></span>
-            <span class="pg-ba-box"><span class="pg-ba-wrong">"Today my condition is not good."</span><span class="pg-ba-right">"I'm a bit under the weather today."</span></span>
+            <span class="pg-ba-box"><span class="pg-ba-wrong">"I have a promise."</span><span class="pg-ba-right">"I have plans."</span></span>
           </div>
+          <div class="pg-ba-why"><b style="color:#b91c1c">왜?</b> <b>promise</b>는 ‘굳은 맹세’예요. 가벼운 약속·일정엔 <b>plans</b>가 자연스러워요.</div>
         </div>
       </div>
-      <div class="pg-phase pg-reveal">
+      <div class="pg-phase">
         <div class="pg-phase-dot">7–9<small>개월</small></div>
         <span class="pg-phase-tag">유창성 폭발</span>
         <h3>영어가 '대화 수단'이 됩니다</h3>
         <div class="pg-ba">
-          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"그 단어가 생각이 안 나"</div>
+          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"그건 좀 별로야"</div>
           <div class="pg-ba-line">
             <span class="pg-ba-ic"><i class="x">✕</i><i class="v">✓</i></span>
-            <span class="pg-ba-box"><span class="pg-ba-wrong">"Umm… the word… I don't know…"</span><span class="pg-ba-right">"Ugh, it's on the tip of my tongue."</span></span>
+            <span class="pg-ba-box"><span class="pg-ba-wrong">"No. I don't like it."</span><span class="pg-ba-right">"It's not really my thing."</span></span>
           </div>
+          <div class="pg-ba-why"><b style="color:#92600a">왜?</b> 직설적인 거절은 무례하게 들려요. <b>not really my thing</b>으로 부드럽게 돌려 말해요.</div>
         </div>
       </div>
-      <div class="pg-phase pg-reveal">
+      <div class="pg-phase">
         <div class="pg-phase-dot">10<small>개월~</small></div>
         <span class="pg-phase-tag">뉘앙스 마스터</span>
         <h3>원어민처럼 생각하고 말합니다</h3>
         <div class="pg-ba">
-          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"그건 좀 하고 싶지 않은데"</div>
+          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"그 단어가 생각이 안 나"</div>
           <div class="pg-ba-line">
             <span class="pg-ba-ic"><i class="x">✕</i><i class="v">✓</i></span>
-            <span class="pg-ba-box"><span class="pg-ba-wrong">"No. I don't want."</span><span class="pg-ba-right">"I'd rather not, if that's okay."</span></span>
+            <span class="pg-ba-box"><span class="pg-ba-wrong">"Uh… what was the word…?"</span><span class="pg-ba-right">"Ugh, it's on the tip of my tongue."</span></span>
           </div>
+          <div class="pg-ba-why"><b style="color:#0f6e56">왜?</b> ‘혀끝에 맴돈다’를 원어민은 <b>on the tip of my tongue</b>이라 해요 — ‘거의 생각났다’는 뉘앙스까지.</div>
         </div>
       </div>
     </div>
@@ -591,24 +600,30 @@
 <script>
 (function(){
   function init(){
-    [].slice.call(document.querySelectorAll('.pg-ba-wrong')).forEach(function(w){
+    [].slice.call(document.querySelectorAll('.pg-ba-wrong')).forEach(function(w,ci){
       var t=w.textContent; w.textContent='';
       var rnd=function(n){var x=Math.sin(n*97.13)*43758.5453;return x-Math.floor(x);};
       for(var i=0;i<t.length;i++){
         var s=document.createElement('span'); s.className='ch'; s.textContent=t.charAt(i);
-        s.style.setProperty('--dx',(rnd(i*3+1)*132-66).toFixed(1)+'px');
-        s.style.setProperty('--dy',(rnd(i*3+2)*108-30).toFixed(1)+'px');
-        s.style.setProperty('--rot',(rnd(i*3+3)*176-88).toFixed(1)+'deg');
-        s.style.transitionDelay=(1.65+i*0.005).toFixed(3)+'s';
+        s.style.setProperty('--dx',(rnd(ci*50+i*3+1)*56-28).toFixed(1)+'px');
+        s.style.setProperty('--dy',(28+rnd(ci*50+i*3+2)*60).toFixed(1)+'px');
+        s.style.setProperty('--rot',(rnd(ci*50+i*3+3)*150-75).toFixed(1)+'deg');
+        s.style.transitionDelay=(2.4+i*0.006).toFixed(3)+'s';
         w.appendChild(s);
       }
     });
     var els=[].slice.call(document.querySelectorAll('.pg-reveal'));
-    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('pg-in')});return;}
+    if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('pg-in')});[].slice.call(document.querySelectorAll('.pg-phase')).forEach(function(e){e.classList.add('pg-in')});return;}
     var io=new IntersectionObserver(function(entries){
       entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('pg-in'); io.unobserve(e.target); } });
     },{threshold:.18,rootMargin:'0px 0px -8% 0px'});
     els.forEach(function(e){io.observe(e)});
+    var road=document.querySelector('.pg-road-h');
+    if(road){
+      var phs=[].slice.call(road.querySelectorAll('.pg-phase'));
+      var rio=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ phs.forEach(function(p,i){ setTimeout(function(){p.classList.add('pg-in');}, i*300); }); rio.disconnect(); } });},{threshold:.2});
+      rio.observe(road);
+    }
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })();
