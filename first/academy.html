@@ -64,6 +64,8 @@
 
         <!-- 아카데미: smooth blue route -->
         <path class="rt-blue" pathLength="1" d="M74,240 C 320,300 430,332 560,330" fill="none" stroke="#2D5BFF" stroke-width="7" stroke-linecap="round"/>
+        <circle class="rt-comet rt-comet-r" r="6" fill="#ef4444"/>
+        <circle class="rt-comet rt-comet-b" r="8" fill="#2D5BFF"/>
         <g class="rt-bt" transform="translate(566,330)"><text text-anchor="middle" y="7" font-size="22" fill="#2D5BFF">✓</text></g>
         <text class="rt-bt" x="600" y="300" font-family="Pretendard,sans-serif" font-size="20" font-weight="700" fill="#2D5BFF">아카데미 이후</text>
         <text class="rt-bt rt-bt-big" x="600" y="392" font-family="Fraunces,serif" font-size="98" font-weight="900" fill="#2D5BFF" letter-spacing="-3">0.5<tspan font-family="Pretendard,sans-serif" font-size="40" fill="#2D5BFF" dx="2">초</tspan></text>
@@ -940,7 +942,14 @@
 .rt-wrap.rt-draw .rt-broken{opacity:1;transition:opacity 1s ease 1.3s}
 .rt-wrap.rt-draw .rt-fluent{opacity:1;transition:opacity .5s ease 1.9s}
 .rt-wrap.rt-draw .rt-underline path{stroke-dashoffset:0;transition:stroke-dashoffset .7s ease 2.3s}
-@media(prefers-reduced-motion:reduce){.rt-art .rt-red,.rt-art .rt-blue,.rt-art .rt-circle,.rt-underline path{stroke-dashoffset:0}.rt-art .rt-rt,.rt-art .rt-bt,.rt-art .rt-node,.rt-art .rt-spark,.rt-results .rt-broken,.rt-results .rt-fluent{opacity:1}}
+.rt-comet{offset-distance:0%;opacity:0}
+.rt-comet-r{offset-path:path("M74,226 C 165,108 232,254 326,150 C 408,60 452,256 545,150")}
+.rt-comet-b{offset-path:path("M74,240 C 320,300 430,332 560,330");filter:drop-shadow(0 0 8px rgba(45,91,255,.85))}
+.rt-wrap.rt-draw .rt-comet-r{animation:rtcometR 2.4s ease-in-out .2s forwards}
+.rt-wrap.rt-draw .rt-comet-b{animation:rtcometB .8s cubic-bezier(.3,.7,.2,1) .35s forwards}
+@keyframes rtcometR{0%{offset-distance:0%;opacity:0}8%{opacity:.9}90%{opacity:.9}100%{offset-distance:100%;opacity:0}}
+@keyframes rtcometB{0%{offset-distance:0%;opacity:0}14%{opacity:1}86%{opacity:1}100%{offset-distance:100%;opacity:0}}
+@media(prefers-reduced-motion:reduce){.rt-art .rt-red,.rt-art .rt-blue,.rt-art .rt-circle,.rt-underline path{stroke-dashoffset:0}.rt-art .rt-rt,.rt-art .rt-bt,.rt-art .rt-node,.rt-art .rt-spark,.rt-results .rt-broken,.rt-results .rt-fluent{opacity:1}.rt-comet{display:none}}
 </style>
 <script>
 (function(){
