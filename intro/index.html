@@ -1261,7 +1261,7 @@
     </div>
 
     <!-- WHY THE BOX -->
-<!-- ===== intro 문제→해결 (제목 타이핑 + 카드 스택 + 다크 솔루션) ===== -->
+<!-- ===== intro 문제→해결 (제목 타이핑 + 🎁 키네틱 Before→After + 다크 솔루션) ===== -->
 <section class="ps">
   <div class="ps-wrap">
     <div class="ps-head">
@@ -1269,19 +1269,16 @@
       <h2 class="ps-title">10년을 공부했는데,<br>왜 외국인 앞에선 <span class="ps-type" id="psType">&nbsp;</span><span class="ps-cur" aria-hidden="true"></span></h2>
     </div>
 
-    <div class="ps-stack">
-      <article class="ps-pcard" style="top:108px;z-index:1">
-        <div class="ps-pc-tx"><span class="ps-pc-tag">PROBLEM 01</span><h3>과잉 이론</h3><p>문법 문제는 푸는데, “어제 뭐 했어?” “배 안 고파?”는 3초 안에 안 나와요.</p></div>
-        <div class="ps-pc-vis"><span class="ps-pc-emo">🧠</span><span class="ps-pc-no">01</span></div>
-      </article>
-      <article class="ps-pcard" style="top:170px;z-index:2">
-        <div class="ps-pc-tx"><span class="ps-pc-tag">PROBLEM 02</span><h3>입력 부재</h3><p>머릿속 한국어를 영어로 번역하느라, 대화 타이밍을 자꾸 놓쳐요.</p></div>
-        <div class="ps-pc-vis"><span class="ps-pc-emo">😶</span><span class="ps-pc-no">02</span></div>
-      </article>
-      <article class="ps-pcard" style="top:232px;z-index:3">
-        <div class="ps-pc-tx"><span class="ps-pc-tag">PROBLEM 03</span><h3>심리적 장벽</h3><p>“틀리면 어떡하지?”라는 불안감이 내 입을 막아버려요.</p></div>
-        <div class="ps-pc-vis"><span class="ps-pc-emo">😰</span><span class="ps-pc-no">03</span></div>
-      </article>
+    <!-- 🎁 키네틱 Before → After -->
+    <div class="ps-kin" id="psKin">
+      <div class="ps-kin-q">“어제 뭐 했어?”를 <b>영어로</b> 말하면?</div>
+      <div class="ps-kin-stage">
+        <div class="ps-kin-line ps-kin-before"><s>Uh… I… yesterday… go…?</s> 😵‍💫</div>
+        <div class="ps-kin-line ps-kin-after">I just <span class="ps-kin-hl"><i>chilled at home</i><span class="ps-kin-ul"></span></span>. 😎</div>
+        <div class="ps-kin-gift">🎁</div>
+        <div class="ps-kin-chk"><span>✓</span><b>딱!</b></div>
+      </div>
+      <div class="ps-kin-tags"><span class="ps-kin-tag ps-kin-tb">BEFORE · 지금</span><span class="ps-kin-tag ps-kin-ta">AFTER · 더박스 후</span></div>
     </div>
 
     <p class="ps-impact">이건 능력 부족이 아닙니다.<br><b class="ps-hl">제대로 된 회화 훈련을 받지 못했기 때문</b>입니다.</p>
@@ -1318,23 +1315,64 @@
 .ps{background:#fff;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f;overflow:visible}
 .ps *{box-sizing:border-box}
 .ps-wrap{max-width:840px;margin:0 auto}
-.ps-head{text-align:center;margin-bottom:54px}
+.ps-head{text-align:center;margin-bottom:40px}
 .ps-eyebrow{display:inline-block;background:#fdecec;color:#dc2626;font-size:12px;font-weight:800;letter-spacing:.14em;padding:7px 16px;border-radius:999px;margin-bottom:20px}
 .ps-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;line-height:1.4;margin:0;color:#0c1322}
 .ps-type{color:#ef4444}
 .ps-cur{display:inline-block;width:3px;height:1.05em;background:#ef4444;margin-left:1px;vertical-align:-.16em;animation:pscur 1.05s steps(1) infinite}
 @keyframes pscur{50%{opacity:0}}
-/* 카드 스택 (스크롤 시 쌓임) */
-.ps-stack{margin:0 auto;max-width:780px}
-.ps-pcard{position:sticky;display:grid;grid-template-columns:1fr 230px;gap:0;background:#fff;border:1px solid #e9ebf1;border-radius:22px;box-shadow:0 18px 44px rgba(20,30,60,.13);overflow:hidden;margin-bottom:34px;min-height:210px}
-.ps-pc-tx{padding:34px 32px;display:flex;flex-direction:column;justify-content:center}
-.ps-pc-tag{display:inline-block;width:fit-content;background:#f3f4f6;color:#8a93a3;font-size:11.5px;font-weight:800;letter-spacing:.1em;padding:5px 12px;border-radius:999px;margin-bottom:14px}
-.ps-pc-tx h3{font-size:25px;font-weight:800;letter-spacing:-.6px;margin:0 0 10px;color:#10131a}
-.ps-pc-tx p{font-size:15.5px;line-height:1.62;color:#52607a;margin:0}
-.ps-pc-vis{position:relative;background:linear-gradient(135deg,#15151d 0%,#241420 100%);display:flex;align-items:center;justify-content:center}
-.ps-pc-emo{font-size:52px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.4))}
-.ps-pc-no{position:absolute;bottom:10px;right:18px;color:rgba(255,255,255,.16);font-size:62px;font-weight:900;line-height:1}
-.ps-impact{text-align:center;font-size:20px;line-height:1.7;font-weight:600;color:#10131a;margin:54px auto 0}
+/* 🎁 키네틱 Before→After */
+.ps-kin{position:relative;max-width:680px;margin:0 auto;background:#fff;border:1px solid #eef0f4;border-radius:20px;padding:40px 30px;text-align:center;overflow:hidden;box-shadow:0 16px 40px rgba(20,30,60,.06)}
+.ps-kin-q{font-size:14px;color:#94a0b3;font-weight:700;margin-bottom:6px}
+.ps-kin-q b{color:#ef4444}
+.ps-kin-stage{position:relative;height:160px;display:flex;align-items:center;justify-content:center}
+.ps-kin-line{position:absolute;left:0;right:0;font-family:'Fraunces',Georgia,serif;font-size:clamp(22px,5vw,33px);letter-spacing:-.5px;line-height:1.25}
+.ps-kin-before{color:#aeb6c4;clip-path:inset(0 0 0 0)}
+.ps-kin-before s{text-decoration-color:#e0788f;text-decoration-thickness:2px}
+.ps-kin-after{color:#10131a;font-weight:600;clip-path:inset(0 100% 0 0)}
+.ps-kin-hl{position:relative;white-space:nowrap}.ps-kin-hl i{font-style:normal}
+.ps-kin-ul{position:absolute;left:0;right:0;bottom:-4px;height:10px;background:#ffe07a;border-radius:6px;transform:scaleX(0);transform-origin:left;z-index:-1}
+.ps-kin-gift{position:absolute;top:50%;left:0;font-size:48px;line-height:1;filter:drop-shadow(0 8px 16px rgba(239,68,68,.35));opacity:0;transform:translateX(-50%) translateY(-50%);z-index:5}
+.ps-kin-gift::before{content:"";position:absolute;right:96%;top:44%;width:50px;height:7px;background:linear-gradient(90deg,transparent,rgba(239,68,68,.42));border-radius:4px}
+.ps-kin-chk{position:absolute;right:18px;top:8px;display:flex;align-items:center;gap:7px;opacity:0;transform:scale(.5)}
+.ps-kin-chk span{width:30px;height:30px;border-radius:50%;background:#10b981;color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900}
+.ps-kin-chk b{color:#10b981;font-weight:900;font-size:17px}
+.ps-kin-tags{display:flex;justify-content:center;gap:8px;margin-top:6px;height:24px}
+.ps-kin-tag{font-size:11px;font-weight:800;letter-spacing:.12em;padding:5px 12px;border-radius:999px}
+.ps-kin-tb{background:#f1f3f7;color:#9aa3b2}
+.ps-kin-ta{background:#fdecec;color:#dc2626;opacity:0}
+/* play (스크롤 진입 시 .play 부여) */
+.ps-kin.play .ps-kin-before{animation:pskBefore 3.4s linear forwards}
+.ps-kin.play .ps-kin-after{animation:pskAfter 3.4s linear forwards}
+.ps-kin.play .ps-kin-gift{animation:pskGift 3.4s linear forwards}
+.ps-kin.play .ps-kin-ul{animation:pskUL 3.4s ease forwards}
+.ps-kin.play .ps-kin-chk{animation:pskChk 3.4s ease forwards}
+.ps-kin.play .ps-kin-tb{animation:pskTagB 3.4s ease forwards}
+.ps-kin.play .ps-kin-ta{animation:pskTagA 3.4s ease forwards}
+@keyframes pskBefore{0%,12%{clip-path:inset(0 0 0 0)}72%,100%{clip-path:inset(0 0 0 100%)}}
+@keyframes pskAfter{0%,12%{clip-path:inset(0 100% 0 0)}72%,100%{clip-path:inset(0 0 0 0)}}
+@keyframes pskGift{
+ 0%{left:-10%;opacity:0;transform:translateX(-50%) translateY(-50%) rotate(-22deg) scale(.85)}
+ 6%{opacity:1}
+ 12%{left:0%;transform:translateX(-50%) translateY(-130%) rotate(15deg) scale(1.1)}
+ 24%{transform:translateX(-50%) translateY(26%) rotate(-17deg) scale(1.12)}
+ 36%{transform:translateX(-50%) translateY(-124%) rotate(15deg) scale(1.14)}
+ 48%{transform:translateX(-50%) translateY(22%) rotate(-17deg) scale(1.14)}
+ 60%{transform:translateX(-50%) translateY(-118%) rotate(13deg) scale(1.1)}
+ 72%{left:100%;opacity:1;transform:translateX(-50%) translateY(-22%) rotate(-10deg) scale(1.05)}
+ 82%{left:112%;opacity:0;transform:translateX(-50%) translateY(-55%) rotate(9deg) scale(1)}
+ 100%{left:112%;opacity:0}
+}
+@keyframes pskUL{0%,74%{transform:scaleX(0)}90%,100%{transform:scaleX(1)}}
+@keyframes pskChk{0%,78%{opacity:0;transform:scale(.5)}88%{opacity:1;transform:scale(1.15)}96%,100%{opacity:1;transform:scale(1)}}
+@keyframes pskTagB{0%,58%{opacity:1}68%,100%{opacity:0}}
+@keyframes pskTagA{0%,66%{opacity:0}72%,100%{opacity:1}}
+@media(prefers-reduced-motion:reduce){
+  .ps-kin-before{clip-path:inset(0 0 0 100%)}.ps-kin-after{clip-path:inset(0 0 0 0)}
+  .ps-kin-gift{display:none}.ps-kin-ul{transform:scaleX(1)}.ps-kin-chk{opacity:1;transform:none}
+  .ps-kin-tb{opacity:0}.ps-kin-ta{opacity:1}
+}
+.ps-impact{text-align:center;font-size:20px;line-height:1.7;font-weight:600;color:#10131a;margin:46px auto 0}
 .ps-hl{background:linear-gradient(transparent 55%,#ffe07a 55%);font-weight:800;padding:0 3px}
 /* 다크 솔루션 */
 .ps-sol{margin:50px auto 0;background:linear-gradient(135deg,#0f0f1a 0%,#1e1b3a 100%);border-radius:28px;padding:48px 40px;text-align:center}
@@ -1354,16 +1392,12 @@
 .ps-track-list{display:flex;flex-direction:column;gap:7px}
 .ps-track-list span{background:rgba(255,255,255,.06);border-radius:9px;padding:8px 11px;font-size:13px;color:rgba(255,255,255,.72)}
 .ps-result{margin-top:16px;background:linear-gradient(90deg,rgba(248,113,113,.16),rgba(110,231,183,.16));border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 24px;display:flex;align-items:center;justify-content:center;gap:14px}
-.ps-flag{font-size:26px}
-.ps-result-tx{text-align:left}
+.ps-flag{font-size:26px}.ps-result-tx{text-align:left}
 .ps-result-t{color:#fff;font-weight:800;font-size:15px}
 .ps-result-d{color:rgba(255,255,255,.55);font-size:13px;margin-top:2px}
 @media(max-width:680px){
   .ps{padding:64px 16px}.ps-title{font-size:25px}
-  .ps-pcard{grid-template-columns:1fr;min-height:0}
-  .ps-pc-vis{height:96px;order:-1}.ps-pc-emo{font-size:40px}.ps-pc-no{font-size:46px}
-  .ps-pc-tx{padding:24px 22px}.ps-pc-tx h3{font-size:21px}
-  .ps-pcard{position:static;margin-bottom:16px}
+  .ps-kin{padding:28px 18px}.ps-kin-stage{height:150px}
   .ps-impact{font-size:17px}
   .ps-sol{padding:36px 22px;border-radius:22px}.ps-sol-title{font-size:22px}
   .ps-tracks{grid-template-columns:1fr;gap:12px}
@@ -1373,15 +1407,21 @@
 <script>
 (function(){
   function init(){
-    var el=document.getElementById('psType'); if(!el||el.dataset.on) return; el.dataset.on='1';
-    var arr=["작아질까요?","얼어붙을까요?","머릿속이 하얘질까요?","말문이 막힐까요?"];
-    var i=0,j=0,del=false;
-    (function t(){
-      var p=arr[i]; el.textContent=del?p.slice(0,j-1):p.slice(0,j+1); j+=del?-1:1;
-      var d=del?42:100;
-      if(!del&&j===p.length){del=true;d=1700;} else if(del&&j===0){del=false;i=(i+1)%arr.length;d=320;}
-      setTimeout(t,d);
-    })();
+    var el=document.getElementById('psType');
+    if(el&&!el.dataset.on){ el.dataset.on='1';
+      var arr=["작아질까요?","얼어붙을까요?","머릿속이 하얘질까요?","말문이 막힐까요?"];var i=0,j=0,del=false;
+      (function t(){var p=arr[i];el.textContent=del?p.slice(0,j-1):p.slice(0,j+1);j+=del?-1:1;
+        var d=del?42:100;if(!del&&j===p.length){del=true;d=1700;}else if(del&&j===0){del=false;i=(i+1)%arr.length;d=320;}
+        setTimeout(t,d);})();
+    }
+    var kin=document.getElementById('psKin');
+    if(kin&&'IntersectionObserver'in window){
+      var io=new IntersectionObserver(function(es){es.forEach(function(e){
+        if(e.isIntersecting&&e.intersectionRatio>=0.45){ if(!kin.classList.contains('play')) kin.classList.add('play'); }
+        else if(e.intersectionRatio===0){ kin.classList.remove('play'); }
+      });},{threshold:[0,0.45]});
+      io.observe(kin);
+    } else if(kin){ kin.classList.add('play'); }
   }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
 })();
