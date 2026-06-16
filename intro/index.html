@@ -1475,7 +1475,7 @@
         <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">영어 회로 만들기</h3><p class="sx-desc">문장 구조부터 탄탄하게, 말 멈춤을 줄여요.</p><div class="sx-step">STEP 01</div></div>
       </article>
       <article class="sx-card">
-        <div class="sx-img" style="background-image:url('../first/images/study/session9.jpg')"><span class="sx-cat">NATIVE STUDY</span><span class="sx-num">02</span></div>
+        <div class="sx-img" style="background-image:url('../first/images/study/session9.jpg');background-position:center 72%"><span class="sx-cat">NATIVE STUDY</span><span class="sx-num">02</span></div>
         <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">원어민과 90분 실전</h3><p class="sx-desc">소그룹 대화량으로 자신감까지 한 번에.</p><div class="sx-step">STEP 02</div></div>
       </article>
       <article class="sx-card">
@@ -2455,8 +2455,8 @@
 .hero h1 .scr-dud{opacity:.6;font-weight:inherit}
 .hero h1 .scr-hide{opacity:0}
 .hero h1{transform-origin:center center;will-change:transform,opacity}
-.hero h1.hs-zoom{animation:heroZoom 1s cubic-bezier(.16,1,.3,1) both}
-@keyframes heroZoom{0%{transform:scale(1.5);opacity:0}28%{opacity:1}100%{transform:scale(1);opacity:1}}
+.hero h1.hs-zoom{animation:heroZoom 2s cubic-bezier(.22,1,.36,1) both}
+@keyframes heroZoom{0%{transform:scale(1.55);opacity:0}22%{opacity:1}100%{transform:scale(1);opacity:1}}
 @media(prefers-reduced-motion:reduce){.hero h1.hs-zoom{animation:none}}
 </style>
 <script>
@@ -2466,8 +2466,8 @@
   function scramble(el,text,delay){
     var q=[],i;
     for(i=0;i<text.length;i++){
-      var st=delay+i*2+Math.floor(Math.random()*16);
-      var en=st+10+Math.floor(Math.random()*22);
+      var st=delay+i*5+Math.floor(Math.random()*24);
+      var en=st+30+Math.floor(Math.random()*40);
       q.push({to:text[i],st:st,en:en,ch:null});
     }
     var frame=0,raf;
@@ -2478,7 +2478,7 @@
         if(it.to===" "){out+=" ";done++;continue;}
         if(frame>=it.en){out+=it.to;done++;}
         else if(frame>=it.st){
-          if(!it.ch||Math.random()<0.3)it.ch=rChar();
+          if(!it.ch||Math.random()<0.12)it.ch=rChar();
           out+='<span class="scr-dud">'+it.ch+'</span>';
         } else out+='<span class="scr-hide">'+it.to+'</span>';
       }
