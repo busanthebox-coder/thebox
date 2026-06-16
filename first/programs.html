@@ -244,8 +244,8 @@
 @keyframes pgShake{12%{transform:translateX(-2.5px)}28%{transform:translateX(3px)}44%{transform:translateX(-3px)}60%{transform:translateX(2.5px)}76%{transform:translateX(-1.5px)}92%{transform:translateX(1px)}}
 
 /* ── GROWTH CURVE ── */
-.pg-curve{background:#fff;padding:96px 24px 110px}
-.pg-curve-box{max-width:780px;margin:0 auto;background:var(--bg);border:1px solid var(--ln);border-radius:22px;padding:34px 30px 28px}
+.pg-curve-box{margin:38px 0 0}
+.pg-curve-box+.pg-road-h{margin-top:20px}
 .pg-curve svg{width:100%;height:auto;display:block;overflow:visible}
 .pg-cv-line{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s cubic-bezier(.4,0,.2,1) .2s}
 .pg-curve-box.pg-in .pg-cv-line{stroke-dashoffset:0}
@@ -503,7 +503,20 @@
   <div class="pg-wrap">
     <p class="pg-eyebrow">10-MONTH ROADMAP</p>
     <h2 class="pg-h2">10개월, 영어가 이렇게 바뀝니다</h2>
-    <p class="pg-sub">아카데미로 토대를 만들고 스터디로 실전. 단계마다 더듬던 영어가 부서지고, 자연스러운 표현으로 다시 써져요.</p>
+    <p class="pg-sub">토대가 쌓이면 어느 순간 유창성이 가파르게 올라가요. 단계마다 더듬던 영어가 자연스러운 표현으로 다시 써집니다.</p>
+    <div class="pg-curve-box pg-reveal">
+      <svg viewBox="0 0 1000 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="단계가 쌓일수록 가파르게 상승하는 영어 실력 성장 곡선">
+        <line x1="46" y1="24" x2="46" y2="210" stroke="#e7e9ef" stroke-width="2"/>
+        <line x1="46" y1="210" x2="980" y2="210" stroke="#e7e9ef" stroke-width="2"/>
+        <text x="36" y="40" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12.5" font-weight="700" fill="#9aa3b2">유창</text>
+        <text x="36" y="208" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12.5" font-weight="700" fill="#9aa3b2">시작</text>
+        <path class="pg-cv-line" pathLength="1" d="M120,194 C232,189 300,181 373,171 C490,157 545,114 627,90 C722,62 802,50 880,44" fill="none" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round"/>
+        <g class="pg-cv-dot pg-cv-d1"><circle cx="120" cy="194" r="6.5" fill="#ef4444"/></g>
+        <g class="pg-cv-dot pg-cv-d2"><circle cx="373" cy="171" r="6.5" fill="#f87171"/></g>
+        <g class="pg-cv-dot pg-cv-d3"><circle cx="627" cy="90" r="7" fill="#f59e0b"/></g>
+        <g class="pg-cv-dot pg-cv-d4"><circle cx="880" cy="44" r="8" fill="#10b981"/></g>
+      </svg>
+    </div>
     <div class="pg-road-h">
       <div class="pg-phase">
         <div class="pg-phase-dot">1–3<small>개월</small></div>
@@ -557,28 +570,6 @@
           <div class="pg-ba-why"><b style="color:#0f6e56">왜?</b> ‘혀끝에 맴돈다’를 원어민은 <b>on the tip of my tongue</b>이라 해요 — ‘거의 생각났다’는 뉘앙스까지.</div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- GROWTH CURVE -->
-<section class="pg-curve">
-  <div class="pg-wrap">
-    <p class="pg-eyebrow g">GROWTH CURVE</p>
-    <h2 class="pg-h2">예상 성장 곡선</h2>
-    <p class="pg-sub">토대가 쌓이면, 어느 순간 유창성이 가파르게 올라갑니다.</p>
-    <div class="pg-curve-box pg-reveal">
-      <svg viewBox="0 0 720 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="시간이 지날수록 가파르게 상승하는 영어 실력 성장 곡선">
-        <line x1="56" y1="252" x2="688" y2="252" stroke="#e7e9ef" stroke-width="2"/>
-        <line x1="56" y1="40" x2="56" y2="252" stroke="#e7e9ef" stroke-width="2"/>
-        <text x="46" y="252" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#9aa3b2">시작</text>
-        <text x="46" y="52" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12" fill="#9aa3b2">유창</text>
-        <path class="pg-cv-line" pathLength="1" d="M64,236 C 200,224 268,214 360,176 C 452,138 520,74 660,52" fill="none" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round"/>
-        <g class="pg-cv-dot pg-cv-d1"><circle cx="64" cy="236" r="6" fill="#ef4444"/><text x="64" y="280" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12.5" font-weight="700" fill="#5a6680">1–3개월</text></g>
-        <g class="pg-cv-dot pg-cv-d2"><circle cx="248" cy="218" r="6" fill="#f87171"/><text x="248" y="280" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12.5" font-weight="700" fill="#5a6680">4–6개월</text></g>
-        <g class="pg-cv-dot pg-cv-d3"><circle cx="430" cy="150" r="6" fill="#f59e0b"/><text x="430" y="280" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12.5" font-weight="700" fill="#5a6680">7–9개월</text></g>
-        <g class="pg-cv-dot pg-cv-d4"><circle cx="660" cy="52" r="7" fill="#10b981"/><text x="660" y="280" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="12.5" font-weight="800" fill="#059669">10개월~</text></g>
-      </svg>
     </div>
     <p class="pg-order">중요한 건 <b>'순서'</b>입니다. 더박스는 레벨에 맞는 시작점을 잡아주고, <b>아카데미 → 스터디</b>로 자연스럽게 이어줍니다.</p>
   </div>
