@@ -85,7 +85,7 @@
       <hr class="rt-rule">
       <div class="rt-a">
         <p class="rt-meta"><span class="rt-lb rt-lb--g">아카데미 이후</span><span class="rt-note">번역 없이, 생각하자마자 바로</span></p>
-        <p class="rt-fluent">“I fell asleep while watching a movie.”</p>
+        <p class="rt-fluent"><span class="rt-fl1">“I fell asleep</span><span class="rt-fl2">while watching a movie.”</span></p>
         <svg class="rt-underline" viewBox="0 0 520 18" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M6,11 C 95,3 165,17 255,9 C 335,2 415,16 514,8" fill="none" stroke="#2D5BFF" stroke-width="4.5" stroke-linecap="round"/></svg>
       </div>
     </div>
@@ -110,9 +110,9 @@
 .rt-note{font-family:'Pretendard',-apple-system,sans-serif;font-size:17px;color:#9aa3b2}
 .rt-broken{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:32px;color:#b9c0cc;margin:0;letter-spacing:.2px}
 .rt-rule{border:0;height:1px;background:#e3e6ec;margin:34px 0}
-.rt-fluent{font-family:'Fraunces',serif;font-weight:900;font-size:44px;line-height:1.2;color:#10131a;margin:0;letter-spacing:-.5px}
+.rt-fluent{font-family:'Fraunces',serif;font-weight:900;font-size:40px;line-height:1.32;color:#10131a;margin:0;letter-spacing:-.5px}
 .rt-underline{display:block;width:72%;max-width:430px;height:16px;margin-top:6px}
-@media(max-width:680px){.rt{padding:68px 16px}.rt-title{font-size:27px}.rt-broken{font-size:24px}.rt-fluent{font-size:30px}.rt-underline{width:88%}}
+@media(max-width:680px){.rt{padding:68px 16px}.rt-title{font-size:27px}.rt-broken{font-size:24px}.rt-fluent{font-size:23px}.rt-underline{width:88%}}
 </style>
 <!-- ===== /REDESIGN (컨셉 J / 길+손그림, 사이트 톤) ===== -->
 <!-- ===== 이런 순간, 나만 그런 게 아니었어요 (원본 리스트형 유지) ===== -->
@@ -927,9 +927,10 @@
 .rt-art .rt-red,.rt-art .rt-blue,.rt-art .rt-circle{stroke-dasharray:1;stroke-dashoffset:1}
 .rt-art .rt-rt,.rt-art .rt-bt,.rt-art .rt-node,.rt-art .rt-spark{opacity:0}
 .rt-art,.rt-results{transition:opacity .35s ease}
-.rt-results .rt-broken,.rt-results .rt-fluent{-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-repeat:no-repeat;background-size:200% 100%;background-position:100% 0}
+.rt-results .rt-broken,.rt-results .rt-fluent span{-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-repeat:no-repeat;background-size:200% 100%;background-position:100% 0}
+.rt-results .rt-fluent span{display:block;white-space:nowrap}
 .rt-results .rt-broken{background-image:linear-gradient(to right,#10131a 50%,#dde1e8 50%)}
-.rt-results .rt-fluent{background-image:linear-gradient(to right,#10131a 50%,#dde1e8 50%)}
+.rt-results .rt-fluent span{background-image:linear-gradient(to right,#10131a 50%,#dde1e8 50%)}
 .rt-underline path{stroke-dasharray:1;stroke-dashoffset:1}
 .rt-wrap.rt-draw .rt-node{opacity:1;transition:opacity .4s ease}
 .rt-wrap.rt-draw .rt-red{stroke-dashoffset:0;transition:stroke-dashoffset 2.4s ease-in-out .2s}
@@ -943,7 +944,8 @@
 .rt-wrap.rt-draw .rt-bt{opacity:1;transition:opacity .4s ease 1s}
 .rt-wrap.rt-draw .rt-spark{opacity:1;transition:opacity .4s ease 1.35s}
 .rt-wrap.rt-draw .rt-broken{background-position:0 0;transition:background-position 5s ease 1.2s}
-.rt-wrap.rt-draw .rt-fluent{background-position:0 0;transition:background-position 2.4s ease 1.9s}
+.rt-wrap.rt-draw .rt-fl1{background-position:0 0;transition:background-position 1.2s ease 1.9s}
+.rt-wrap.rt-draw .rt-fl2{background-position:0 0;transition:background-position 1s ease 3.05s}
 .rt-wrap.rt-draw .rt-underline path{stroke-dashoffset:0;transition:stroke-dashoffset .7s ease 2.3s}
 .rt-comet{offset-distance:0%;opacity:0}
 .rt-comet-r{offset-path:path("M74,226 C 165,108 232,254 326,150 C 408,60 452,256 545,150")}
@@ -952,7 +954,7 @@
 .rt-wrap.rt-draw .rt-comet-b{animation:rtcometB .8s cubic-bezier(.3,.7,.2,1) .35s forwards}
 @keyframes rtcometR{0%{offset-distance:0%;opacity:0}8%{opacity:.9}90%{opacity:.9}100%{offset-distance:100%;opacity:0}}
 @keyframes rtcometB{0%{offset-distance:0%;opacity:0}14%{opacity:1}86%{opacity:1}100%{offset-distance:100%;opacity:0}}
-@media(prefers-reduced-motion:reduce){.rt-art .rt-red,.rt-art .rt-blue,.rt-art .rt-circle,.rt-underline path{stroke-dashoffset:0}.rt-art .rt-rt,.rt-art .rt-bt,.rt-art .rt-node,.rt-art .rt-spark{opacity:1}.rt-results .rt-broken,.rt-results .rt-fluent{background-position:0 0}.rt-comet{display:none}}
+@media(prefers-reduced-motion:reduce){.rt-art .rt-red,.rt-art .rt-blue,.rt-art .rt-circle,.rt-underline path{stroke-dashoffset:0}.rt-art .rt-rt,.rt-art .rt-bt,.rt-art .rt-node,.rt-art .rt-spark{opacity:1}.rt-results .rt-broken,.rt-results .rt-fluent span{background-position:0 0}.rt-comet{display:none}}
 </style>
 <script>
 (function(){
