@@ -616,10 +616,10 @@
         phs.forEach(function(p){p.classList.add('pg-notrans');p.classList.remove('pg-in');});
         requestAnimationFrame(function(){requestAnimationFrame(function(){
           phs.forEach(function(p){p.classList.remove('pg-notrans');});
-          phs.forEach(function(p,i){setTimeout(function(){p.classList.add('pg-in');}, i*300);});
+          phs.forEach(function(p,i){setTimeout(function(){p.classList.add('pg-in');}, i*3000);});
         });});
       }
-      var rio=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ playRoad(); setInterval(playRoad, 8500); rio.disconnect(); } });},{threshold:.2});
+      var rio=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ playRoad(); setInterval(playRoad, 17400); rio.disconnect(); } });},{threshold:.2});
       rio.observe(road);
     }
   }
