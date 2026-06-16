@@ -2499,14 +2499,14 @@
             el.style.transitionDelay = (i * 80) + 'ms';
         });
     </script>
-<!-- ===== intro 히어로 헤드라인 텍스트 스크램블(랜덤 글자 → 정착) — </body> 앞 주입 ===== -->
+<!-- ===== intro 히어로: 큰 글자 줌아웃(이목 끌기) → 스크램블(이목 유지) — </body> 앞 주입 ===== -->
 <style>
 .hero h1 .scr-dud{opacity:.6;font-weight:inherit}
 .hero h1 .scr-hide{opacity:0}
-.hero h1{transform-origin:center center;will-change:transform}
-.hero h1.hs-pop{animation:heroPop 4.6s ease-in-out infinite}
-@keyframes heroPop{0%{transform:scale(1)}3%{transform:scale(1.09)}7%{transform:scale(.99)}11%{transform:scale(1.03)}15%{transform:scale(1)}100%{transform:scale(1)}}
-@media(prefers-reduced-motion:reduce){.hero h1.hs-pop{animation:none}}
+.hero h1{transform-origin:center center;will-change:transform,opacity}
+.hero h1.hs-zoom{animation:heroZoom 1s cubic-bezier(.16,1,.3,1) both}
+@keyframes heroZoom{0%{transform:scale(1.5);opacity:0}28%{opacity:1}100%{transform:scale(1);opacity:1}}
+@media(prefers-reduced-motion:reduce){.hero h1.hs-zoom{animation:none}}
 </style>
 <script>
 (function(){
@@ -2544,18 +2544,21 @@
     var line1="";
     for(var n=h1.firstChild;n;n=n.nextSibling){ if(n.nodeName==="BR")break; if(n.nodeType===3)line1+=n.textContent; }
     line1=line1.trim()||"더박스에서는";
-    var s1=document.createElement("span");
+    var s1=document.createElement("span"); s1.textContent=line1;
     h1.innerHTML=""; h1.appendChild(s1); h1.appendChild(document.createElement("br"));
-    if(!em){em=document.createElement("em");} else em.textContent="";
-    h1.appendChild(em);
-    scramble(s1,line1,0);
-    scramble(em,line2,12);
-    setTimeout(function(){ h1.classList.add("hs-pop"); }, 2000);
+    if(!em){em=document.createElement("em");} em.textContent=line2; h1.appendChild(em);
+    // 1) 큰 글자에서 작아지며 등장 (이목 끌기)
+    h1.classList.add("hs-zoom");
+    // 2) 줌이 끝난 뒤 스크램블 (이목 유지), 이후 주기적 반복
+    setTimeout(function(){
+      scramble(s1,line1,0); scramble(em,line2,12);
+      setInterval(function(){ scramble(s1,line1,0); scramble(em,line2,12); }, 7000);
+    }, 1150);
   }
   if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",init); else init();
 })();
 </script>
-<!-- ===== /히어로 스크램블 ===== -->
+<!-- ===== /히어로 줌아웃→스크램블 ===== -->
 
 </body>
 
