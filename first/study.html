@@ -201,7 +201,7 @@
 .pp-hl::before{content:"";position:absolute;left:-3px;right:-5px;top:34%;bottom:6%;background:#ffce4d;opacity:.72;transform:rotate(-1.2deg);border-radius:48% 52% 50% 50%/62% 40% 60% 38%;z-index:-1;mix-blend-mode:multiply}
 .pp-sub{color:#5a6680;font-size:16.5px;margin:0 0 46px}
 .pp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px}
-.pp-card{background:#fff;border-radius:20px;padding:34px 18px 28px;box-shadow:0 12px 30px rgba(20,30,60,.06);transition:transform .2s ease,box-shadow .2s ease,outline-color .15s ease;cursor:pointer;position:relative;outline:2.5px solid transparent;outline-offset:-2px;-webkit-tap-highlight-color:transparent}
+.pp-card{background:#fff;border-radius:20px;padding:34px 18px 28px;box-shadow:0 12px 30px rgba(20,30,60,.06);transition:transform .2s ease,box-shadow .2s ease,outline-color .15s ease;cursor:default;position:relative;outline:2.5px solid transparent;outline-offset:-2px;-webkit-tap-highlight-color:transparent}
 .pp-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(20,30,60,.12)}
 .pp-card.sel{outline-color:var(--c);transform:translateY(-4px);box-shadow:0 18px 42px color-mix(in srgb,var(--c) 26%,transparent)}
 .pp-card.sel::after{content:"✓";position:absolute;top:11px;right:11px;width:24px;height:24px;border-radius:50%;background:var(--c);color:#fff;font-size:13px;font-weight:900;display:grid;place-items:center;animation:pppop .25s ease}
@@ -304,7 +304,7 @@
     </style>
     <script>
     (function(){
-      document.querySelectorAll('.pp-card').forEach(function(c){c.addEventListener('click',function(){c.classList.toggle('sel');});});
+      (function(){var cards=[].slice.call(document.querySelectorAll('.pp-card'));if(!cards.length)return;var i=0,go=false;function step(){cards.forEach(function(c){c.classList.remove('sel');});cards[i].classList.add('sel');i=(i+1)%cards.length;}function start(){if(go)return;go=true;step();setInterval(step,1300);}var sec=cards[0].closest('section')||cards[0];if('IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){start();io.disconnect();}});},{threshold:0.2});io.observe(sec);}else start();})();
       var chat=document.getElementById('scChat'); if(!chat) return;
       var body=document.getElementById('scBody'), msgs=[].slice.call(body.querySelectorAll('.sc-msg')), timers=[];
       function reset(){ timers.forEach(clearTimeout); timers=[]; msgs.forEach(function(m){m.classList.remove('show');m.style.display='none';}); }
