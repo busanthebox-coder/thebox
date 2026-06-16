@@ -86,15 +86,32 @@
 .pg-hero-tags span{display:inline-flex;align-items:center;gap:7px}
 .pg-dot{width:6px;height:6px;border-radius:50%;background:var(--red);display:inline-block}
 
-/* ── WHY ACADEMY FIRST ── */
+/* ── WHY ACADEMY FIRST (통념→진실 키네틱) ── */
 .pg-why{background:#fff;padding:104px 24px}
-.pg-why-list{max-width:880px;margin:0 auto;border-top:1px solid var(--ln)}
-.pg-why-item{display:grid;grid-template-columns:96px 1fr;gap:8px;padding:34px 6px;border-bottom:1px solid var(--ln);align-items:start}
-.pg-why-no{font-family:'Fraunces',serif;font-weight:900;font-size:46px;line-height:1;color:var(--red);opacity:.92}
-.pg-why-tag{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.04em;color:var(--red-deep);background:#fdeaea;padding:5px 11px;border-radius:8px;margin-bottom:11px}
-.pg-why-item h3{font-size:22px;font-weight:800;letter-spacing:-.5px;margin:0 0 9px;color:var(--ink)}
-.pg-why-item p{font-size:16.5px;line-height:1.7;color:var(--mut);margin:0;word-break:keep-all}
-.pg-why-item p b{color:var(--ink);font-weight:700}
+.pw-list{max-width:620px;margin:46px auto 0;display:flex;flex-direction:column;gap:26px}
+.pw-row{border-bottom:1px solid #eef0f4;padding-bottom:26px}
+.pw-row:last-child{border-bottom:0;padding-bottom:0}
+.pw-tag{display:inline-block;font-size:12.5px;font-weight:800;letter-spacing:.02em;color:var(--red-deep);background:#fdeaea;padding:5px 12px;border-radius:8px;margin-bottom:13px}
+.pw-morph{position:relative;height:1.8em;margin-bottom:10px}
+.pw-myth,.pw-truth{position:absolute;left:0;top:0;white-space:nowrap;line-height:1.8em;font-size:clamp(16px,2.4vw,21px);letter-spacing:-.4px}
+.pw-myth{color:#9aa3b2;font-weight:600;text-decoration:line-through;text-decoration-color:#cfd5df;clip-path:inset(0 0 0 0);transition:clip-path .95s cubic-bezier(.5,0,.2,1)}
+.pw-truth{color:var(--ink);font-weight:800;clip-path:inset(0 100% 0 0);transition:clip-path .95s cubic-bezier(.4,0,.2,1)}
+.pw-myth i,.pw-truth i{font-style:normal;font-weight:900;margin-right:8px}
+.pw-myth i{color:#c4cad6}.pw-truth i{color:var(--red)}
+.pw-desc{font-size:15px;color:var(--mut);line-height:1.65;margin:0;word-break:keep-all;opacity:0;transition:opacity .6s ease}
+.pw-desc b{color:var(--ink);font-weight:700}
+.pw-list.pg-in .pw-row:nth-child(1) .pw-myth{clip-path:inset(0 100% 0 0);transition-delay:.5s}
+.pw-list.pg-in .pw-row:nth-child(1) .pw-truth{clip-path:inset(0 0 0 0);transition-delay:.5s}
+.pw-list.pg-in .pw-row:nth-child(1) .pw-desc{opacity:1;transition-delay:1.15s}
+.pw-list.pg-in .pw-row:nth-child(2) .pw-myth{clip-path:inset(0 100% 0 0);transition-delay:1.4s}
+.pw-list.pg-in .pw-row:nth-child(2) .pw-truth{clip-path:inset(0 0 0 0);transition-delay:1.4s}
+.pw-list.pg-in .pw-row:nth-child(2) .pw-desc{opacity:1;transition-delay:2.05s}
+.pw-list.pg-in .pw-row:nth-child(3) .pw-myth{clip-path:inset(0 100% 0 0);transition-delay:2.3s}
+.pw-list.pg-in .pw-row:nth-child(3) .pw-truth{clip-path:inset(0 0 0 0);transition-delay:2.3s}
+.pw-list.pg-in .pw-row:nth-child(3) .pw-desc{opacity:1;transition-delay:2.95s}
+.pw-list.pg-in .pw-row:nth-child(4) .pw-myth{clip-path:inset(0 100% 0 0);transition-delay:3.2s}
+.pw-list.pg-in .pw-row:nth-child(4) .pw-truth{clip-path:inset(0 0 0 0);transition-delay:3.2s}
+.pw-list.pg-in .pw-row:nth-child(4) .pw-desc{opacity:1;transition-delay:3.85s}
 
 /* ── LEVEL / FLOW ── */
 .pg-level{background:var(--bg);padding:104px 24px}
@@ -234,7 +251,7 @@
 @media(max-width:860px){
   .pg-h1{font-size:36px}.pg-h2{font-size:28px}.pg-lead{font-size:17px}.pgp-title{font-size:30px}
   .pg-vs-grid{grid-template-columns:1fr}
-  .pg-why-item{grid-template-columns:60px 1fr}.pg-why-no{font-size:34px}
+  .pw-list{max-width:100%;margin-top:36px}
   .pg-lv-row{flex-wrap:wrap;gap:12px}.pg-lv-arrow{display:none}.pg-lv-rec{margin-left:auto}
   .pg-vs-truth{font-size:18px}
   .pg-tbl table{font-size:13px}.pg-tbl th,.pg-tbl td{padding:11px 9px}.pg-tbl tbody th{width:84px}
@@ -246,6 +263,7 @@
   .pg-cv-line{stroke-dashoffset:0!important}.pg-cv-dot{opacity:1!important}
   .pg-fl{stroke-dashoffset:0!important}.pg-fn{opacity:1!important}
   .pgp-body h3{background-size:100% 40%}
+  .pw-myth{clip-path:inset(0 100% 0 0)}.pw-truth{clip-path:inset(0 0 0 0)}.pw-desc{opacity:1}
 }
 </style>
 
@@ -274,40 +292,28 @@
   <div class="pg-wrap">
     <p class="pg-eyebrow">WHY ACADEMY FIRST</p>
     <h2 class="pg-h2">왜 기초일수록 <span class="pg-uline">아카데미부터</span>일까요?</h2>
-    <p class="pg-sub">원어민 스터디는 좋지만, 토대가 없으면 늘지 않습니다. 교육학이 말하는 4가지 이유.</p>
-    <div class="pg-why-list">
-      <article class="pg-why-item pg-reveal">
-        <div class="pg-why-no">01</div>
-        <div class="pg-why-body">
-          <span class="pg-why-tag">i + 1 · 이해 가능한 입력</span>
-          <h3>뇌는 처리 가능한 정보만 받아들입니다</h3>
-          <p>지금 수준보다 <b>딱 한 단계 높은 입력</b>일 때만 학습이 일어나요. 너무 어려운 대화는 그냥 소음으로 흘러갑니다.</p>
-        </div>
-      </article>
-      <article class="pg-why-item pg-reveal">
-        <div class="pg-why-no">02</div>
-        <div class="pg-why-body">
-          <span class="pg-why-tag">정의적 여과 가설</span>
-          <h3>불안이 높으면 아는 것도 막힙니다</h3>
-          <p>"틀리면 어쩌지"가 크면 입이 안 떨어져요. <b>안전한 소그룹</b>에서 먼저 자신감을 쌓아야 실전에서 터집니다.</p>
-        </div>
-      </article>
-      <article class="pg-why-item pg-reveal">
-        <div class="pg-why-no">03</div>
-        <div class="pg-why-body">
-          <span class="pg-why-tag">ZPD · 스캐폴딩</span>
-          <h3>보조 → 독립, 순서가 중요합니다</h3>
-          <p>처음엔 강사가 잡아주고, 익숙해지면 손을 뗍니다. <b>받쳐주는 단계 없이 실전부터</b>면 대부분 중도에 멈춰요.</p>
-        </div>
-      </article>
-      <article class="pg-why-item pg-reveal">
-        <div class="pg-why-no">04</div>
-        <div class="pg-why-body">
-          <span class="pg-why-tag">화석화 (Fossilization)</span>
-          <h3>틀린 습관은 나중에 10배 힘듭니다</h3>
-          <p>잘못 굳은 표현은 고치는 데 몇 배의 시간이 들어요. <b>처음에 제대로</b> 잡는 게 가장 빠른 길입니다.</p>
-        </div>
-      </article>
+    <p class="pg-sub">많이들 오해하지만 — 교육학이 말하는 진실은 정반대입니다.</p>
+    <div class="pw-list pg-reveal">
+      <div class="pw-row">
+        <span class="pw-tag">i + 1 · 이해 가능한 입력</span>
+        <div class="pw-morph"><span class="pw-myth"><i>✕</i>많이 듣다 보면 알아서 는다</span><span class="pw-truth"><i>✓</i>한 단계 높은 입력일 때만 는다</span></div>
+        <p class="pw-desc">지금보다 <b>딱 한 단계 높은 입력</b>일 때만 학습이 일어나요. 너무 어려운 대화는 그냥 소음으로 흘러갑니다.</p>
+      </div>
+      <div class="pw-row">
+        <span class="pw-tag">정의적 여과 가설</span>
+        <div class="pw-morph"><span class="pw-myth"><i>✕</i>실전에서 부딪혀야 빨리 는다</span><span class="pw-truth"><i>✓</i>불안하면 아는 것도 막힌다</span></div>
+        <p class="pw-desc">"틀리면 어쩌지"가 크면 입이 안 떨어져요. <b>안전한 소그룹</b>에서 자신감을 먼저 쌓아야 실전에서 터집니다.</p>
+      </div>
+      <div class="pw-row">
+        <span class="pw-tag">ZPD · 스캐폴딩</span>
+        <div class="pw-morph"><span class="pw-myth"><i>✕</i>바로 원어민 대화부터 하면 된다</span><span class="pw-truth"><i>✓</i>받쳐주다 손 떼는 순서가 중요</span></div>
+        <p class="pw-desc">처음엔 강사가 잡아주고, 익숙해지면 손을 뗍니다. <b>받쳐주는 단계 없이 실전부터</b>면 대부분 중도에 멈춰요.</p>
+      </div>
+      <div class="pw-row">
+        <span class="pw-tag">화석화 (Fossilization)</span>
+        <div class="pw-morph"><span class="pw-myth"><i>✕</i>일단 말하고 나중에 고치자</span><span class="pw-truth"><i>✓</i>틀린 습관은 나중에 10배 힘들다</span></div>
+        <p class="pw-desc">잘못 굳은 표현은 고치는 데 몇 배의 시간이 들어요. <b>처음에 제대로</b> 잡는 게 가장 빠른 길입니다.</p>
+      </div>
     </div>
   </div>
 </section>
