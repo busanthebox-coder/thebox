@@ -49,29 +49,29 @@
     <div class="rt-art">
       <svg viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="번역하는 꼬인 길은 3~5초, 영어로 바로 가는 매끈한 길은 0.5초">
         <!-- start -->
-        <circle cx="58" cy="232" r="11" fill="#1f2a44"/>
-        <text x="58" y="198" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="15" font-weight="800" fill="#1f2a44">생각</text>
-        <text x="58" y="266" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="11.5" fill="#9aa3b2">한국어</text>
+        <circle class="rt-node" cx="58" cy="232" r="11" fill="#1f2a44"/>
+        <text class="rt-node" x="58" y="198" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="15" font-weight="800" fill="#1f2a44">생각</text>
+        <text class="rt-node" x="58" y="266" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="11.5" fill="#9aa3b2">한국어</text>
 
         <!-- 지금: tangled red route (hand-drawn) -->
-        <path d="M74,226 C 165,108 232,254 326,150 C 408,60 452,256 545,150" fill="none" stroke="#ef4444" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <text x="206" y="100" font-family="Pretendard,sans-serif" font-size="19" font-weight="700" fill="#ef6b6b" transform="rotate(-6 206 100)">단어?</text>
-        <text x="392" y="256" font-family="Pretendard,sans-serif" font-size="19" font-weight="700" fill="#ef6b6b" transform="rotate(4 392 256)">문법?</text>
-        <text x="496" y="100" font-family="Pretendard,sans-serif" font-size="19" font-weight="700" fill="#ef6b6b" transform="rotate(-3 496 100)">어순?</text>
-        <g transform="translate(566,150)"><text text-anchor="middle" y="7" font-size="22" fill="#ef4444">✕</text></g>
-        <text x="600" y="118" font-family="Pretendard,sans-serif" font-size="20" font-weight="700" fill="#ef4444">지금</text>
-        <text x="600" y="176" font-family="Fraunces,serif" font-size="58" font-weight="900" fill="#ccd2dd" letter-spacing="-2">3–5<tspan font-family="Pretendard,sans-serif" font-size="24" fill="#c4cad4" dx="2">초</tspan></text>
+        <path class="rt-red" pathLength="1" d="M74,226 C 165,108 232,254 326,150 C 408,60 452,256 545,150" fill="none" stroke="#ef4444" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text class="rt-rt rt-rt1" x="206" y="100" font-family="Pretendard,sans-serif" font-size="19" font-weight="700" fill="#ef6b6b" transform="rotate(-6 206 100)">단어?</text>
+        <text class="rt-rt rt-rt2" x="392" y="256" font-family="Pretendard,sans-serif" font-size="19" font-weight="700" fill="#ef6b6b" transform="rotate(4 392 256)">문법?</text>
+        <text class="rt-rt rt-rt3" x="496" y="100" font-family="Pretendard,sans-serif" font-size="19" font-weight="700" fill="#ef6b6b" transform="rotate(-3 496 100)">어순?</text>
+        <g class="rt-rt rt-rt4" transform="translate(566,150)"><text text-anchor="middle" y="7" font-size="22" fill="#ef4444">✕</text></g>
+        <text class="rt-rt rt-rt4" x="600" y="118" font-family="Pretendard,sans-serif" font-size="20" font-weight="700" fill="#ef4444">지금</text>
+        <text class="rt-rt rt-rt4" x="600" y="176" font-family="Fraunces,serif" font-size="58" font-weight="900" fill="#ccd2dd" letter-spacing="-2">3–5<tspan font-family="Pretendard,sans-serif" font-size="24" fill="#c4cad4" dx="2">초</tspan></text>
 
         <!-- 아카데미: smooth blue route -->
-        <path d="M74,240 C 320,300 430,332 560,330" fill="none" stroke="#2D5BFF" stroke-width="7" stroke-linecap="round"/>
-        <g transform="translate(566,330)"><text text-anchor="middle" y="7" font-size="22" fill="#2D5BFF">✓</text></g>
-        <text x="600" y="300" font-family="Pretendard,sans-serif" font-size="20" font-weight="700" fill="#2D5BFF">아카데미 이후</text>
-        <text x="600" y="392" font-family="Fraunces,serif" font-size="98" font-weight="900" fill="#2D5BFF" letter-spacing="-3">0.5<tspan font-family="Pretendard,sans-serif" font-size="40" fill="#2D5BFF" dx="2">초</tspan></text>
+        <path class="rt-blue" pathLength="1" d="M74,240 C 320,300 430,332 560,330" fill="none" stroke="#2D5BFF" stroke-width="7" stroke-linecap="round"/>
+        <g class="rt-bt" transform="translate(566,330)"><text text-anchor="middle" y="7" font-size="22" fill="#2D5BFF">✓</text></g>
+        <text class="rt-bt" x="600" y="300" font-family="Pretendard,sans-serif" font-size="20" font-weight="700" fill="#2D5BFF">아카데미 이후</text>
+        <text class="rt-bt rt-bt-big" x="600" y="392" font-family="Fraunces,serif" font-size="98" font-weight="900" fill="#2D5BFF" letter-spacing="-3">0.5<tspan font-family="Pretendard,sans-serif" font-size="40" fill="#2D5BFF" dx="2">초</tspan></text>
         <!-- hand-drawn circle around 0.5초 -->
-        <path d="M598,316 C 556,316 543,356 562,382 C 585,410 706,414 786,400 C 838,390 846,340 821,322 C 800,307 700,306 612,314" fill="none" stroke="#2D5BFF" stroke-width="2.6" stroke-linecap="round" opacity=".85"/>
+        <path class="rt-circle" pathLength="1" d="M598,316 C 556,316 543,356 562,382 C 585,410 706,414 786,400 C 838,390 846,340 821,322 C 800,307 700,306 612,314" fill="none" stroke="#2D5BFF" stroke-width="2.6" stroke-linecap="round" opacity=".85"/>
         <!-- sparkles -->
-        <path d="M548,300 C 549,305 552,308 557,309 552,310 549,313 548,318 547,313 544,310 539,309 544,308 547,305 548,300Z" fill="#e8a72e"/>
-        <path d="M828,326 C 829,330 831,332 835,333 831,334 829,336 828,340 827,336 825,334 821,333 825,332 827,330 828,326Z" fill="#2D5BFF"/>
+        <path class="rt-spark" d="M548,300 C 549,305 552,308 557,309 552,310 549,313 548,318 547,313 544,310 539,309 544,308 547,305 548,300Z" fill="#e8a72e"/>
+        <path class="rt-spark" d="M828,326 C 829,330 831,332 835,333 831,334 829,336 828,340 827,336 825,334 821,333 825,332 827,330 828,326Z" fill="#2D5BFF"/>
       </svg>
     </div>
 
@@ -84,7 +84,7 @@
       <div class="rt-a">
         <p class="rt-meta"><span class="rt-lb rt-lb--g">아카데미 이후</span><span class="rt-note">번역 없이, 생각하자마자 바로</span></p>
         <p class="rt-fluent">“I fell asleep while watching a movie.”</p>
-        <svg class="rt-underline" viewBox="0 0 520 18" preserveAspectRatio="none" aria-hidden="true"><path d="M6,11 C 95,3 165,17 255,9 C 335,2 415,16 514,8" fill="none" stroke="#2D5BFF" stroke-width="4.5" stroke-linecap="round"/></svg>
+        <svg class="rt-underline" viewBox="0 0 520 18" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M6,11 C 95,3 165,17 255,9 C 335,2 415,16 514,8" fill="none" stroke="#2D5BFF" stroke-width="4.5" stroke-linecap="round"/></svg>
       </div>
     </div>
   </div>
@@ -921,4 +921,35 @@
 @media(max-width:560px){.acp{padding:64px 16px}.acp-title{font-size:27px}}
 </style>
 <!-- ===== /REDESIGN: 아카데미 수강 금액 ===== -->
+<style>
+.rt-art .rt-red,.rt-art .rt-blue,.rt-art .rt-circle{stroke-dasharray:1;stroke-dashoffset:1}
+.rt-art .rt-rt,.rt-art .rt-bt,.rt-art .rt-node,.rt-art .rt-spark{opacity:0}
+.rt-results .rt-broken,.rt-results .rt-fluent{opacity:0}
+.rt-underline path{stroke-dasharray:1;stroke-dashoffset:1}
+.rt-wrap.rt-draw .rt-node{opacity:1;transition:opacity .4s ease}
+.rt-wrap.rt-draw .rt-red{stroke-dashoffset:0;transition:stroke-dashoffset 2.4s ease-in-out .2s}
+.rt-wrap.rt-draw .rt-blue{stroke-dashoffset:0;transition:stroke-dashoffset .8s cubic-bezier(.2,.7,.2,1) .35s}
+.rt-wrap.rt-draw .rt-circle{stroke-dashoffset:0;transition:stroke-dashoffset .7s ease 1.15s}
+.rt-wrap.rt-draw .rt-rt{opacity:1;transition:opacity .45s ease}
+.rt-wrap.rt-draw .rt-rt1{transition-delay:.6s}
+.rt-wrap.rt-draw .rt-rt2{transition-delay:1.1s}
+.rt-wrap.rt-draw .rt-rt3{transition-delay:1.6s}
+.rt-wrap.rt-draw .rt-rt4{transition-delay:2.2s}
+.rt-wrap.rt-draw .rt-bt{opacity:1;transition:opacity .4s ease 1s}
+.rt-wrap.rt-draw .rt-spark{opacity:1;transition:opacity .4s ease 1.35s}
+.rt-wrap.rt-draw .rt-broken{opacity:1;transition:opacity 1s ease 1.3s}
+.rt-wrap.rt-draw .rt-fluent{opacity:1;transition:opacity .5s ease 1.9s}
+.rt-wrap.rt-draw .rt-underline path{stroke-dashoffset:0;transition:stroke-dashoffset .7s ease 2.3s}
+@media(prefers-reduced-motion:reduce){.rt-art .rt-red,.rt-art .rt-blue,.rt-art .rt-circle,.rt-underline path{stroke-dashoffset:0}.rt-art .rt-rt,.rt-art .rt-bt,.rt-art .rt-node,.rt-art .rt-spark,.rt-results .rt-broken,.rt-results .rt-fluent{opacity:1}}
+</style>
+<script>
+(function(){
+  var w=document.querySelector('.rt-wrap'); if(!w) return;
+  if(!('IntersectionObserver' in window)){ w.classList.add('rt-draw'); return; }
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){
+    if(e.isIntersecting && e.intersectionRatio>=0.3){ w.classList.add('rt-draw'); io.disconnect(); }
+  });},{threshold:[0,0.3]});
+  io.observe(w);
+})();
+</script>
 </body></html>
