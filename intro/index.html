@@ -1513,14 +1513,14 @@
 .sx-hl{position:relative;white-space:nowrap;color:#fff}
 .sx-hl::after{content:"";position:absolute;left:-2px;right:-2px;bottom:-6px;height:9px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='12'><path d='M4,8 C60,2 120,11 175,5 C195,3 210,7 216,6' fill='none' stroke='%23ef4444' stroke-width='3.6' stroke-linecap='round'/></svg>") no-repeat center/100% 100%}
 .sx-sub{color:rgba(255,255,255,.55);font-size:17px;line-height:1.7;margin:0}
-.sx-wrap{position:relative;max-width:1440px;margin:0 auto}
+.sx-wrap{position:relative;max-width:1560px;margin:0 auto}
 .sx-stage{position:relative;height:680px;perspective:2000px;transform-style:preserve-3d}
-.sx-card{position:absolute;left:50%;top:50%;width:540px;height:632px;border-radius:26px;overflow:hidden;background:#16171f;border:1px solid rgba(255,255,255,.09);box-shadow:0 40px 80px rgba(0,0,0,.5);transition:transform .6s cubic-bezier(.2,.7,.2,1),opacity .55s;will-change:transform;cursor:pointer}
-.sx-img{height:392px;background:#1c1015 center/cover no-repeat;position:relative}
+.sx-card{position:absolute;left:50%;top:50%;width:700px;height:620px;border-radius:26px;overflow:hidden;background:#16171f;border:1px solid rgba(255,255,255,.09);box-shadow:0 40px 80px rgba(0,0,0,.5);transition:transform .6s cubic-bezier(.2,.7,.2,1),opacity .55s;will-change:transform;cursor:pointer}
+.sx-img{height:390px;background:#1c1015 center/cover no-repeat;position:relative}
 .sx-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,14,19,0) 48%,rgba(13,14,19,.5) 100%)}
 .sx-cat{position:absolute;top:18px;left:18px;z-index:2;background:rgba(0,0,0,.55);backdrop-filter:blur(4px);color:#fff;font-size:14px;font-weight:800;letter-spacing:.12em;padding:8px 15px;border-radius:9px}
 .sx-num{position:absolute;top:16px;right:20px;z-index:2;color:rgba(255,255,255,.9);font-size:22px;font-weight:800;text-shadow:0 1px 6px rgba(0,0,0,.5)}
-.sx-body{padding:28px 32px;position:relative;height:240px}
+.sx-body{padding:26px 34px;position:relative;height:230px}
 .sx-brand{color:#f87171;font-size:13px;font-weight:800;letter-spacing:.1em;margin-bottom:12px}
 .sx-ctitle{color:#fff;font-size:29px;font-weight:800;margin:0 0 12px;letter-spacing:-.5px}
 .sx-desc{color:rgba(255,255,255,.7);font-size:17.5px;line-height:1.55;margin:0}
@@ -1544,7 +1544,7 @@
     var stage=document.getElementById('sxStage'); if(!stage||stage.dataset.on) return; stage.dataset.on='1';
     var cards=[].slice.call(stage.querySelectorAll('.sx-card')), n=cards.length, cur=0;
     var dots=[].slice.call(document.querySelectorAll('#sxDots span'));
-    function gap(){ return window.innerWidth<900?188:392; }
+    function gap(){ return window.innerWidth<900?188:460; }
     function layout(){
       var g=gap();
       cards.forEach(function(c,idx){
