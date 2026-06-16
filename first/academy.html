@@ -1,1093 +1,924 @@
 <!DOCTYPE html>
-
 <html lang="ko">
-
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>THE BOX 아카데미 — 체계적 영어 문법 교정</title>
-  <meta name="description" content="THE BOX 아카데미 — 영어로 말하는 방법부터 소통하는 방법까지. 더박스 아카데미에서 기초부터 프리토킹까지 완성하세요.">
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📦</text></svg>">
-  <link as="style" crossorigin=""
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css" rel="stylesheet" />
-  <link href="styles.css" rel="stylesheet" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>body{margin:0;background:#fff}</style>
 </head>
-
 <body>
-  <nav class="topbar" id="topbar">
-    <div class="container topbar__inner">
-      <a class="logo" href="index.html">THE BOX</a>
-      <div class="topbar__actions">
-        <a class="btn btn--secondary" href="programs.html">시스템 안내</a>
-        <a class="btn btn--secondary" href="study.html">스터디</a>
-        <a class="btn btn--secondary" href="academy.html">아카데미</a>
-        <a class="btn btn--secondary" href="level-test.html">레벨 테스트</a>
-        <a class="btn btn--primary" href="https://m.booking.naver.com/booking/13/bizes/839473" target="_blank">상담 예약</a>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="메뉴 열기">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M3 12h18M3 6h18M3 18h18" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </nav>
+<header style="position:sticky;top:0;z-index:200;background:rgba(255,255,255,.93);backdrop-filter:saturate(160%) blur(10px);-webkit-backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid #eef0f4;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-family:'Pretendard',-apple-system,sans-serif">
+  <a href="../intro/" style="font-weight:800;font-size:21px;color:#111;text-decoration:none;letter-spacing:-.6px">THE <span style="color:#ef4444">BOX</span></a>
+  <a href="https://busanthebox-coder.github.io/consultation/" style="font-weight:800;font-size:14px;color:#fff;background:#111;padding:10px 20px;border-radius:11px;text-decoration:none">상담 예약</a>
+</header>
+<!-- ===== academy: 메인 히어로 (수업 사진 + 카피) — 흰 배경 ===== -->
+<section class="ah">
+  <div class="ah-wrap">
+    <span class="ah-badge">THE BOX ACADEMY</span>
+    <h1 class="ah-title">영어로 말하는 방법부터<br><span class="ah-em">소통하는 방법</span>까지</h1>
+    <p class="ah-sub">더박스 아카데미에서 기초부터 프리토킹까지,<br>단계별로 완성하세요.</p>
+  </div>
+  <figure class="ah-photo">
+    <img src="images/academy/academy_main.jpg" alt="더박스 아카데미 수업 — 화이트보드로 문법 구조를 설명하는 장면">
+  </figure>
+</section>
+<style>
+.ah{background:#fff;padding:86px 24px 78px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f;text-align:center}
+.ah *{box-sizing:border-box}
+.ah-wrap{max-width:900px;margin:0 auto}
+.ah-badge{display:inline-block;background:#2D5BFF;color:#fff;font-weight:800;font-size:13px;letter-spacing:.13em;padding:9px 22px;border-radius:999px;margin-bottom:28px;box-shadow:0 8px 20px rgba(45,91,255,.28)}
+.ah-title{font-size:44px;font-weight:800;letter-spacing:-1.6px;line-height:1.3;margin:0 0 18px;color:#10131a}
+.ah-em{color:#2D5BFF}
+.ah-sub{color:#5a6680;font-size:17px;line-height:1.72;margin:0 0 52px}
+.ah-callout{max-width:680px;margin:0 auto 50px;background:linear-gradient(135deg,#eef0ff,#f3f0ff);border:1px solid #dfe2fb;border-radius:18px;padding:24px 28px}
+.ah-callout p{margin:0;color:#5b5fd6;font-weight:700;font-size:16px;line-height:1.75}
+.ah-callout u{text-decoration-color:#a9aef0;text-underline-offset:4px}
+.ah-photo{max-width:1100px;margin:0 auto;border-radius:24px;overflow:hidden;box-shadow:0 26px 64px rgba(20,30,60,.17)}
+.ah-photo img{width:100%;height:auto;display:block}
+@media(max-width:600px){.ah{padding:54px 16px 44px}.ah-title{font-size:27px;letter-spacing:-1px}.ah-sub{font-size:15px}.ah-callout{padding:18px 20px;margin-bottom:36px}.ah-callout p{font-size:14px}.ah-badge{margin-bottom:22px}}
+</style>
+<!-- ===== /academy: 메인 히어로 ===== -->
+<!-- ===== REDESIGN (컨셉 J / 길 일러스트 + 손그림, 사이트 톤 통일): 왜 영어가 입에서 안 나올까요? ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,900;1,9..144,500&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<section class="rt">
+  <div class="rt-wrap">
+    <p class="rt-eyebrow">왜 영어가 안 나올까?</p>
+    <h2 class="rt-title">왜 영어가 입에서<br><span class="rt-hl">안 나올까요?</span></h2>
+    <p class="rt-sub">실력이 없어서가 아니에요. 머릿속 한국어를 <b>단어 찾고 · 문법 따지고 · 어순 맞추다</b> 보면, 결국 말할 타이밍을 놓치고 멈춥니다.</p>
 
-  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
-  <div class="mobile-nav-panel" id="mobileNav">
-    <div class="mobile-nav-panel__header">
-      <a href="index.html" class="logo">THE BOX</a>
-      <button class="mobile-nav-close" id="mobileNavClose" aria-label="메뉴 닫기">✕</button>
+    <div class="rt-art">
+      <svg viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="번역하는 꼬인 길은 3~5초, 영어로 바로 가는 매끈한 길은 0.5초">
+        <!-- start -->
+        <circle cx="58" cy="232" r="11" fill="#1f2a44"/>
+        <text x="58" y="198" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="15" font-weight="800" fill="#1f2a44">생각</text>
+        <text x="58" y="266" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="11.5" fill="#9aa3b2">한국어</text>
+
+        <!-- 지금: tangled red route (hand-drawn) -->
+        <path d="M74,226 C 165,108 232,254 326,150 C 408,60 452,256 545,150" fill="none" stroke="#ef4444" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="206" y="100" font-family="Pretendard,sans-serif" font-size="19" font-weight="700" fill="#ef6b6b" transform="rotate(-6 206 100)">단어?</text>
+        <text x="392" y="256" font-family="Pretendard,sans-serif" font-size="19" font-weight="700" fill="#ef6b6b" transform="rotate(4 392 256)">문법?</text>
+        <text x="496" y="100" font-family="Pretendard,sans-serif" font-size="19" font-weight="700" fill="#ef6b6b" transform="rotate(-3 496 100)">어순?</text>
+        <g transform="translate(566,150)"><text text-anchor="middle" y="7" font-size="22" fill="#ef4444">✕</text></g>
+        <text x="600" y="118" font-family="Pretendard,sans-serif" font-size="20" font-weight="700" fill="#ef4444">지금</text>
+        <text x="600" y="176" font-family="Fraunces,serif" font-size="58" font-weight="900" fill="#ccd2dd" letter-spacing="-2">3–5<tspan font-family="Pretendard,sans-serif" font-size="24" fill="#c4cad4" dx="2">초</tspan></text>
+
+        <!-- 아카데미: smooth blue route -->
+        <path d="M74,240 C 320,300 430,332 560,330" fill="none" stroke="#2D5BFF" stroke-width="7" stroke-linecap="round"/>
+        <g transform="translate(566,330)"><text text-anchor="middle" y="7" font-size="22" fill="#2D5BFF">✓</text></g>
+        <text x="600" y="300" font-family="Pretendard,sans-serif" font-size="20" font-weight="700" fill="#2D5BFF">아카데미 이후</text>
+        <text x="600" y="392" font-family="Fraunces,serif" font-size="98" font-weight="900" fill="#2D5BFF" letter-spacing="-3">0.5<tspan font-family="Pretendard,sans-serif" font-size="40" fill="#2D5BFF" dx="2">초</tspan></text>
+        <!-- hand-drawn circle around 0.5초 -->
+        <path d="M598,316 C 556,316 543,356 562,382 C 585,410 706,414 786,400 C 838,390 846,340 821,322 C 800,307 700,306 612,314" fill="none" stroke="#2D5BFF" stroke-width="2.6" stroke-linecap="round" opacity=".85"/>
+        <!-- sparkles -->
+        <path d="M548,300 C 549,305 552,308 557,309 552,310 549,313 548,318 547,313 544,310 539,309 544,308 547,305 548,300Z" fill="#e8a72e"/>
+        <path d="M828,326 C 829,330 831,332 835,333 831,334 829,336 828,340 827,336 825,334 821,333 825,332 827,330 828,326Z" fill="#2D5BFF"/>
+      </svg>
     </div>
-    <div class="mobile-nav-panel__links">
-      <a href="index.html">🏠 홈</a>
-      <a href="programs.html">🗺 시스템 안내</a>
-      <a href="study.html">🗣️ 원어민 스터디</a>
-      <a href="academy.html" class="active">📘 아카데미</a>
-      <a href="level-test.html">📝 레벨 테스트</a>
-    </div>
-    <div class="mobile-nav-panel__cta">
-      <a href="https://m.booking.naver.com/booking/13/bizes/839473" target="_blank">⚡ 상담 예약하기</a>
+
+    <div class="rt-results">
+      <div class="rt-r">
+        <p class="rt-meta"><span class="rt-lb rt-lb--r">지금</span><span class="rt-note">단어·문법·어순 찾다가 결국 멈춤</span></p>
+        <p class="rt-broken">“I… um… movie…?”</p>
+      </div>
+      <hr class="rt-rule">
+      <div class="rt-a">
+        <p class="rt-meta"><span class="rt-lb rt-lb--g">아카데미 이후</span><span class="rt-note">번역 없이, 생각하자마자 바로</span></p>
+        <p class="rt-fluent">“I fell asleep while watching a movie.”</p>
+        <svg class="rt-underline" viewBox="0 0 520 18" preserveAspectRatio="none" aria-hidden="true"><path d="M6,11 C 95,3 165,17 255,9 C 335,2 415,16 514,8" fill="none" stroke="#2D5BFF" stroke-width="4.5" stroke-linecap="round"/></svg>
+      </div>
     </div>
   </div>
-  <!-- Hero -->
-  <header class="page-hero page-hero--academy">
-    <div class="container">
-      <div class="page-hero__badge reveal" style="background:#6366f1">ACADEMY</div>
-      <h1 class="reveal">영어로 말하는 방법부터<br /><strong style="color:var(--primary)">소통하는 방법</strong>까지</h1>
-      <p class="reveal subtitle">더박스 아카데미에서 기초부터 프리토킹까지,<br />단계별로 완성하세요.</p>
-      <div class="reveal"
-        style="margin-top:30px;padding:20px;background:rgba(99,102,241,0.1);border-radius:16px;border:2px solid #6366f1;max-width:600px;margin-left:auto;margin-right:auto">
-        <p style="font-size:1.15rem;color:#6366f1;margin:0;line-height:1.7;font-weight:700">머릿속엔 영어가 있는데, 입까지 도달하지 못하는
-          느낌.<br />생각과 입 사이의 <span style="text-decoration:underline;text-underline-offset:4px">연결 회로를 만들면, 말이 자동으로
-            따라옵니다.</span></p>
+</section>
+
+<style>
+.rt{background:#f6f7f9;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.rt *{box-sizing:border-box}
+.rt-wrap{max-width:980px;margin:0 auto}
+.rt-eyebrow{color:#2D5BFF;font-weight:800;font-size:13px;letter-spacing:.2em;margin:0 0 16px;text-align:center}
+.rt-title{font-size:38px;font-weight:800;letter-spacing:-1.3px;line-height:1.32;margin:0 0 16px;color:#10131a;text-align:center}
+.rt-hl{position:relative;white-space:nowrap}
+.rt-hl::before{content:"";position:absolute;left:-3px;right:-5px;top:30%;bottom:8%;background:#ffce4d;opacity:.7;transform:rotate(-1.4deg);border-radius:48% 52% 50% 50%/62% 40% 60% 38%;z-index:-1;mix-blend-mode:multiply}
+.rt-sub{color:#5a6680;font-size:16.5px;line-height:1.7;margin:0 auto 36px;max-width:600px;text-align:center}.rt-sub b{color:#10131a}
+.rt-art{max-width:940px;margin:0 auto 40px}
+.rt-art svg{width:100%;height:auto;display:block;overflow:visible}
+.rt-results{max-width:640px;margin:0 auto}
+.rt-meta{display:flex;align-items:baseline;gap:12px;margin:0 0 8px;flex-wrap:wrap}
+.rt-lb{font-family:'Pretendard',-apple-system,sans-serif;font-weight:700;font-size:22px;transform:rotate(-1deg)}
+.rt-lb--r{color:#cf5a4e}.rt-lb--g{color:#2D5BFF}
+.rt-note{font-family:'Pretendard',-apple-system,sans-serif;font-size:17px;color:#9aa3b2}
+.rt-broken{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:32px;color:#b9c0cc;margin:0;letter-spacing:.2px}
+.rt-rule{border:0;height:1px;background:#e3e6ec;margin:34px 0}
+.rt-fluent{font-family:'Fraunces',serif;font-weight:900;font-size:44px;line-height:1.2;color:#10131a;margin:0;letter-spacing:-.5px}
+.rt-underline{display:block;width:72%;max-width:430px;height:16px;margin-top:6px}
+@media(max-width:680px){.rt{padding:68px 16px}.rt-title{font-size:27px}.rt-broken{font-size:24px}.rt-fluent{font-size:30px}.rt-underline{width:88%}}
+</style>
+<!-- ===== /REDESIGN (컨셉 J / 길+손그림, 사이트 톤) ===== -->
+<!-- ===== 이런 순간, 나만 그런 게 아니었어요 (원본 리스트형 유지) ===== -->
+<section class="emp">
+  <div class="emp-wrap">
+    <h2 class="emp-title">이런 순간, 나만 그런 게 아니었어요</h2>
+    <ul class="emp-list">
+      <li><span class="emp-emo">🙂</span><span class="emp-tx"><span class="emp-sit">머릿속은 한국어로 가득한데, 영어로 귀를 닫아버린 느낌 —</span> <b>말이 빠르게 나와야 하는데 멈춘다</b></span></li>
+      <li><span class="emp-emo">⏳</span><span class="emp-tx"><span class="emp-sit">“I… um…” 하다가 상대가 먼저 말을 끊어버림 —</span> <b>내 차례가 사라지는 거</b></span></li>
+      <li><span class="emp-emo">😣</span><span class="emp-tx"><span class="emp-sit">“오늘 너무 지루해”를 “I'm boring today”라고 말했는데, —</span> <b>왜 boring이 아니라 bored인지 모르겠는 답답함</b></span></li>
+      <li><span class="emp-emo">🔄</span><span class="emp-tx"><span class="emp-sit">유튜브로 독학해도 결국 똑같은 실수 반복 —</span> <b>“나는 원래 영어 체질이 아닌 건가?”라는 의심</b></span></li>
+      <li><span class="emp-emo">💨</span><span class="emp-tx"><span class="emp-sit">외국인이 말 걸면 심장부터 뛰고, 아는 단어도 하얀 백지 —</span> <b>불안이 실력을 가리는 것</b></span></li>
+    </ul>
+    <p class="emp-punch">이건 능력 부족이 아닙니다.<br><b>제대로 된 회화 훈련을 받지 못했기 때문입니다.</b></p>
+  </div>
+</section>
+<style>
+.emp{background:#f6f7f9;padding:96px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.emp *{box-sizing:border-box}
+.emp-wrap{max-width:820px;margin:0 auto}
+.emp-title{font-size:34px;font-weight:800;letter-spacing:-1.2px;text-align:center;margin:0 0 44px;color:#10131a}
+.emp-list{list-style:none;padding:0;margin:0 0 44px}
+.emp-list li{display:flex;gap:14px;align-items:flex-start;padding:22px 6px;border-bottom:1px solid #e6e8ed}
+.emp-list li:first-child{border-top:1px solid #e6e8ed}
+.emp-emo{font-size:22px;flex:0 0 auto;line-height:1.5}
+.emp-tx{font-size:17px;line-height:1.6}
+.emp-sit{color:#8a93a3}
+.emp-tx b{color:#1c2330;font-weight:800}
+.emp-punch{text-align:center;font-size:20px;color:#3a4150;line-height:1.6;margin:0}
+.emp-punch b{color:#10131a;font-weight:800}
+@media(max-width:640px){.emp{padding:64px 16px}.emp-title{font-size:24px}.emp-tx{font-size:15.5px}.emp-punch{font-size:17px}}
+</style>
+<!-- ===== /이런 순간 (원본) ===== -->
+<!-- ===== REDESIGN (손그림): 아카데미 핵심 장점 ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<section class="bh">
+  <div class="bh-wrap">
+    <p class="bh-eyebrow">아카데미가 다른 이유</p>
+    <h2 class="bh-title">아카데미 <span class="bh-hl">핵심 장점</span></h2>
+    <p class="bh-sub">전문 영어 선생님과 함께, 문법·표현을 뿌리부터 잡습니다.</p>
+
+    <div class="bh-grid">
+      <div class="bh-item">
+        <span class="bh-no" style="color:#ef4444">01</span>
+        <div class="bh-tx"><h3>영어로 바로 생각하고 말하기</h3><p>한국어를 ‘번역’하지 않고, 영어 구조로 바로 생각해 입으로 꺼내는 훈련.</p></div>
+      </div>
+      <div class="bh-item">
+        <span class="bh-no" style="color:#2D5BFF">02</span>
+        <div class="bh-tx"><h3>자주 틀리는 문법 완전 고정</h3><p>시제·전치사·관사 등 반복 실수 패턴을 뿌리부터 교정합니다.</p></div>
+      </div>
+      <div class="bh-item">
+        <span class="bh-no" style="color:#9333ea">03</span>
+        <div class="bh-tx"><h3>숙제 + 피드백 루프</h3><p>수업 후 숙제 → 피드백 → 복습. 자동 반복 학습이 됩니다.</p></div>
+      </div>
+      <div class="bh-item">
+        <span class="bh-no" style="color:#f59e0b">04</span>
+        <div class="bh-tx"><h3>소그룹 밀착 관리</h3><p>4~10명 소그룹으로 개인별 약점만 정확히 집중 교정.</p></div>
+      </div>
+      <div class="bh-item">
+        <span class="bh-no" style="color:#10b981">05</span>
+        <div class="bh-tx"><h3>문장 만들기 훈련</h3><p>암기가 아닌 구조 이해 → 직접 문장 생성으로 응용력을 키웁니다.</p></div>
+      </div>
+      <div class="bh-item">
+        <span class="bh-no" style="color:#ec4899">06</span>
+        <div class="bh-tx"><h3>왕기초부터 시작 가능</h3><p>영어 문장을 처음 배우는 분도 부담 없이 시작할 수 있어요.</p></div>
       </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <!-- Hero Image -->
-  <section class="section" style="padding-top:0">
-    <div class="container">
-      <div class="reveal">
-        <img src="images/academy/academy_main.jpg" alt="아카데미 대표 이미지"
-          style="width:100%; max-height:600px; object-fit:cover; border-radius:30px; box-shadow:0 15px 40px rgba(0,0,0,0.1); display:block;">
+<style>
+.bh{background:#fff;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.bh *{box-sizing:border-box}
+.bh-wrap{max-width:880px;margin:0 auto;text-align:center}
+.bh-eyebrow{color:#2D5BFF;font-weight:800;font-size:13px;letter-spacing:.18em;margin:0 0 14px}
+.bh-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;margin:0 0 12px;color:#10131a}
+.bh-hl{position:relative;white-space:nowrap}
+.bh-hl::before{content:"";position:absolute;left:-3px;right:-5px;top:32%;bottom:8%;background:#ffce4d;opacity:.7;transform:rotate(-1.3deg);border-radius:48% 52% 50% 50%/62% 40% 60% 38%;z-index:-1;mix-blend-mode:multiply}
+.bh-sub{color:#5a6680;font-size:16.5px;line-height:1.7;margin:0 auto 48px;max-width:520px}
+.bh-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:48px;row-gap:6px;text-align:left}
+.bh-item{display:flex;gap:18px;align-items:flex-start;padding:22px 4px;border-bottom:1.5px dashed #e6e3da}
+.bh-no{font-family:'Pretendard',-apple-system,sans-serif;font-weight:700;font-size:34px;line-height:1;flex:0 0 auto;margin-top:2px}
+.bh-tx h3{font-size:18.5px;font-weight:800;margin:0 0 7px;color:#161a22}
+.bh-tx p{font-size:14.5px;color:#5a6273;line-height:1.65;margin:0}
+@media(max-width:680px){.bh{padding:64px 16px}.bh-title{font-size:25px}.bh-grid{grid-template-columns:1fr;column-gap:0}}
+</style>
+<!-- ===== /REDESIGN (손그림): 핵심 장점 ===== -->
+<!-- ===== REDESIGN (손그림): 아카데미 학습 프로세스 ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<section class="pc2">
+  <div class="pc2-wrap">
+    <p class="pc2-eyebrow">학습 프로세스</p>
+    <h2 class="pc2-title">설명으로 끝나지 않습니다</h2>
+    <p class="pc2-sub">말하기 루틴이 몸에 밸 때까지, 이 순서로.</p>
+
+    <div class="pc2-flow">
+      <div class="pc2-step" style="--c:#ef4444">
+        <span class="pc2-no">1</span>
+        <h3>영어 회로부터 만들기</h3>
+        <p>말이 안 나오는 이유부터 정리하고, 바로 써먹는 기본 문장 패턴을 먼저 잡아요.</p>
+      </div>
+      <span class="pc2-ar">→</span>
+      <div class="pc2-step" style="--c:#2D5BFF">
+        <span class="pc2-no">2</span>
+        <h3>구조 → 예문 → 내 문장</h3>
+        <p>예문을 내 상황에 맞게 바꿔 말하면서 ‘말하기 루틴’을 만듭니다.</p>
+      </div>
+      <span class="pc2-ar">→</span>
+      <div class="pc2-step" style="--c:#9333ea">
+        <span class="pc2-no">3</span>
+        <h3>자연스러운 교정</h3>
+        <p>콩글리시·어색한 표현을 다듬고, 더 자연스러운 대체 표현까지 익혀요.</p>
+      </div>
+      <span class="pc2-ar">→</span>
+      <div class="pc2-step" style="--c:#10b981">
+        <span class="pc2-no">4</span>
+        <h3>숙제 + 1:1 피드백</h3>
+        <p>짧은 반복 숙제로 복습하고, 개인 피드백으로 실수가 굳지 않게 잡아드려요.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 연결 회로 인포그래픽 -->
-  <section class="section" style="padding: 70px 0; background: linear-gradient(135deg, #0B1A4D 0%, #1a1145 100%);">
-    <div class="container">
-      <h2 class="reveal section-title" style="color:#fff; text-align:center; margin-bottom: 12px;">
-        왜 영어가 <span style="color:#818cf8">입에서 안 나올까요?</span>
-      </h2>
-      <p class="reveal" style="text-align:center; color:rgba(255,255,255,0.6); font-size:1rem; margin-bottom:56px;">
-        머릿속엔 분명히 있는데… 입까지 도달하지 못하는 이유
-      </p>
+<style>
+.pc2{background:#f6f7f9;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.pc2 *{box-sizing:border-box}
+.pc2-wrap{max-width:1040px;margin:0 auto;text-align:center}
+.pc2-eyebrow{color:#2D5BFF;font-weight:800;font-size:13px;letter-spacing:.16em;margin:0 0 14px}
+.pc2-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;margin:0 0 12px;color:#10131a}
+.pc2-sub{color:#5a6680;font-size:16.5px;line-height:1.7;margin:0 auto 48px;max-width:520px}
+.pc2-flow{display:flex;align-items:flex-start;justify-content:center;gap:8px;text-align:left}
+.pc2-step{flex:1;max-width:230px}
+.pc2-no{font-family:'Pretendard',-apple-system,sans-serif;font-weight:700;font-size:30px;color:#fff;background:var(--c);width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:14px;box-shadow:0 5px 14px rgba(0,0,0,.16)}
+.pc2-step h3{font-size:17px;font-weight:800;margin:0 0 8px;color:#161a22}
+.pc2-step p{font-size:14px;color:#5a6273;line-height:1.6;margin:0}
+.pc2-ar{font-family:'Pretendard',-apple-system,sans-serif;color:#c4c8d0;font-weight:700;font-size:28px;margin-top:8px;flex:0 0 auto}
+@media(max-width:820px){
+  .pc2-flow{flex-direction:column;align-items:flex-start;gap:0;max-width:460px;margin:0 auto}
+  .pc2-step{max-width:none;display:grid;grid-template-columns:46px 1fr;column-gap:16px;align-items:start}
+  .pc2-no{margin-bottom:0}
+  .pc2-step h3{grid-column:2}.pc2-step p{grid-column:2}
+  .pc2-ar{transform:rotate(90deg);margin:6px 0 6px 14px}
+  .pc2-title{font-size:25px}.pc2{padding:64px 16px}
+}
+</style>
+<!-- ===== /REDESIGN (손그림): 학습 프로세스 ===== -->
+<!-- ===== academy: 수업 현장 (가로 스크롤 마퀴) =====
+     사진: images/academy/class1~5.jpg (라이브 first/images/academy/ 에 존재). 더 추가하면 마퀴에 끼워넣기.
+-->
+<section class="acl">
+  <div class="acl-head">
+    <p class="acl-eyebrow">아카데미 수업 현장</p>
+    <h2 class="acl-title">전문 선생님과, <span class="acl-hl">이렇게 수업합니다</span></h2>
+    <p class="acl-sub">화이트보드 설명 → 예문 → 내 문장. 레벨에 맞춰 밀착 교정합니다.</p>
+    <div class="acl-stats">
+      <div class="acl-stat"><b>주 2회</b><span>회당 90분</span></div>
+      <div class="acl-stat"><b>4~10명</b><span>소그룹 밀착</span></div>
+      <div class="acl-stat"><b>레벨별</b><span>맞춤 커리큘럼</span></div>
+    </div>
+  </div>
+  <div class="acl-row">
+    <div class="acl-track">
+      <img loading="lazy" src="images/academy/class5.jpg" alt="화이트보드에 직접 써가며 설명하는 수업"><img loading="lazy" src="images/academy/class2.jpg" alt="아카데미 강의 현장"><img loading="lazy" src="images/academy/class4.jpg" alt="레벨별 밀착 수업"><img loading="lazy" src="images/academy/class1.jpg" alt="수업 중인 학생들"><img loading="lazy" src="images/academy/class3.jpg" alt="소그룹 밀착 지도">
+      <img loading="lazy" src="images/academy/class5.jpg" alt="" aria-hidden="true"><img loading="lazy" src="images/academy/class2.jpg" alt="" aria-hidden="true"><img loading="lazy" src="images/academy/class4.jpg" alt="" aria-hidden="true"><img loading="lazy" src="images/academy/class1.jpg" alt="" aria-hidden="true"><img loading="lazy" src="images/academy/class3.jpg" alt="" aria-hidden="true">
+    </div>
+  </div>
+</section>
+<style>
+.acl{background:#fff;padding:100px 0;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f;overflow:hidden}
+.acl *{box-sizing:border-box}
+.acl-head{max-width:1080px;margin:0 auto;padding:0 24px;text-align:center}
+.acl-eyebrow{color:#2D5BFF;font-weight:800;font-size:13px;letter-spacing:.16em;margin:0 0 14px}
+.acl-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;margin:0 0 12px;color:#10131a}
+.acl-hl{position:relative;white-space:nowrap}
+.acl-hl::before{content:"";position:absolute;left:-3px;right:-5px;top:32%;bottom:8%;background:#ffce4d;opacity:.7;transform:rotate(-1.3deg);border-radius:48% 52% 50% 50%/62% 40% 60% 38%;z-index:-1;mix-blend-mode:multiply}
+.acl-sub{color:#5a6680;font-size:16.5px;line-height:1.7;margin:0 auto 30px;max-width:540px}
+.acl-stats{display:flex;justify-content:center;gap:40px;flex-wrap:wrap}
+.acl-stat b{display:block;font-size:28px;font-weight:900;color:#2D5BFF;letter-spacing:-1px}
+.acl-stat span{font-size:13.5px;color:#8a93a3;font-weight:600}
+.acl-row{width:100%;overflow:hidden;margin-top:46px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.acl-track{display:flex;gap:16px;width:max-content;animation:aclscroll 34s linear infinite}
+.acl-row:hover .acl-track{animation-play-state:paused}
+.acl-track img{height:300px;width:420px;object-fit:cover;object-position:center 36%;border-radius:18px;flex:0 0 auto;box-shadow:0 14px 32px rgba(20,30,60,.12)}
+@keyframes aclscroll{from{transform:translateX(0)}to{transform:translateX(calc(-50% - 8px))}}
+@media(max-width:720px){.acl{padding:64px 0}.acl-title{font-size:25px}.acl-stats{gap:24px}.acl-head{padding:0 16px}.acl-track img{height:220px;width:300px}}
+@media(prefers-reduced-motion:reduce){.acl-track{animation:none}.acl-row{overflow-x:auto}}
+</style>
+<!-- ===== /academy: 수업 현장 마퀴 ===== -->
+<!-- ===== REDESIGN (손그림): 아카데미 레벨 시스템 (Lv카드만, 다크 i+1 패널은 별도 i1theory로 분리) ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<section class="lh">
+  <div class="lh-wrap">
+    <p class="lh-eyebrow">📶 레벨 시스템</p>
+    <h2 class="lh-title">내 레벨에 <span class="lh-hl">딱 맞는</span> 커리큘럼</h2>
+    <p class="lh-sub">레벨에 따라 배우는 내용이 다릅니다. 정확한 레벨에서 시작하세요.</p>
 
-      <!-- 심플 Before / After 비교 -->
-      <div
-        style="max-width:820px; margin:0 auto; display:flex; gap:20px; align-items:stretch; flex-wrap:wrap; justify-content:center;">
-
-        <!-- 😶 지금 나 -->
-        <div class="reveal-left"
-          style="flex:1; min-width:260px; max-width:380px; background:rgba(239,68,68,0.06); border:1.5px solid rgba(239,68,68,0.2); border-radius:24px; padding:36px 28px; position:relative; overflow:hidden;">
-          <div style="position:absolute; top:-30px; right:-30px; font-size:6rem; opacity:0.04;">❌</div>
-          <div style="text-align:center; margin-bottom:24px;">
-            <span
-              style="display:inline-block; background:#EF4444; color:#fff; font-weight:700; padding:6px 20px; border-radius:99px; font-size:0.82rem; letter-spacing:0.5px;">😶
-              지금</span>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:18px;">
-            <div style="display:flex; align-items:flex-start; gap:14px;">
-              <div style="font-size:1.5rem; flex-shrink:0; margin-top:2px;">🧠</div>
-              <div>
-                <div style="color:#fff; font-weight:700; font-size:0.95rem;">"나 어제 친구 만났어"</div>
-                <div style="color:rgba(255,255,255,0.45); font-size:0.82rem; margin-top:4px;">머릿속에는 한국어가 떠오름</div>
-              </div>
-            </div>
-            <div style="text-align:center; color:rgba(239,68,68,0.5); font-size:1.2rem;">⬇ ⚡ 번역 시도</div>
-            <div style="display:flex; align-items:flex-start; gap:14px;">
-              <div style="font-size:1.5rem; flex-shrink:0; margin-top:2px;">⏳</div>
-              <div>
-                <div style="color:rgba(255,255,255,0.7); font-weight:700; font-size:0.95rem;">단어 탐색 → 문법 고민 → 멈춤</div>
-                <div style="color:rgba(239,68,68,0.7); font-size:0.82rem; margin-top:4px;">3~5초 이상 소요… 타이밍 놓침</div>
-              </div>
-            </div>
-            <div style="text-align:center; color:rgba(239,68,68,0.4); font-size:1.2rem;">⬇</div>
-            <div style="background:rgba(239,68,68,0.1); border-radius:14px; padding:16px; text-align:center;">
-              <div style="font-size:1.6rem; margin-bottom:6px;">😰</div>
-              <div style="color:rgba(239,68,68,0.9); font-weight:800; font-size:1.05rem;">"I… um… yesterday…"</div>
-              <div style="color:rgba(255,255,255,0.4); font-size:0.8rem; margin-top:6px;">결국 말을 포기하거나 버벅임</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 🗣 아카데미 이후 -->
-        <div class="reveal-right"
-          style="flex:1; min-width:260px; max-width:380px; background:rgba(16,185,129,0.06); border:1.5px solid rgba(16,185,129,0.2); border-radius:24px; padding:36px 28px; position:relative; overflow:hidden;">
-          <div style="position:absolute; top:-30px; right:-30px; font-size:6rem; opacity:0.04;">✅</div>
-          <div style="text-align:center; margin-bottom:24px;">
-            <span
-              style="display:inline-block; background:#10B981; color:#fff; font-weight:700; padding:6px 20px; border-radius:99px; font-size:0.82rem; letter-spacing:0.5px;">🗣
-              아카데미 이후</span>
-          </div>
-          <div style="display:flex; flex-direction:column; gap:18px;">
-            <div style="display:flex; align-items:flex-start; gap:14px;">
-              <div style="font-size:1.5rem; flex-shrink:0; margin-top:2px;">🧠</div>
-              <div>
-                <div style="color:#fff; font-weight:700; font-size:0.95rem;">"나 어제 친구 만났어"</div>
-                <div style="color:rgba(255,255,255,0.45); font-size:0.82rem; margin-top:4px;">같은 생각이 떠오를 때</div>
-              </div>
-            </div>
-            <div style="text-align:center; color:rgba(16,185,129,0.6); font-size:1.2rem;">⬇ ⚡ 자동 회로</div>
-            <div style="display:flex; align-items:flex-start; gap:14px;">
-              <div style="font-size:1.5rem; flex-shrink:0; margin-top:2px;">💡</div>
-              <div>
-                <div style="color:rgba(255,255,255,0.7); font-weight:700; font-size:0.95rem;">영어 구조로 바로 떠오름</div>
-                <div style="color:rgba(16,185,129,0.7); font-size:0.82rem; margin-top:4px;">번역 없이 0.5초 이내 반응</div>
-              </div>
-            </div>
-            <div style="text-align:center; color:rgba(16,185,129,0.5); font-size:1.2rem;">⬇</div>
-            <div style="background:rgba(16,185,129,0.1); border-radius:14px; padding:16px; text-align:center;">
-              <div style="font-size:1.6rem; margin-bottom:6px;">😊</div>
-              <div style="color:rgba(16,185,129,1); font-weight:800; font-size:1.05rem;">"I met my friend yesterday!"
-              </div>
-              <div style="color:rgba(255,255,255,0.4); font-size:0.8rem; margin-top:6px;">자신 있게 바로 말하기</div>
-            </div>
-          </div>
-        </div>
+    <div class="lh-grid">
+      <div class="lh-lv" style="--c:#10b981">
+        <span class="lh-no">Lv.1</span><h3>왕기초반</h3>
+        <p class="lh-for">영어 문장을 처음부터 다시</p>
+        <ul class="lh-list"><li>be동사 기본 문장</li><li>일반동사 현재형</li><li>과거형·미래형 기본</li><li>기본 의문문·부정문</li></ul>
+        <p class="lh-goal">🎯 “어제 뭐 했어?”를 스스로</p>
       </div>
-
-      <!-- 어떻게 바뀌나? 4단계 -->
-      <div style="max-width:820px; margin:48px auto 0;">
-        <p class="reveal"
-          style="text-align:center; color:rgba(255,255,255,0.5); font-size:0.85rem; font-weight:600; letter-spacing:2px; margin-bottom:20px;">
-          HOW IT WORKS</p>
-        <div class="stagger-container" style="display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
-          <div class="stagger-item"
-            style="flex:1; min-width:150px; max-width:190px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:20px 16px; text-align:center;">
-            <div
-              style="width:36px; height:36px; background:rgba(99,102,241,0.2); border-radius:10px; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:1.1rem; color:#818cf8; font-weight:800;">
-              1</div>
-            <div style="color:#fff; font-weight:700; font-size:0.88rem; margin-bottom:6px;">구조 이해</div>
-            <div style="color:rgba(255,255,255,0.4); font-size:0.78rem; line-height:1.5;">영어 문장의<br>기본 뼈대 학습</div>
-          </div>
-          <div class="stagger-item"
-            style="flex:1; min-width:150px; max-width:190px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:20px 16px; text-align:center;">
-            <div
-              style="width:36px; height:36px; background:rgba(99,102,241,0.2); border-radius:10px; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:1.1rem; color:#818cf8; font-weight:800;">
-              2</div>
-            <div style="color:#fff; font-weight:700; font-size:0.88rem; margin-bottom:6px;">내 문장 만들기</div>
-            <div style="color:rgba(255,255,255,0.4); font-size:0.78rem; line-height:1.5;">배운 구조로<br>직접 문장 생성</div>
-          </div>
-          <div class="stagger-item"
-            style="flex:1; min-width:150px; max-width:190px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:16px; padding:20px 16px; text-align:center;">
-            <div
-              style="width:36px; height:36px; background:rgba(99,102,241,0.2); border-radius:10px; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:1.1rem; color:#818cf8; font-weight:800;">
-              3</div>
-            <div style="color:#fff; font-weight:700; font-size:0.88rem; margin-bottom:6px;">교정 + 피드백</div>
-            <div style="color:rgba(255,255,255,0.4); font-size:0.78rem; line-height:1.5;">실수가 굳기 전에<br>정확히 교정</div>
-          </div>
-          <div class="stagger-item"
-            style="flex:1; min-width:150px; max-width:190px; background:rgba(16,185,129,0.1); border:1.5px solid rgba(16,185,129,0.3); border-radius:16px; padding:20px 16px; text-align:center;">
-            <div
-              style="width:36px; height:36px; background:rgba(16,185,129,0.2); border-radius:10px; display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:1.1rem; color:#34d399; font-weight:800;">
-              4</div>
-            <div style="color:#34d399; font-weight:700; font-size:0.88rem; margin-bottom:6px;">자동 출력</div>
-            <div style="color:rgba(255,255,255,0.4); font-size:0.78rem; line-height:1.5;">생각 → 말<br>0.5초 반응</div>
-          </div>
-        </div>
+      <div class="lh-lv" style="--c:#2D5BFF">
+        <span class="lh-no">Lv.2</span><h3>기초반</h3>
+        <p class="lh-for">문장은 되지만 디테일 부족</p>
+        <ul class="lh-list"><li>진행형·전치사·관사</li><li>to부정사 vs 동명사</li><li>빈도부사</li><li>비교급·최상급</li></ul>
+        <p class="lh-goal">🎯 전치사·관사를 실수 없이</p>
+      </div>
+      <div class="lh-lv" style="--c:#9333ea">
+        <span class="lh-no">Lv.3</span><h3>중급반</h3>
+        <p class="lh-for">문법은 아는데 버벅임</p>
+        <ul class="lh-list"><li>현재완료·조동사 뉘앙스</li><li>관계대명사·수동태</li><li>will vs be going to</li><li>can vs be able to</li></ul>
+        <p class="lh-goal">🎯 뉘앙스 구분해 자연스럽게</p>
+      </div>
+      <div class="lh-lv" style="--c:#ef4444">
+        <span class="lh-no">Lv.4</span><h3>중상급반</h3>
+        <p class="lh-for">정확도·표현력 동시에</p>
+        <ul class="lh-list"><li>가정법·구동사</li><li>if절 0~3 조건절</li><li>고급 표현(used to 등)</li><li>현재완료진행·wish</li></ul>
+        <p class="lh-goal">🎯 스터디에서 자신있게 발언</p>
       </div>
     </div>
-  </section>
-  <!-- Why Academy -->
-  <section class="section bg-light">
-    <div class="container">
-      <h2 class="reveal section-title">이런 순간, 나만 그런 게 아니었어요</h2>
-      <div class="checklist reveal" style="max-width:700px">
-        <div class="check-item">😶 머릿속은 한국어로 가득한데, 영어로 귀를 닫아버린 느낌 — <strong>말이 빠르게 나와야 하는데 멈춘다</strong></div>
-        <div class="check-item">⏳ "I… um…" 하다가 상대가 먼저 말을 끊어버림 — <strong>내 차례가 사라지는 거</strong></div>
-        <div class="check-item">😣 "오늘 너무 지루해"를 "I'm boring today"라고 말했는데, — <strong>왜 boring이 아니라 bored인지 모르겠는
-            답답함</strong>
-        </div>
-        <div class="check-item">🔄 유튜브로 독학해도 결국 똑같은 실수 반복 — <strong>"나는 원래 영어 체질이 아닌 건가?"라는 의심</strong></div>
-        <div class="check-item">💨 외국인이 말 걸면 심장부터 뛰고, 아는 단어도 하얀 백지 — <strong>불안이 실력을 가리는 것</strong></div>
-      </div>
-      <p class="reveal center-text impact-text">이건 능력 부족이 아닙니다.<br /><strong>제대로 된 회화 훈련을 받지 못했기 때문</strong>입니다.</p>
-    </div>
-  </section>
-  <!-- Core Benefits -->
-  <section class="section">
-    <div class="container">
-      <h2 class="reveal section-title">아카데미 핵심 장점</h2>
-      <div class="benefit-grid stagger-container">
-        <div class="benefit-card stagger-item">
-          <div class="benefit-num">01</div>
-          <h3>영어로 바로 생각하고 말하기</h3>
-          <p>한국어를 영어로 '번역'하는 게 아니라, <strong>영어 구조로 바로 생각하고 입으로 꺼내는 훈련</strong>을 합니다.</p>
-        </div>
-        <div class="benefit-card stagger-item">
-          <div class="benefit-num">02</div>
-          <h3>자주 틀리는 문법 완전 고정</h3>
-          <p>시제, 전치사, 관사 등 <strong>반복 실수 패턴</strong>을 찾아내 뿌리부터 교정합니다.</p>
-        </div>
-        <div class="benefit-card stagger-item">
-          <div class="benefit-num">03</div>
-          <h3>숙제 + 피드백 루프</h3>
-          <p>수업 후 숙제 → 피드백 → 복습. <strong>구조화된 루프</strong>로 자동 반복 학습이 됩니다.</p>
-        </div>
-        <div class="benefit-card stagger-item">
-          <div class="benefit-num">04</div>
-          <h3>소그룹 밀착 관리</h3>
-          <p>4~10명 소그룹으로 <strong>개인별 약점을 정확히 파악</strong>하고, 나에게 꼭 필요한 부분만 집중 교정합니다.</p>
-        </div>
-        <div class="benefit-card stagger-item">
-          <div class="benefit-num">05</div>
-          <h3>문장 만들기 훈련</h3>
-          <p>단순 암기가 아닌 <strong>구조 이해 → 직접 문장 생성</strong>으로 응용력을 키웁니다.</p>
-        </div>
-        <div class="benefit-card stagger-item">
-          <div class="benefit-num">06</div>
-          <h3>왕기초부터 시작 가능</h3>
-          <p>영어 문장을 처음 배우는 분도 <strong>부담 없이 시작</strong>할 수 있는 체계적 커리큐럼입니다.</p>
-        </div>
-      </div>
+  </div>
+</section>
 
-      <!-- Image Marquee Animation -->
-      <div class="marquee-container reveal" style="margin-top:40px">
-        <div class="marquee-track">
-          <img src="images/academy/class1.JPG" alt="수업 현장 1" class="marquee-item">
-          <img src="images/academy/class2.jpg" alt="수업 현장 2" class="marquee-item">
-          <img src="images/academy/class3.jpg" alt="수업 현장 3" class="marquee-item">
-          <img src="images/academy/class4.JPG" alt="수업 현장 4" class="marquee-item">
-          <img src="images/academy/class5.jpeg" alt="수업 현장 5" class="marquee-item">
-          <img src="images/academy/class1.JPG" alt="수업 현장 1" class="marquee-item">
-          <img src="images/academy/class2.jpg" alt="수업 현장 2" class="marquee-item">
-          <img src="images/academy/class3.jpg" alt="수업 현장 3" class="marquee-item">
-          <img src="images/academy/class4.JPG" alt="수업 현장 4" class="marquee-item">
-          <img src="images/academy/class5.jpeg" alt="수업 현장 5" class="marquee-item">
-        </div>
-      </div>
+<style>
+.lh{background:#fff;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.lh *{box-sizing:border-box}
+.lh-wrap{max-width:1040px;margin:0 auto;text-align:center}
+.lh-eyebrow{color:#2D5BFF;font-weight:800;font-size:13px;letter-spacing:.16em;margin:0 0 14px}
+.lh-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;margin:0 0 12px;color:#10131a}
+.lh-hl{position:relative;white-space:nowrap}
+.lh-hl::before{content:"";position:absolute;left:-3px;right:-5px;top:32%;bottom:8%;background:#ffce4d;opacity:.7;transform:rotate(-1.3deg);border-radius:48% 52% 50% 50%/62% 40% 60% 38%;z-index:-1;mix-blend-mode:multiply}
+.lh-sub{color:#5a6680;font-size:16.5px;line-height:1.7;margin:0 auto 48px;max-width:520px}
+.lh-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:34px 28px;text-align:left}
+.lh-lv{position:relative;padding-top:14px;border-top:3px solid var(--c)}
+.lh-no{font-family:'Pretendard',-apple-system,sans-serif;font-weight:700;font-size:24px;color:var(--c)}
+.lh-lv h3{font-size:19px;font-weight:800;margin:2px 0 6px;color:#161a22}
+.lh-for{font-size:13px;color:#9aa3b2;margin:0 0 14px;min-height:34px}
+.lh-list{list-style:none;padding:0;margin:0 0 14px;display:flex;flex-direction:column;gap:7px}
+.lh-list li{position:relative;padding-left:16px;font-size:13.5px;color:#475063;line-height:1.45}
+.lh-list li::before{content:"";position:absolute;left:0;top:7px;width:6px;height:6px;border-radius:50%;background:var(--c)}
+.lh-goal{font-family:'Pretendard',-apple-system,sans-serif;font-size:16.5px;font-weight:700;color:var(--c);margin:0;line-height:1.4}
+@media(max-width:880px){.lh-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.lh{padding:64px 16px}.lh-title{font-size:25px}.lh-grid{grid-template-columns:1fr;gap:26px}.lh-for{min-height:0}}
+</style>
+<!-- ===== /REDESIGN (손그림): 레벨 시스템 ===== -->
+<!-- ===== REDESIGN: i+1 이론 (왜 초보자가 스터디 바로 가면 안 되나) — 손그림 다이어그램 ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,900&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<section class="i1">
+  <div class="i1-wrap">
+    <p class="i1-eyebrow">🧠 언어학 이론 기반</p>
+    <h2 class="i1-title">왜 초보자가 스터디에<br>바로 가면 안 될까요?</h2>
+    <p class="i1-sub">현재 실력보다 <b>딱 한 단계 위(i+1)</b>의 입력만 ‘학습’으로 바뀝니다.</p>
+
+    <div class="i1-art">
+      <svg viewBox="0 0 940 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="i+1은 한 칸 오르기로 성공, i+5는 절벽 점프로 실패">
+        <!-- ===== LEFT: i+1 한 칸 ===== -->
+        <text x="240" y="44" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="22" font-weight="700" fill="#0a9b63">딱 한 단계 위</text>
+        <!-- platform i -->
+        <path d="M70,312 C 110,311 145,313 178,311" fill="none" stroke="#2b2a28" stroke-width="5" stroke-linecap="round"/>
+        <text x="124" y="304" text-anchor="middle" font-family="Fraunces,serif" font-size="26" font-weight="900" fill="#2b2a28">i</text>
+        <text x="124" y="336" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="16" fill="#9a948c">현재 실력</text>
+        <!-- platform i+1 -->
+        <path d="M268,238 C 310,237 348,239 388,238" fill="none" stroke="#10b981" stroke-width="5" stroke-linecap="round"/>
+        <text x="330" y="226" text-anchor="middle" font-family="Fraunces,serif" font-size="26" font-weight="900" fill="#0a9b63">i+1</text>
+        <!-- easy hop arrow -->
+        <path d="M186,300 C 214,250 238,240 262,240" fill="none" stroke="#10b981" stroke-width="3.5" stroke-linecap="round"/>
+        <path d="M262,240 l -16,-6 M262,240 l -6,15" fill="none" stroke="#10b981" stroke-width="3.5" stroke-linecap="round"/>
+        <!-- check + sparkle -->
+        <text x="330" y="290" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="19" font-weight="700" fill="#0a9b63">✓ 실제 학습으로 전환</text>
+        <path d="M404,214 C 405,220 409,224 415,225 409,226 405,230 404,236 403,230 399,226 393,225 399,224 403,220 404,214Z" fill="#e8a72e"/>
+
+        <!-- divider -->
+        <path d="M470,70 C 469,160 471,250 470,330" fill="none" stroke="#e3e1da" stroke-width="2" stroke-dasharray="2 9" stroke-linecap="round"/>
+
+        <!-- ===== RIGHT: i+5 절벽 ===== -->
+        <text x="700" y="44" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="22" font-weight="700" fill="#d4574f">스터디 바로 갈 시</text>
+        <!-- platform i -->
+        <path d="M540,312 C 580,311 612,313 640,311" fill="none" stroke="#2b2a28" stroke-width="5" stroke-linecap="round"/>
+        <text x="590" y="304" text-anchor="middle" font-family="Fraunces,serif" font-size="26" font-weight="900" fill="#2b2a28">i</text>
+        <!-- cliff wall -->
+        <path d="M735,316 L 735,96 L 742,96" fill="none" stroke="#cfcabf" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- platform i+5 way up -->
+        <path d="M742,92 C 786,91 826,93 866,92" fill="none" stroke="#ef4444" stroke-width="5" stroke-linecap="round"/>
+        <text x="808" y="80" text-anchor="middle" font-family="Fraunces,serif" font-size="26" font-weight="900" fill="#ef4444">i+5</text>
+        <!-- failed jump arc (up then crash down) -->
+        <path d="M648,302 C 690,150 718,118 730,150 C 742,184 728,262 706,312" fill="none" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="1 10"/>
+        <path d="M706,312 l 14,-9 M706,312 l 2,-17" fill="none" stroke="#ef4444" stroke-width="3.5" stroke-linecap="round"/>
+        <!-- crash scribble -->
+        <path d="M694,330 l 12,8 M706,330 l -12,8 M700,326 l 0,16" stroke="#ef4444" stroke-width="2.4" stroke-linecap="round"/>
+        <text x="700" y="298" text-anchor="middle" font-family="Pretendard,sans-serif" font-size="19" font-weight="700" fill="#d4574f">✕ 과부하 → 포기 (화석화)</text>
+      </svg>
     </div>
-  </section>
-  <!-- How it works -->
-  <section class="section bg-light">
-    <div class="container">
-      <h2 class="reveal section-title">아카데미 학습 프로세스</h2>
-      <div class="process-steps stagger-container">
-        <div class="process-step stagger-item">
-          <div class="process-num">1</div>
-          <h3>영어 회로부터 만들기</h3>
-          <p>말이 안 나오는 이유부터 정리하고, 바로 써먹는 기본 문장 패턴을 먼저 잡습니다.</p>
-        </div>
-        <div class="process-arrow stagger-item">→</div>
-        <div class="process-step stagger-item">
-          <div class="process-num">2</div>
-          <h3>수업: 구조 → 예문 → 내 문장</h3>
-          <p>설명으로 끝내지 않고, 예문을 내 상황에 맞게 바꿔 말하면서 ‘말하기 루틴’을 만듭니다.</p>
-        </div>
-        <div class="process-arrow stagger-item">→</div>
-        <div class="process-step stagger-item">
-          <div class="process-num">3</div>
-          <h3>자연스러운 교정 + 표현 업그레이드</h3>
-          <p>콩글리시/어색한 표현은 수업 중 자연스럽게 다듬고, 같은 의미의 더 자연스러운 대체 표현까지 같이 익힙니다.</p>
-        </div>
-        <div class="process-arrow stagger-item">→</div>
-        <div class="process-step stagger-item">
-          <div class="process-num">4</div>
-          <h3>숙제 + 1:1 피드백으로 체득</h3>
-          <p>짧고 반복 가능한 숙제로 복습하고, 개인 피드백으로 실수가 굳어지지 않게 잡아드립니다.</p>
-        </div>
-      </div>
+
+    <p class="i1-cite">옥스퍼드·MIT 공동 언어습득 연구(Ellis, 2003): 현재 실력(i)보다 <b>딱 한 단계 위(i+1)</b>의 입력만 실제 학습으로 전환됩니다. 하버드 교육대학원도 제2언어 교육 핵심 원칙으로 인용.</p>
+    <p class="i1-concl">왕기초·기초 레벨은 스터디보다 <span class="i1-hl">아카데미가 훨씬 효과적</span>입니다.<br>아카데미에서 기초를 잡으면 → 스터디에서 자신감 있게 대화할 수 있어요.</p>
+
+    <div class="i1-cta">
+      <a class="i1-btn i1-btn--ghost" href="programs.html">왜 이 순서가 중요한지 →</a>
+      <a class="i1-btn i1-btn--solid" href="level-test.html">내 레벨 테스트 해보기 →</a>
     </div>
-  </section>
-  <!-- Academy Level System: 뭘 배우는지 -->
-  <section class="section">
-    <div class="container">
-      <h2 class="reveal section-title">📶 아카데미 레벨 시스템</h2>
-      <p class="reveal center-text subtitle" style="margin-bottom:40px">레벨에 따라 배우는 내용이 다릅니다. 내 레벨에 맞는 커리큘럼으로
-        시작하세요.</p>
-      <div class="academy-level-grid stagger-container">
-        <div class="academy-level-card stagger-item" style="border-top:4px solid #ef4444">
-          <div class="academy-level-badge" style="background:#ef4444">Lv.1</div>
-          <h3>왕기초반</h3>
-          <p class="academy-level-who">영어 문장을 처음부터 다시 배우고 싶은 분</p>
-          <ul class="academy-level-list">
-            <li>be동사 (am/is/are) 기본 문장</li>
-            <li>일반동사 현재형 (I go, She goes)</li>
-            <li>과거형 기본 (I went, She came)</li>
-            <li>미래형 기본 (will / be going to)</li>
-            <li>기본 의문문 (Do you~? / Does she~?)</li>
-            <li>기본 부정문 (don't / doesn't)</li>
-          </ul>
-          <p class="academy-level-goal">🎯 목표: "어제 뭐 했어?" 정도의 문장을 스스로 만들어 낼 수 있다</p>
-        </div>
-        <div class="academy-level-card stagger-item" style="border-top:4px solid #f59e0b">
-          <div class="academy-level-badge" style="background:#f59e0b">Lv.2</div>
-          <h3>기초반</h3>
-          <p class="academy-level-who">기본 문장은 되지만 디테일이 부족한 분</p>
-          <ul class="academy-level-list">
-            <li>진행형 (am/is/are ~ing)</li>
-            <li>전치사 (in/on/at/by 등)</li>
-            <li>관사 (a/an/the/무관사)</li>
-            <li>to부정사 vs 동명사 (want to / enjoy ~ing)</li>
-            <li>빈도부사 (always, usually, often…)</li>
-            <li>비교급·최상급 (bigger, the biggest)</li>
-          </ul>
-          <p class="academy-level-goal">🎯 목표: 전치사와 관사를 실수 없이 쓸 수 있다</p>
-        </div>
-        <div class="academy-level-card stagger-item" style="border-top:4px solid #6366f1">
-          <div class="academy-level-badge" style="background:#6366f1">Lv.3</div>
-          <h3>중급반</h3>
-          <p class="academy-level-who">문법은 아는데 말할 때 버벅이는 분</p>
-          <ul class="academy-level-list">
-            <li>현재완료 (have been / have done)</li>
-            <li>조동사 뉘앙스 (must/should/have to)</li>
-            <li>관계대명사 (who/which/that)</li>
-            <li>수동태 (be + p.p.)</li>
-            <li>will vs be going to 뉘앙스 차이</li>
-            <li>can vs be able to 뉘앙스 차이</li>
-          </ul>
-          <p class="academy-level-goal">🎯 목표: 뉘앙스를 구분해서 자연스럽게 말할 수 있다</p>
-        </div>
-        <div class="academy-level-card stagger-item" style="border-top:4px solid #10b981">
-          <div class="academy-level-badge" style="background:#10b981">Lv.4</div>
-          <h3>중상급반</h3>
-          <p class="academy-level-who">정확도와 표현력을 동시에 높이고 싶은 분</p>
-          <ul class="academy-level-list">
-            <li>가정법 (If I were~ / If I had~)</li>
-            <li>구동사 (end up, turn out, run into…)</li>
-            <li>if절 0~3 조건절 전체</li>
-            <li>고급 표현 (used to, be supposed to…)</li>
-            <li>현재완료진행형 (have been ~ing)</li>
-            <li>wish / would rather 표현</li>
-          </ul>
-          <p class="academy-level-goal">🎯 목표: 스터디에서 자신있게 발언할 수 있다</p>
-        </div>
+  </div>
+</section>
+
+<style>
+.i1{background:#f6f7f9;padding:96px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.i1 *{box-sizing:border-box}
+.i1-wrap{max-width:880px;margin:0 auto;text-align:center}
+.i1-eyebrow{display:inline-block;font-weight:800;font-size:13.5px;color:#5a6680;margin:0 0 16px}
+.i1-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;line-height:1.3;margin:0 0 14px;color:#10131a}
+.i1-sub{color:#5a6680;font-size:16.5px;line-height:1.7;margin:0 auto 24px;max-width:520px}.i1-sub b{color:#10131a}
+.i1-art{max-width:820px;margin:0 auto 30px}
+.i1-art svg{width:100%;height:auto;display:block;overflow:visible}
+.i1-cite{color:#8a93a3;font-size:13.5px;line-height:1.7;max-width:680px;margin:0 auto 18px}.i1-cite b{color:#3a4150}
+.i1-concl{font-size:18px;font-weight:700;color:#1c2330;line-height:1.6;margin:0 auto 32px;max-width:600px}
+.i1-hl{position:relative;white-space:nowrap}
+.i1-hl::before{content:"";position:absolute;left:-2px;right:-4px;top:34%;bottom:6%;background:#ffce4d;opacity:.7;transform:rotate(-1.2deg);border-radius:48% 52% 50% 50%/62% 40% 60% 38%;z-index:-1;mix-blend-mode:multiply}
+.i1-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.i1-btn{display:inline-flex;align-items:center;padding:15px 26px;border-radius:12px;font-weight:800;font-size:15.5px;text-decoration:none;transition:transform .15s}
+.i1-btn:hover{transform:translateY(-2px)}
+.i1-btn--solid{background:#2D5BFF;color:#fff;box-shadow:0 8px 22px rgba(45,91,255,.28)}
+.i1-btn--ghost{background:#fff;color:#1c2330;border:1.5px solid #d8dde6}
+@media(max-width:680px){.i1{padding:64px 16px}.i1-title{font-size:26px}.i1-concl{font-size:16px}}
+</style>
+<!-- ===== /REDESIGN: i+1 이론 손그림 ===== -->
+<!-- ===== REDESIGN (손그림): 이런 문법과 표현을 집중 교정합니다 ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<section class="gh">
+  <div class="gh-wrap">
+    <p class="gh-eyebrow">집중 교정</p>
+    <h2 class="gh-title">이런 표현, <span class="gh-hl">90%가 틀려요</span></h2>
+    <p class="gh-sub">암기가 아니라, 뉘앙스가 다른 표현의 차이를 예문으로 익힙니다.</p>
+
+    <div class="gh-grid">
+      <div class="gh-i">
+        <p class="gh-q">“내 남자친구 진짜 재밌어” <span>성격이 좋다</span></p>
+        <p class="gh-x">My boyfriend is funny.</p><p class="gh-o">My boyfriend is fun.</p>
+        <p class="gh-tip">funny 웃긴(comedy) · fun 즐거운(pleasure)</p>
       </div>
-      <!-- i+1 강조 배너 (재설계) -->
-      <div class="reveal"
-        style="margin-top:40px; max-width:760px; margin-left:auto; margin-right:auto; border-radius:20px; overflow:hidden; box-shadow:0 8px 32px rgba(99,102,241,0.2);">
-        <!-- 배너 상단 -->
-        <div style="background:linear-gradient(135deg,#4338CA,#6366f1); padding:20px 28px 16px;">
-          <div style="display:flex; align-items:center; gap:12px;">
-            <span style="font-size:2rem;">🧠</span>
-            <div>
-              <div
-                style="color:rgba(255,255,255,0.75); font-size:0.78rem; font-weight:600; letter-spacing:1.5px; text-transform:uppercase;">
-                언어학 이론 기반</div>
-              <div style="color:#fff; font-weight:800; font-size:1.15rem; margin-top:2px;">왜 초보자가 스터디에 바로 가면 안 되는가?
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- 배너 본문 -->
-        <div style="background:#F5F3FF; padding:22px 28px;">
-          <!-- i+1 시각화 -->
-          <div style="display:flex; align-items:center; gap:10px; margin-bottom:18px; flex-wrap:wrap;">
-            <div
-              style="background:#E0E7FF; border:2px solid #6366f1; border-radius:10px; padding:10px 16px; text-align:center; min-width:72px;">
-              <div style="font-size:1.4rem; font-weight:800; color:#4338CA;">i</div>
-              <div style="font-size:0.72rem; color:#6366f1; font-weight:600;">현재 실력</div>
-            </div>
-            <div style="color:#6366f1; font-size:1.2rem; font-weight:700;">+1</div>
-            <div
-              style="background:#EDE9FE; border:2px solid #6366f1; border-radius:10px; padding:10px 16px; text-align:center; min-width:72px;">
-              <div style="font-size:1.4rem; font-weight:800; color:#6366f1;">i+1</div>
-              <div style="font-size:0.72rem; color:#6366f1; font-weight:600;">딱 한 단계 위</div>
-            </div>
-            <div style="color:#999; font-size:1.2rem;">→</div>
-            <div
-              style="background:#F0FDF4; border:2px solid #10B981; border-radius:10px; padding:10px 16px; text-align:center; min-width:72px;">
-              <div style="font-size:1.4rem; font-weight:800; color:#059669;">✅</div>
-              <div style="font-size:0.72rem; color:#10B981; font-weight:600;">학습으로 전환</div>
-            </div>
-            <div style="color:#ccc; font-size:1rem; margin:0 2px;">|</div>
-            <div
-              style="background:#FEF2F2; border:2px solid #EF4444; border-radius:10px; padding:10px 16px; text-align:center; min-width:72px;">
-              <div style="font-size:1.4rem; font-weight:800; color:#DC2626;">i+5</div>
-              <div style="font-size:0.72rem; color:#EF4444; font-weight:600;">과부하 → 포기</div>
-              <div style="font-size:0.68rem; color:#EF4444; margin-top:3px; font-style:italic;">(스터디 바로 갈 시)</div>
-            </div>
-          </div>
-          <div style="font-size:0.92rem; color:#374151; line-height:1.75;">
-            <p style="margin:0 0 10px;"><strong style="color:#4338CA;">옥스퍼드·MIT 공동 언어습득 연구</strong>(Ellis, 2003)에 따르면,
-              현재 실력(i)보다 <strong style="color:#4338CA;">딱 한 단계 위(i+1)</strong>의 입력만이 실제 학습으로 전환됩니다. 이 원리는 하버드 교육대학원에서도
-              제2언어 교육의 핵심 원칙으로 인용됩니다.</p>
-            <p style="margin:0 0 10px;">기초 없이 원어민 대화에 뛰어들면 → <strong style="color:#DC2626;">정보 과부하(Cognitive
-                Overload)</strong>로 뇌가 처리를 포기하고, 틀린 표현이 굳어지는 <strong style="color:#DC2626;">화석화(Fossilization)</strong>가
-              발생합니다.</p>
-            <div
-              style="background:white; border-left:3px solid #6366f1; padding:10px 14px; border-radius:0 8px 8px 0; margin-top:4px;">
-              💡 <strong>왕기초·기초 레벨</strong>은 스터디보다 아카데미가 훨씬 효과적입니다. 아카데미에서 기초를 잡으면 → <strong
-                style="color:#059669;">스터디에서 자신감 있게</strong> 대화할 수 있습니다.
-            </div>
-          </div>
-          <p style="margin:14px 0 0; font-size:0.88rem;"><a href="programs.html"
-              style="color:#4338CA;font-weight:700; text-decoration:none;">👉 왜 이 순서가 중요한지 자세히 보기 →</a></p>
-        </div>
+      <div class="gh-i">
+        <p class="gh-q">“나 약속 있어” <span>가벼운 일정</span></p>
+        <p class="gh-x">I have a promise.</p><p class="gh-o">I have plans.</p>
+        <p class="gh-tip">promise는 서약처럼 무거운 단어</p>
       </div>
-      <div class="reveal" style="text-align:center;margin-top:30px">
-        <a class="btn btn--primary btn--large" href="level-test.html">내 레벨 테스트 해보기 →</a>
+      <div class="gh-i">
+        <p class="gh-q">“그거 먹지 말걸…” <span>과거 후회</span></p>
+        <p class="gh-x">I shouldn't eat it.</p><p class="gh-o">I shouldn't have eaten it.</p>
+        <p class="gh-tip">should have p.p. = 했어야 했는데(후회)</p>
+      </div>
+      <div class="gh-i">
+        <p class="gh-q">“어제 영화 봤어” <span>집에서 TV로</span></p>
+        <p class="gh-x">I saw a movie.</p><p class="gh-o">I watched a movie on Netflix.</p>
+        <p class="gh-tip">see 눈에 들어옴 · watch 지켜봄</p>
+      </div>
+      <div class="gh-i">
+        <p class="gh-q">로또 “될지도 몰라” vs “그럴 리 없지만”</p>
+        <p class="gh-o2">If I win… <span>가능성</span></p><p class="gh-o2">If I won… <span>망상</span></p>
+        <p class="gh-tip">동사를 과거형으로 → 현실과 거리가 멀어짐</p>
+      </div>
+      <div class="gh-i">
+        <p class="gh-q">‘일하다’ 말고 work 제대로</p>
+        <p class="gh-o2">This medicine doesn't work. <span>효과 없다</span></p><p class="gh-o2">That plan works for me. <span>괜찮다</span></p>
+        <p class="gh-tip">work = 기능하다 / 효과 있다 / 작동하다</p>
       </div>
     </div>
-  </section>
-  <!-- Grammar Focus Areas (확장) -->
-  <section class="section bg-light">
-    <div class="container">
-      <h2 class="reveal section-title">이런 문법과 표현을 집중 교정합니다</h2>
-      <p class="reveal center-text subtitle" style="margin-bottom:40px">단순 문법 암기가 아닌, 뉘앙스가 다른 표현들의 차이를 예문으로 이해합니다.
-      </p>
-      <div class="grammar-detail-grid stagger-container">
-        <!-- 1. Fun vs Funny -->
-        <div class="grammar-detail-card stagger-item">
-          <div class="grammar-detail-tag">🚨 90%가 틀리는 표현</div>
-          <h3>"그 사람 재밌어"라고 했는데 왜 웃을까?</h3>
-          <div class="grammar-detail-body">
-            <div class="grammar-example">
-              <span class="ex-ko">🇰🇷 "내 남자친구 진짜 재밌어" (성격이 좋다)</span>
-              <span class="ex-en">❌ "My boyfriend is <strong>funny</strong>." (그는 개그맨이다/웃기게 생겼다)</span>
-            </div>
-            <div class="grammar-example">
-              <span class="ex-en">✅ "My boyfriend is <strong>fun</strong>." (같이 있으면 즐겁다)</span>
-            </div>
-            <p class="grammar-tip">💡 <strong>Funny</strong>는 '웃긴(Comedy)' 것이고, <strong>Fun</strong>은
-              '즐거운(Pleasure)' 것입니다.</p>
-          </div>
+  </div>
+</section>
+
+<style>
+.gh{background:#f6f7f9;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.gh *{box-sizing:border-box}
+.gh-wrap{max-width:980px;margin:0 auto;text-align:center}
+.gh-eyebrow{color:#2D5BFF;font-weight:800;font-size:13px;letter-spacing:.16em;margin:0 0 14px}
+.gh-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;margin:0 0 12px;color:#10131a}
+.gh-hl{position:relative;white-space:nowrap}
+.gh-hl::before{content:"";position:absolute;left:-3px;right:-5px;top:32%;bottom:8%;background:#ffce4d;opacity:.7;transform:rotate(-1.3deg);border-radius:48% 52% 50% 50%/62% 40% 60% 38%;z-index:-1;mix-blend-mode:multiply}
+.gh-sub{color:#5a6680;font-size:16.5px;line-height:1.7;margin:0 auto 44px;max-width:520px}
+.gh-grid{display:grid;grid-template-columns:1fr 1fr;column-gap:48px;row-gap:4px;text-align:left}
+.gh-i{padding:22px 4px;border-bottom:1.5px dashed #e2e4ea}
+.gh-q{font-size:15.5px;font-weight:800;color:#1c2330;margin:0 0 12px}
+.gh-q span{font-weight:600;font-size:13px;color:#9aa3b2;margin-left:4px}
+.gh-x,.gh-o,.gh-o2{font-family:'Fraunces',serif;font-size:17px;margin:0 0 5px;letter-spacing:-.2px;padding-left:24px;position:relative}
+.gh-x::before{content:"✗";position:absolute;left:0;color:#d4574f;font-weight:800;font-family:'Pretendard'}
+.gh-o::before{content:"✓";position:absolute;left:0;color:#0a9b63;font-weight:800;font-family:'Pretendard'}
+.gh-o2::before{content:"○";position:absolute;left:0;color:#2D5BFF;font-weight:800;font-family:'Pretendard';font-size:13px;top:4px}
+.gh-x{color:#b9b1a6;font-style:italic;text-decoration:line-through;text-decoration-color:#d8b7b2}
+.gh-o{color:#16632f;font-weight:600}
+.gh-o2{color:#2b3240;font-weight:600}
+.gh-o2 span{font-family:'Pretendard';font-style:normal;font-weight:600;font-size:12px;color:#9aa3b2;margin-left:6px}
+.gh-tip{font-family:'Pretendard',-apple-system,sans-serif;font-size:16px;color:#7c8696;margin:10px 0 0}
+@media(max-width:720px){.gh{padding:64px 16px}.gh-title{font-size:25px}.gh-grid{grid-template-columns:1fr;column-gap:0}.gh-x,.gh-o,.gh-o2{font-size:15.5px}}
+</style>
+<!-- ===== /REDESIGN (손그림): 문법 집중 교정 ===== -->
+<!-- ===== 문법, 암기가 아니라 '감각'입니다 (완전문장 + 핵심표현 형광펜 매핑) ===== -->
+<section class="sh">
+  <div class="sh-wrap">
+    <p class="sh-eyebrow">GRAMMAR AS SENSE</p>
+    <h2 class="sh-title">문법은 암기가 아니라 <span class="sh-hl">‘감각’</span>입니다</h2>
+    <p class="sh-sub">완전한 문장 속에서, <b>형광펜 친 표현</b>이 왼쪽 한국어 뜻이에요. <span class="sh-tap">↓ 항목을 눌러 펼쳐보세요</span></p>
+
+    <p class="sh-group"><span class="sh-gbar" style="background:#2D5BFF"></span>기초 &amp; 중급 교정</p>
+    <div class="sh-list">
+      <details class="sh-i" open>
+        <summary><span class="sh-no">01</span><span class="sh-t">시제 — 과거 vs 현재완료</span><em>가장 많이 틀려요</em><span class="sh-ic"></span></summary>
+        <div class="sh-b">
+          <div class="sh-row"><span class="sh-k">제주도 가봤어 <em>경험</em></span><span class="sh-en"><span class="sh-x">I went to Jeju.</span><span class="sh-o"><u>I’ve been to</u> Jeju.</span></span></div>
+          <div class="sh-row"><span class="sh-k">아직 점심 안 먹었어</span><span class="sh-en"><span class="sh-x">I didn’t eat lunch.</span><span class="sh-o">I <u>haven’t eaten</u> lunch <u>yet</u>.</span></span></div>
+          <div class="sh-row"><span class="sh-k">3년째 배우고 있어</span><span class="sh-en"><span class="sh-x">I learned English for 3 years.</span><span class="sh-o"><u>I’ve been learning</u> English for 3 years.</span></span></div>
+          <p class="sh-tip">경험·아직 안 한 일·지금까지 이어지는 상태는 <b>현재완료</b>, 끝난 사건은 <b>과거형</b>. 한국어엔 이 구분이 없어 90%가 틀립니다.</p>
         </div>
-        <!-- 2. Promise vs Plans -->
-        <div class="grammar-detail-card stagger-item">
-          <div class="grammar-detail-tag">🇰🇷 콩글리쉬 탈출</div>
-          <h3>"나 약속 있어" → I have a promise?</h3>
-          <div class="grammar-detail-body">
-            <div class="grammar-example">
-              <span class="ex-ko">🇰🇷 "나 오늘 저녁에 약속 있어"</span>
-              <span class="ex-en">❌ "I have a <strong>promise</strong>." (나는 맹세를 했다 ⛪️)</span>
-            </div>
-            <div class="grammar-example">
-              <span class="ex-en">✅ "I have <strong>plans</strong>." (일정이 있다)</span>
-            </div>
-            <p class="grammar-tip">💡 <strong>Promise</strong>는 결혼 서약처럼 무거운 단어입니다. 친구와의 가벼운 약속은
-              <strong>Plans</strong>입니다.
-            </p>
-          </div>
+      </details>
+      <details class="sh-i">
+        <summary><span class="sh-no">02</span><span class="sh-t">to부정사 vs 동명사</span><em>바꿔 쓰면 어색</em><span class="sh-ic"></span></summary>
+        <div class="sh-b">
+          <div class="sh-row"><span class="sh-k">오늘 너무 지루해</span><span class="sh-en"><span class="sh-x">I’m boring.</span><span class="sh-o">I’m <u>bored</u>.</span></span></div>
+          <div class="sh-row"><span class="sh-k">공부하기로 했어</span><span class="sh-en"><span class="sh-x">I decided studying.</span><span class="sh-o">I decided <u>to study</u>.</span></span></div>
+          <p class="sh-tip"><b>enjoy / finish / mind</b> 뒤엔 ~ing, <b>decide / want / plan</b> 뒤엔 to.</p>
         </div>
-        <!-- 3. Should have p.p. -->
-        <div class="grammar-detail-card stagger-item">
-          <div class="grammar-detail-tag">👄 원어민 뉘앙스</div>
-          <h3>"아, 그거 먹지 말걸..." 영어로?</h3>
-          <div class="grammar-detail-body">
-            <div class="grammar-example">
-              <span class="ex-ko">🇰🇷 "지금 먹지 말아야지" (현재 의지)</span>
-              <span class="ex-en">🇺🇸 "I <strong>shouldn't eat</strong> it."</span>
-            </div>
-            <div class="grammar-example">
-              <span class="ex-ko">🇰🇷 "아까 먹지 말았어야 했는데" (과거 후회)</span>
-              <span class="ex-en">🇺🇸 "I <strong>shouldn't have eaten</strong> it."</span>
-            </div>
-            <p class="grammar-tip">💡 <strong>should have p.p.</strong>는 '했어야 했는데(안 했다)'라는
-              <strong>후회</strong>의 감정을 담습니다.
-            </p>
-          </div>
+      </details>
+      <details class="sh-i">
+        <summary><span class="sh-no">03</span><span class="sh-t">관사 (a / the)</span><em>빠뜨리면 어색</em><span class="sh-ic"></span></summary>
+        <div class="sh-b">
+          <div class="sh-row"><span class="sh-k">어제 카페 갔어 <em>처음 언급</em></span><span class="sh-en"><span class="sh-x">I went to cafe.</span><span class="sh-o">I went to <u>a</u> cafe.</span></span></div>
+          <div class="sh-row"><span class="sh-k">창문 열어줄래? <em>서로 아는 그것</em></span><span class="sh-en"><span class="sh-x">Can you open window?</span><span class="sh-o">Can you open <u>the</u> window?</span></span></div>
+          <p class="sh-tip">처음 언급은 <b>a</b>, 서로 아는 그것은 <b>the</b>.</p>
         </div>
-        <!-- 4. Real vs Fake If -->
-        <div class="grammar-detail-card stagger-item">
-          <div class="grammar-detail-tag">🧠 문법의 재발견</div>
-          <h3>로또 당첨, 'If I win' vs 'If I won'</h3>
-          <div class="grammar-detail-body">
-            <div class="grammar-example">
-              <span class="ex-ko">🇰🇷 "나 진짜 될지도 몰라" (가능성 있음)</span>
-              <span class="ex-en">🇺🇸 "If I <strong>win</strong> the lottery..."</span>
-            </div>
-            <div class="grammar-example">
-              <span class="ex-ko">🇰🇷 "그럴 리 없지만 상상해보면" (망상)</span>
-              <span class="ex-en">🇺🇸 "If I <strong>won</strong> the lottery..."</span>
-            </div>
-            <p class="grammar-tip">💡 동사의 시제를 '과거'로 쓰면, 현실과의 거리가 멀어집니다. (가정법의 핵심)</p>
-          </div>
+      </details>
+    </div>
+
+    <p class="sh-group"><span class="sh-gbar" style="background:#ef4444"></span>뉘앙스 차이 (Nuance)</p>
+    <div class="sh-list">
+      <details class="sh-i">
+        <summary><span class="sh-no">04</span><span class="sh-t">Will vs Be going to</span><em>즉흥이냐 계획이냐</em><span class="sh-ic"></span></summary>
+        <div class="sh-b">
+          <div class="sh-row"><span class="sh-k">피자 시켜야지 <em>지금 결정</em></span><span class="sh-en"><span class="sh-o"><u>I’ll</u> order a pizza.</span></span></div>
+          <div class="sh-row"><span class="sh-k">친구 만나기로 했어 <em>계획</em></span><span class="sh-en"><span class="sh-o"><u>I’m going to</u> meet my friend.</span></span></div>
+          <div class="sh-row"><span class="sh-k">비 올 것 같아 <em>먹구름·근거</em></span><span class="sh-en"><span class="sh-o"><u>It’s going to</u> rain.</span></span></div>
+          <p class="sh-tip"><b>will</b> 즉흥적 결정 · <b>be going to</b> 계획됐거나 근거가 있을 때.</p>
         </div>
-        <!-- 5. Work Nuance -->
-        <div class="grammar-detail-card stagger-item">
-          <div class="grammar-detail-tag">🔥 만능 동사</div>
-          <h3>'일하다' 말고 'Work' 쓰는 법</h3>
-          <div class="grammar-detail-body">
-            <div class="grammar-example">
-              <span class="ex-ko">🇰🇷 "이 약 효과가 없네?"</span>
-              <span class="ex-en">🇺🇸 "This medicine doesn't <strong>work</strong>."</span>
-            </div>
-            <div class="grammar-example">
-              <span class="ex-ko">🇰🇷 "그 계획 괜찮은데? (될 것 같아)"</span>
-              <span class="ex-en">🇺🇸 "That plan <strong>works</strong> for me."</span>
-            </div>
-            <p class="grammar-tip">💡 Work는 '노동'뿐만 아니라 <strong>'기능하다 / 효과가 있다 / 작동하다'</strong>로 확장됩니다.</p>
-          </div>
+      </details>
+      <details class="sh-i">
+        <summary><span class="sh-no">05</span><span class="sh-t">Can vs Be able to</span><em>일반 능력이냐 특정 상황이냐</em><span class="sh-ic"></span></summary>
+        <div class="sh-b">
+          <div class="sh-row"><span class="sh-k">나 수영할 수 있어 <em>일반 능력</em></span><span class="sh-en"><span class="sh-o">I <u>can</u> swim.</span></span></div>
+          <div class="sh-row"><span class="sh-k">결국 합격할 수 있었어 <em>과거 성취</em></span><span class="sh-en"><span class="sh-o">I <u>was able to</u> pass the exam.</span></span></div>
+          <p class="sh-tip"><b>can</b> 일반적 능력 · <b>be able to</b> 특정 상황에서 해냄.</p>
         </div>
-        <!-- 6. Watch / See / Look -->
-        <div class="grammar-detail-card stagger-item">
-          <div class="grammar-detail-tag">👀 동사 디테일</div>
-          <h3>본다고 다 같은 'See'가 아닙니다</h3>
-          <div class="grammar-detail-body">
-            <div class="grammar-example">
-              <span class="ex-ko">🇰🇷 "나 어제 영화 봤어"</span>
-              <span class="ex-en">❌ "I <strong>saw</strong> a movie yesterday." (극장에서 봤다면 OK)</span>
-            </div>
-            <div class="grammar-example">
-              <span class="ex-en">✅ "I <strong>watched</strong> a movie on Netflix." (집에서 TV로)</span>
-            </div>
-            <p class="grammar-tip">💡 <strong>See</strong> (눈에 들어와서 봄) / <strong>Look at</strong> (의식적으로
-              쳐다봄) / <strong>Watch</strong> (움직이는 것을 지켜봄)</p>
-          </div>
+      </details>
+      <details class="sh-i">
+        <summary><span class="sh-no">06</span><span class="sh-t">Must vs Have to vs Should</span><em>의무의 강도</em><span class="sh-ic"></span></summary>
+        <div class="sh-b">
+          <div class="sh-row"><span class="sh-k">담배 피우면 안 돼 <em>금지·규칙</em></span><span class="sh-en"><span class="sh-o">You <u>must not</u> smoke here.</span></span></div>
+          <div class="sh-row"><span class="sh-k">시험이라 공부해야 해 <em>상황적 의무</em></span><span class="sh-en"><span class="sh-o">I <u>have to</u> study for the exam.</span></span></div>
+          <div class="sh-row"><span class="sh-k">너 이거 먹어봐 <em>추천·권유</em></span><span class="sh-en"><span class="sh-o">You <u>should</u> try this.</span></span></div>
+          <p class="sh-tip">의무가 강한 순서 — <b>Must</b> &gt; <b>Have to</b> &gt; <b>Should</b>.</p>
         </div>
+      </details>
+    </div>
+
+    <p class="sh-group"><span class="sh-gbar" style="background:#10b981"></span>핵심 표현 &amp; 문법</p>
+    <div class="sh-list">
+      <details class="sh-i">
+        <summary><span class="sh-no">07</span><span class="sh-t">구동사 (Phrasal Verbs)</span><em>원어민이 매일 써요</em><span class="sh-ic"></span></summary>
+        <div class="sh-b">
+          <div class="sh-row"><span class="sh-k">결국 택시 탔어</span><span class="sh-en"><span class="sh-o">I <u>ended up taking</u> a taxi.</span></span></div>
+          <div class="sh-row"><span class="sh-k">알고 보니 그가 맞았어</span><span class="sh-en"><span class="sh-o">It <u>turned out</u> he was right.</span></span></div>
+          <div class="sh-row"><span class="sh-k">우연히 친구를 만났어</span><span class="sh-en"><span class="sh-o">I <u>ran into</u> an old friend.</span></span></div>
+          <div class="sh-row"><span class="sh-k">좋은 아이디어를 냈어</span><span class="sh-en"><span class="sh-o">She <u>came up with</u> a good idea.</span></span></div>
+          <div class="sh-row"><span class="sh-k">회의를 미뤘어</span><span class="sh-en"><span class="sh-o">I <u>put off</u> the meeting.</span></span></div>
+          <p class="sh-tip">동사+전치사 조합. 구동사를 알면 영어가 훨씬 자연스러워집니다.</p>
+        </div>
+      </details>
+      <details class="sh-i">
+        <summary><span class="sh-no">08</span><span class="sh-t">IF 조건절 완전 정리</span><em>숫자 올라갈수록 비현실적</em><span class="sh-ic"></span></summary>
+        <div class="sh-b">
+          <div class="sh-row"><span class="sh-k">0조건 <em>과학·팩트</em></span><span class="sh-en"><span class="sh-o">If you heat water, it <u>boils</u>.</span></span></div>
+          <div class="sh-row"><span class="sh-k">1조건 <em>가능성</em></span><span class="sh-en"><span class="sh-o">If it rains, <u>I’ll stay</u> home.</span></span></div>
+          <div class="sh-row"><span class="sh-k">2조건 <em>상상, 현실 아님</em></span><span class="sh-en"><span class="sh-o">If I <u>were</u> rich, <u>I’d travel</u> the world.</span></span></div>
+          <div class="sh-row"><span class="sh-k">3조건 <em>과거 후회</em></span><span class="sh-en"><span class="sh-o">If I <u>had studied</u> more, I <u>would have passed</u>.</span></span></div>
+          <p class="sh-tip">동사 시제를 과거로 보낼수록 ‘현실과의 거리’가 멀어집니다.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<style>
+.sh{background:#fff;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.sh *{box-sizing:border-box}
+.sh-wrap{max-width:880px;margin:0 auto;text-align:center}
+.sh-eyebrow{color:#2D5BFF;font-weight:800;font-size:13px;letter-spacing:.18em;margin:0 0 14px}
+.sh-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;margin:0 0 12px;color:#10131a}
+.sh-hl{position:relative;white-space:nowrap}
+.sh-hl::before{content:"";position:absolute;left:-3px;right:-5px;top:32%;bottom:8%;background:#ffce4d;opacity:.6;transform:rotate(-1.2deg);border-radius:48% 52% 50% 50%/62% 40% 60% 38%;z-index:-1;mix-blend-mode:multiply}
+.sh-sub{color:#5a6680;font-size:16.5px;line-height:1.7;margin:0 auto 34px}.sh-sub b{color:#10131a}
+.sh-tap{color:#9aa3b2;font-size:14px;font-weight:600;margin-left:4px}
+.sh-group{display:flex;align-items:center;gap:9px;text-align:left;font-weight:800;font-size:16px;color:#1c2330;margin:34px 0 8px}
+.sh-gbar{width:16px;height:4px;border-radius:2px;flex:0 0 auto}
+.sh-list{text-align:left;border-top:1px solid #ededf1}
+.sh-i{border-bottom:1px solid #ededf1}
+.sh-i summary{display:flex;align-items:center;gap:11px;cursor:pointer;list-style:none;padding:18px 4px;color:#1c2330}
+.sh-i summary::-webkit-details-marker{display:none}
+.sh-no{font-weight:800;font-size:14px;color:#2D5BFF;font-variant-numeric:tabular-nums;flex:0 0 auto}
+.sh-t{font-size:16.5px;font-weight:800}
+.sh-i summary em{font-style:normal;font-size:13.5px;font-weight:600;color:#9aa3b2}
+.sh-ic{margin-left:auto;width:18px;height:18px;position:relative;flex:0 0 auto}
+.sh-ic::before,.sh-ic::after{content:"";position:absolute;background:#9aa3b2;border-radius:2px;transition:transform .2s}
+.sh-ic::before{top:8px;left:0;width:18px;height:2.2px}.sh-ic::after{top:0;left:8px;width:2.2px;height:18px}
+.sh-i[open] .sh-ic::after{transform:scaleY(0)}
+.sh-i[open] .sh-ic::before{background:#2D5BFF}
+.sh-b{padding:2px 4px 22px}
+.sh-row{display:grid;grid-template-columns:240px 1fr;gap:18px;align-items:start;padding:11px 0;border-top:1px dashed #f0f0f3}
+.sh-row:first-child{border-top:0}
+.sh-k{font-size:14px;color:#5b6473;font-weight:700;line-height:1.5;padding-top:2px}
+.sh-k em{font-style:normal;font-weight:500;color:#aab0bc;margin-left:3px;font-size:12.5px}
+.sh-en{display:flex;flex-direction:column;gap:7px;min-width:0}
+.sh-x,.sh-o{font-size:15.5px;line-height:1.5;padding-left:22px;position:relative;letter-spacing:-.1px}
+.sh-x{color:#aeb4bf;text-decoration:line-through;text-decoration-color:#d8c4bf}
+.sh-x::before{content:"✕";position:absolute;left:0;top:1px;color:#d4574f;font-weight:800;font-size:12px;text-decoration:none}
+.sh-o{color:#2f3845;font-weight:600}
+.sh-o::before{content:"✓";position:absolute;left:0;top:1px;color:#0a9b63;font-weight:800;font-size:12px}
+.sh-o u{text-decoration:none;font-weight:800;color:#10131a;background:linear-gradient(transparent 56%,#ffe07a 56%);padding:0 2px;border-radius:3px;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.sh-tip{font-size:14px;color:#5a6273;line-height:1.65;margin:14px 0 0;padding:12px 16px;background:#f6f8ff;border-left:3px solid #2D5BFF;border-radius:0 8px 8px 0}
+.sh-tip b{color:#1c2330;font-weight:700}
+@media(max-width:640px){.sh{padding:64px 16px}.sh-title{font-size:25px}.sh-row{grid-template-columns:1fr;gap:6px}.sh-k{padding-top:0}}
+</style>
+<!-- ===== /문법은 감각 (완전문장 + 형광펜 매핑) ===== -->
+<!-- ===== REDESIGN (손그림): 아카데미 수강 전 vs 후 ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,500&family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<section class="ph2">
+  <div class="ph2-wrap">
+    <p class="ph2-eyebrow">수강 전 → 후</p>
+    <h2 class="ph2-title">같은 말, 이렇게 <span class="ph2-hl">달라집니다</span></h2>
+    <p class="ph2-sub">각 반을 수료할 때마다 — 같은 한국어가 입에서 어떻게 바뀌는지.</p>
+
+    <div class="ph2-levels">
+      <div class="ph2-lv">
+        <p class="ph2-h"><span class="ph2-lb" style="color:#0a9b63">🔰 왕기초반</span> 단어 나열 → <b>완전한 문장</b></p>
+        <p class="ph2-pair"><span class="ph2-x">“Yesterday… friend… pasta…”</span><span class="ph2-ar">→</span><span class="ph2-o">“I ate pasta with my friend yesterday.”</span></p>
+        <p class="ph2-pair"><span class="ph2-x">“I… student.”</span><span class="ph2-ar">→</span><span class="ph2-o">“I am a student.”</span></p>
+      </div>
+      <hr class="ph2-rule">
+      <div class="ph2-lv">
+        <p class="ph2-h"><span class="ph2-lb" style="color:#2D5BFF">📗 기초반</span> 콩글리시 → <b>자연스러운 표현</b></p>
+        <p class="ph2-pair"><span class="ph2-x">“I very like movie.”</span><span class="ph2-ar">→</span><span class="ph2-o">“I really enjoy watching movies.”</span></p>
+        <p class="ph2-pair"><span class="ph2-x">“I have promise.”</span><span class="ph2-ar">→</span><span class="ph2-o">“I have plans.”</span></p>
+      </div>
+      <hr class="ph2-rule">
+      <div class="ph2-lv">
+        <p class="ph2-h"><span class="ph2-lb" style="color:#9333ea">📘 중급반</span> 버벅임 → <b>살아있는 뉘앙스</b></p>
+        <p class="ph2-pair"><span class="ph2-x">“I went there.” (경험인데)</span><span class="ph2-ar">→</span><span class="ph2-o">“I've been there.”</span></p>
+        <p class="ph2-pair"><span class="ph2-x">“I am going to order pizza.”</span><span class="ph2-ar">→</span><span class="ph2-o">“I'll order a pizza.”</span></p>
+      </div>
+      <hr class="ph2-rule">
+      <div class="ph2-lv">
+        <p class="ph2-h"><span class="ph2-lb" style="color:#ef4444">🎓 중상급반</span> 교과서 영어 → <b>원어민급 표현</b></p>
+        <p class="ph2-pair"><span class="ph2-x">“If I have money…”</span><span class="ph2-ar">→</span><span class="ph2-o">“If I were rich, I would…”</span></p>
+        <p class="ph2-pair"><span class="ph2-x">“Finally… taxi…”</span><span class="ph2-ar">→</span><span class="ph2-o">“We ended up taking a taxi.”</span></p>
       </div>
     </div>
-  </section>
-  <!-- Practical Grammar Curriculum (User Content) -->
-  <section class="section">
-    <div class="container">
-      <h2 class="reveal section-title">문법, 암기가 아니라 '감각'입니다</h2>
-      <p class="reveal center-text subtitle" style="margin-bottom:50px">
-        한국식 문법 용어에 지치셨나요? <br />
-        원어민이 실제로 쓰는 <strong>'맛(Nuance)'</strong>과 <strong>'감각(Sense)'</strong>으로 다시 익힙니다.
-      </p>
-      <div class="practical-grid reveal">
-        <!-- 1. Nuance Difference -->
-        <!-- 2. Core Expressions & Grammar -->
-        <!-- 3. Foundation Corrections -->
-        <div class="practical-card">
-          <div class="practical-header">
-            <span class="practical-icon">🛠️</span>
-            <h3>기초 &amp; 중급 교정</h3>
-          </div>
-          <div class="practical-item">
-            <div class="item-title">시제 혼동 (과거 vs 현재완료) — 가장 중요!</div>
-            <div class="correction-box">
-              <p>🇰🇷 "나 제주도 가봤어" (경험)</p>
-              <p>❌ "I <strong>went</strong> to Jeju." (특정 시점 이야기) <br />✅ "I'<strong>ve been</strong> to Jeju." (경험 표현)
-              </p>
-              <p style="margin-top:8px">🇰🇷 "아직 점심 안 먹었어" (현재까지 영향)</p>
-              <p>❌ "I <strong>didn't eat</strong> lunch." (과거 사실만) <br />✅ "I <strong>haven't eaten</strong> lunch yet."
-                (지금도 배고파)</p>
-              <p style="margin-top:8px">🇰🇷 "3년째 영어 배우고 있어" (현재까지 지속)</p>
-              <p>❌ "I <strong>learned</strong> English for 3 years." <br />✅ "I'<strong>ve been learning</strong>
-                English for 3 years."</p>
-            </div>
-            <p class="grammar-tip">💡 경험·아직 안 한 일·지금까지 이어지는 상태는 <strong>현재완료</strong>, 끝난 과거 사건은 <strong>과거형</strong>.
-              한국어엔 이 구분이 없어서 <strong>90%가 틀려요!</strong></p>
-          </div>
-          <div class="practical-item">
-            <div class="item-title">to부정사 vs 동명사 (진짜 많이 틀림!)</div>
-            <div class="correction-box">
-              <p>🇰🇷 "오늘 너무 지루해"</p>
-              <p>❌ "I'm <strong>boring</strong> today." <br />✅ "I'm <strong>bored</strong> today."</p>
-              <p style="margin-top:8px">🇰🇷 "나 영어 공부하기로 했어"</p>
-              <p>❌ "I decided <strong>studying</strong> English." <br />✅ "I decided <strong>to study</strong> English."
-              </p>
-            </div>
-            <p class="grammar-tip">💡 <strong>enjoy/finish/mind</strong> 뒤엔 ~ing, <strong>decide/want/plan</strong> 뒤엔
-              to가 와요. 이걸 바꿔 쓰면 원어민이 어색하게 느껴요!</p>
-          </div>
-          <div class="practical-item">
-            <div class="item-title">관사 (a/the) — 빠뜨리면 어색</div>
-            <div class="correction-box">
-              <p>❌ "I went to cafe yesterday." <br />✅ "I went to <strong>a</strong> cafe yesterday."</p>
-              <p>❌ "Can you open window?" <br />✅ "Can you open <strong>the</strong> window?"</p>
-            </div>
-          </div>
-        </div>
-        <div class="practical-card">
-          <div class="practical-header">
-            <span class="practical-icon">🔥</span>
-            <h3>뉘앙스 차이 (Nuance)</h3>
-          </div>
-          <div class="practical-item">
-            <div class="item-title">Will vs Be going to</div>
-            <p class="item-desc"><strong>will</strong> (즉흥적) vs <strong>be going to</strong> (계획/근거)</p>
-            <div class="item-ex">
-              <p>🍕 "아 배고파, 피자 시켜야지" (지금 결정) <br />→ "I'<strong>ll</strong> order a pizza."</p>
-              <p>📅 "나 오늘 친구 만나기로 했어" (이미 계획) <br />→ "I'<strong>m going to</strong> meet my friend."</p>
-              <p>🌧️ "비 올 것 같아" (먹구름 보임) <br />→ "It'<strong>s going to</strong> rain."</p>
-            </div>
-          </div>
-          <div class="practical-item">
-            <div class="item-title">Can vs Be able to</div>
-            <p class="item-desc"><strong>can</strong> (일반 능력) vs <strong>be able to</strong> (특정 상황)</p>
-            <div class="item-ex">
-              <p>🏊 "나 수영할 수 있어" (일반적) <br />→ "I <strong>can</strong> swim."</p>
-              <p>🏆 "결국 합격할 수 있었어" (과거 성취) <br />→ "I <strong>was able to</strong> pass the exam."</p>
-            </div>
-          </div>
-          <div class="practical-item">
-            <div class="item-title">Must vs Have to vs Should</div>
-            <p class="item-desc">강도: Must 💪💪💪 &gt; Have to 💪💪 &gt; Should 💪</p>
-            <div class="item-ex">
-              <p>🚫 "담배 피우면 안 돼" (금지/규칙) <br />→ <strong>Must not</strong></p>
-              <p>📚 "시험이라 공부해야 해" (상황적 의무) <br />→ <strong>Have to</strong></p>
-              <p>🍦 "너 이거 먹어봐" (추천/권유) <br />→ <strong>Should</strong></p>
-            </div>
-          </div>
-        </div>
-        <div class="practical-card">
-          <div class="practical-header">
-            <span class="practical-icon">📌</span>
-            <h3>핵심 표현 &amp; 문법</h3>
-          </div>
-          <div class="practical-item">
-            <div class="item-title">구동사 (Phrasal Verbs)</div>
-            <p class="item-desc">원어민이 매일 쓰는 동사+전치사 조합</p>
-            <ul class="practical-list">
-              <li>🚖 결국 택시 탔어 → <strong>ended up</strong> taking</li>
-              <li>😲 알고 보니 → <strong>turned out</strong></li>
-              <li>👋 우연히 만났어 → <strong>ran into</strong></li>
-              <li>💡 아이디어를 냈어 → <strong>came up with</strong></li>
-              <li>📅 미뤘어 → <strong>put off</strong></li>
-            </ul>
-            <p class="text-sm text-primary" style="margin-top:8px">💡 구동사를 알면 영어가 훨씬 자연스러워집니다!</p>
-          </div>
-          <div class="practical-item">
-            <div class="item-title">IF 조건절 완전 정리</div>
-            <p class="item-desc">숫자가 올라갈수록 '비현실적'이 됩니다.</p>
-            <ul class="practical-list">
-              <li><strong>0조건</strong> (과학/팩트): 물 끓이면 → 끓는다</li>
-              <li><strong>1조건</strong> (가능성): 비 오면 → 집에 있을게</li>
-              <li><strong>2조건</strong> (상상): 내가 부자라면 (아님) → 여행 갈 텐데</li>
-              <li><strong>3조건</strong> (과거 후회): 공부 더 했으면 (안 함) → 합격했을 텐데</li>
-            </ul>
-          </div>
-        </div>
+
+    <p class="ph2-foot">한 단계씩 올라갈 때마다 — <span class="ph2-hl2">“내가 이걸 영어로 말할 수 있게 됐어!”</span> <svg class="ph2-spark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C12.8 7 17 11.2 24 12 17 12.8 12.8 17 12 24 11.2 17 7 12.8 0 12 7 11.2 11.2 7 12 0Z" fill="#e8a72e"/></svg></p>
+  </div>
+</section>
+
+<style>
+.ph2{background:#f6f7f9;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.ph2 *{box-sizing:border-box}
+.ph2-wrap{max-width:760px;margin:0 auto;text-align:center}
+.ph2-eyebrow{color:#2D5BFF;font-weight:800;font-size:13px;letter-spacing:.18em;margin:0 0 14px}
+.ph2-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;margin:0 0 12px;color:#10131a}
+.ph2-hl{position:relative;white-space:nowrap}
+.ph2-hl::before{content:"";position:absolute;left:-3px;right:-5px;top:32%;bottom:8%;background:#ffce4d;opacity:.7;transform:rotate(-1.3deg);border-radius:48% 52% 50% 50%/62% 40% 60% 38%;z-index:-1;mix-blend-mode:multiply}
+.ph2-sub{color:#5a6680;font-size:16.5px;line-height:1.7;margin:0 auto 44px;max-width:520px}
+.ph2-levels{text-align:left}
+.ph2-h{font-size:17px;font-weight:700;color:#3a4150;margin:0 0 14px}
+.ph2-h b{color:#10131a}
+.ph2-lb{font-family:'Pretendard',-apple-system,sans-serif;font-weight:700;font-size:21px;margin-right:6px}
+.ph2-pair{margin:0 0 10px;font-family:'Fraunces',serif;font-size:17px;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;letter-spacing:-.2px}
+.ph2-x{color:#b9b1a6;font-style:italic;text-decoration:line-through;text-decoration-color:#d8b7b2}
+.ph2-ar{font-family:'Pretendard';color:#c4c8d0;font-weight:800;font-style:normal}
+.ph2-o{color:#16632f;font-weight:600}
+.ph2-rule{border:0;height:1px;background:#e6e8ed;margin:24px 0}
+.ph2-foot{margin:40px 0 0;font-size:18px;font-weight:700;color:#1c2330;line-height:1.6}
+.ph2-hl2{position:relative;white-space:normal}
+.ph2-spark{display:inline-block;width:20px;height:20px;vertical-align:-3px;margin-left:4px}
+@media(max-width:640px){.ph2{padding:64px 16px}.ph2-title{font-size:25px}.ph2-pair{font-size:15px;gap:8px}.ph2-foot{font-size:16px}}
+</style>
+<!-- ===== /REDESIGN (손그림): 수강 전 vs 후 ===== -->
+<!-- ============ SECTION: 영상 후기 (수강생 인터뷰) ============ -->
+<style>
+.tb-rv{background:#0f0f10;padding:96px 20px;font-family:'Pretendard',-apple-system,sans-serif;color:#fff}
+.tb-rv *{box-sizing:border-box}
+.tb-rv .tb-wrap{max-width:1080px;margin:0 auto;text-align:center}
+.tb-rv .tb-eyebrow{color:#ff5a5a;font-weight:700;font-size:14px;letter-spacing:2px;margin:0 0 14px}
+.tb-rv .tb-title{font-size:34px;font-weight:800;letter-spacing:-1px;margin:0 0 14px;line-height:1.3}
+.tb-rv .tb-sub{color:#aaa;font-size:16px;line-height:1.7;margin:0 auto;max-width:620px}
+.tb-rv .tb-underline{width:48px;height:4px;background:#ff5a5a;border-radius:2px;margin:24px auto 48px}
+.tb-rv .tb-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;text-align:left}
+.tb-rv .tb-card{background:#1a1a1c;border:1px solid #2a2a2e;border-radius:16px;overflow:hidden;transition:transform .2s}
+.tb-rv .tb-card:hover{transform:translateY(-4px)}
+/* video facade: thumbnail + play, swaps to iframe on click */
+.tb-rv .tb-video{position:relative;width:100%;aspect-ratio:16/9;background:#000 center/cover no-repeat;cursor:pointer;border:0;padding:0;display:block}
+.tb-rv .tb-play{position:absolute;inset:0;margin:auto;width:60px;height:60px;display:flex;align-items:center;justify-content:center;background:rgba(220,38,38,.94);color:#fff;border-radius:50%;font-size:22px;padding-left:4px;box-shadow:0 6px 20px rgba(0,0,0,.45);transition:transform .2s}
+.tb-rv .tb-video:hover .tb-play{transform:scale(1.12)}
+.tb-rv .tb-video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.tb-rv .tb-meta{padding:18px 18px 22px}
+.tb-rv .tb-name{font-weight:800;font-size:16px;margin:0 0 6px}
+.tb-rv .tb-name span{color:#ff5a5a;font-weight:600;font-size:13px;margin-left:6px}
+.tb-rv .tb-quote{color:#bbb;font-size:14px;line-height:1.6;margin:0}
+.tb-rv .tb-rating{margin:44px auto 0;display:inline-flex;align-items:center;gap:14px;background:#1a1a1c;border:1px solid #2a2a2e;border-radius:14px;padding:16px 26px;flex-wrap:wrap;justify-content:center}
+.tb-rv .tb-rating .tb-stars{color:#ffc107;font-size:18px;letter-spacing:2px}
+.tb-rv .tb-rating b{font-size:22px}
+.tb-rv .tb-rating a{color:#ff5a5a;text-decoration:none;font-weight:700;font-size:14px}
+.tb-rv .tb-cta{margin-top:36px}
+.tb-rv .tb-btn{display:inline-flex;align-items:center;gap:8px;padding:18px 34px;border-radius:14px;font-weight:800;font-size:17px;text-decoration:none;background:#dc2626;color:#fff;box-shadow:0 8px 24px rgba(220,38,38,.32);transition:transform .15s}
+.tb-rv .tb-btn:hover{transform:translateY(-2px)}
+@media(max-width:900px){.tb-rv .tb-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.tb-rv{padding:64px 16px}.tb-rv .tb-title{font-size:26px}.tb-rv .tb-grid{grid-template-columns:1fr}}
+</style>
+
+<section class="tb-rv">
+  <div class="tb-wrap">
+    <p class="tb-eyebrow">REAL REVIEWS</p>
+    <h2 class="tb-title">회원들이 직접 말하는 변화</h2>
+    <p class="tb-sub">대본 없는 진짜 인터뷰. 워홀·유학·이직을 앞두고 더박스를 거쳐간 분들의 이야기입니다.</p>
+    <div class="tb-underline"></div>
+
+    <div class="tb-grid">
+      <div class="tb-card">
+        <div class="tb-video" data-yt="fc5fy1bt33E" role="button" tabindex="0" aria-label="장민서 후기 영상 재생" style="background-image:url('https://i.ytimg.com/vi/fc5fy1bt33E/maxresdefault.jpg')"><span class="tb-play">▶</span></div>
+        <div class="tb-meta"><p class="tb-name">장민서 <span>워킹홀리데이</span></p><p class="tb-quote">"워홀이 끝나면 더박스에 다시 올 거예요."</p></div>
       </div>
-      <style>
-        .practical-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-          gap: 30px;
-          align-items: start;
-        }
-
-        .practical-card {
-          background: white;
-          border-radius: 24px;
-          border: 1px solid #eee;
-          padding: 30px;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
-          transition: transform 0.3s;
-        }
-
-        .practical-card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
-        }
-
-        .practical-header {
-          display: flex;
-          align-items: center;
-          gap: 12px;
-          margin-bottom: 24px;
-          padding-bottom: 16px;
-          border-bottom: 2px solid #f0f0f0;
-        }
-
-        .practical-icon {
-          font-size: 1.8rem;
-        }
-
-        .practical-header h3 {
-          margin: 0;
-          font-size: 1.25rem;
-          font-weight: 700;
-          color: var(--text-main);
-        }
-
-        .practical-item {
-          margin-bottom: 24px;
-        }
-
-        .practical-item:last-child {
-          margin-bottom: 0;
-        }
-
-        .item-title {
-          font-size: 1.05rem;
-          font-weight: 700;
-          color: var(--primary);
-          margin-bottom: 6px;
-          display: flex;
-          align-items: center;
-        }
-
-        .item-title::before {
-          content: "";
-          display: inline-block;
-          width: 6px;
-          height: 6px;
-          background: var(--primary);
-          border-radius: 50%;
-          margin-right: 8px;
-        }
-
-        .item-desc {
-          font-size: 0.9rem;
-          color: var(--text-sub);
-          margin-bottom: 10px;
-          line-height: 1.5;
-        }
-
-        .item-ex {
-          background: #f8f9fa;
-          padding: 12px 16px;
-          border-radius: 12px;
-          font-size: 0.9rem;
-        }
-
-        .item-ex p {
-          margin: 0 0 8px 0;
-          line-height: 1.5;
-        }
-
-        .item-ex p:last-child {
-          margin-bottom: 0;
-        }
-
-        .practical-list {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-        }
-
-        .practical-list li {
-          font-size: 0.9rem;
-          margin-bottom: 6px;
-          padding-left: 10px;
-          border-left: 2px solid #ddd;
-        }
-
-        .correction-box {
-          background: #FFF0F0;
-          border: 1px solid #FFDCDC;
-          padding: 12px;
-          border-radius: 12px;
-          font-size: 0.9rem;
-        }
-
-        .correction-box p {
-          margin: 0 0 6px 0;
-        }
-
-        .correction-box p:last-child {
-          margin-bottom: 0;
-        }
-      </style>
-    </div>
-  </section>
-  <!-- Before & After (레벨별 극적 변화) -->
-  <section class="section">
-    <div class="container">
-      <h2 class="reveal section-title">아카데미 수강 전 vs 후</h2>
-      <p class="reveal center-text subtitle" style="margin-bottom:16px">각 반을 수료할 때마다, <strong>눈에 보이는 변화</strong>가
-        찾아옵니다.</p>
-      <p class="reveal center-text text-muted text-sm" style="margin-bottom:40px">같은 한국어를 영어로
-        어떻게 다르게 말하게 되는지 직접 느껴보세요.</p>
-      <!-- 왕기초반 Before & After -->
-      <div class="before-after reveal" style="margin-bottom:48px">
-        <div class="ba-label" style="text-align:center;margin-bottom:16px">
-          <span class="text-base font-bold"
-            style="background:#ef4444;color:white;padding:6px 20px;border-radius:20px">🔰
-            왕기초반 수강 후</span>
-          <p class="text-sm text-muted" style="margin-top:8px">단어 나열 수준 → <strong>완전한
-              문장</strong>으로 말할 수 있게 됩니다!</p>
-        </div>
-        <div class="ba-grid">
-          <div class="ba-card ba-before">
-            <h3>❌ Before — 단어만 툭툭 던짐</h3>
-            <ul>
-              <li>🇰🇷 "어제 친구랑 파스타 먹었어"</li>
-              <li><strong>"Yesterday... friend... pasta... eat..."</strong> 😰<br /><span class="text-sm"
-                  style="color:#999">(조사도 동사도 없이 단어만 나열)</span></li>
-              <li style="margin-top:10px">🇰🇷 "나 학생이야"</li>
-              <li><strong>"I... student."</strong><br /><span class="text-sm" style="color:#999">(be동사가 뭔지
-                  모름)</span></li>
-            </ul>
-          </div>
-          <div class="ba-arrow">→</div>
-          <div class="ba-card ba-after">
-            <h3>✅ After — 주어+동사가 있는 문장!</h3>
-            <ul>
-              <li>🇰🇷 "어제 친구랑 파스타 먹었어"</li>
-              <li><strong>"I ate pasta with my friend yesterday."</strong> ✨<br /><span
-                  class="text-sm text-primary">(과거형 동사와 전치사까지 완벽!)</span></li>
-              <li style="margin-top:10px">🇰🇷 "나 학생이야"</li>
-              <li><strong>"I am a student."</strong><br /><span class="text-sm text-primary">(be동사를 정확하게
-                  사용)</span></li>
-            </ul>
-          </div>
-        </div>
+      <div class="tb-card">
+        <div class="tb-video" data-yt="gCWZJMvBCTA" role="button" tabindex="0" aria-label="이명제 후기 영상 재생" style="background-image:url('https://i.ytimg.com/vi/gCWZJMvBCTA/maxresdefault.jpg')"><span class="tb-play">▶</span></div>
+        <div class="tb-meta"><p class="tb-name">이명제 <span>Reily반</span></p><p class="tb-quote">"제 영어회화가 어떤 수준인지 진짜 몰랐어요."</p></div>
       </div>
-      <!-- 기초반 Before & After -->
-      <div class="before-after reveal" style="margin-bottom:48px">
-        <div class="ba-label" style="text-align:center;margin-bottom:16px">
-          <span class="text-base font-bold"
-            style="background:#f59e0b;color:white;padding:6px 20px;border-radius:20px">📗
-            기초반 수강 후</span>
-          <p class="text-sm text-muted" style="margin-top:8px">콩글리쉬 표현 → <strong>원어민처럼 자연스러운
-              표현</strong>으로!</p>
-        </div>
-        <div class="ba-grid">
-          <div class="ba-card ba-before">
-            <h3>❌ Before — 한국식 영어 (Konglish)</h3>
-            <ul>
-              <li>🇰🇷 "영화 보는 거 진짜 좋아해"</li>
-              <li><strong>"I very like movie."</strong> 😱<br /><span class="text-sm" style="color:#999">(Very는 동사를 꾸밀 수
-                  없음)</span></li>
-              <li style="margin-top:10px">🇰🇷 "약속 있어"</li>
-              <li><strong>"I have promise."</strong><br /><span class="text-sm" style="color:#999">(Promise는
-                  '서약/맹세'의 의미)</span></li>
-            </ul>
-          </div>
-          <div class="ba-arrow">→</div>
-          <div class="ba-card ba-after">
-            <h3>✅ After — 자연스러운 영어 표현!</h3>
-            <ul>
-              <li>🇰🇷 "영화 보는 거 진짜 좋아해"</li>
-              <li><strong>"I really enjoy watching movies."</strong> ✨<br /><span class="text-sm text-primary">(Really와
-                  Enjoy를 자연스럽게 사용)</span></li>
-              <li style="margin-top:10px">🇰🇷 "약속 있어"</li>
-              <li><strong>"I have plans."</strong><br /><span class="text-sm text-primary">(Plans가 맞는
-                  표현)</span></li>
-            </ul>
-          </div>
-        </div>
+      <div class="tb-card">
+        <div class="tb-video" data-yt="Zv8nsj-0V5w" role="button" tabindex="0" aria-label="유수영 후기 영상 재생" style="background-image:url('https://i.ytimg.com/vi/Zv8nsj-0V5w/maxresdefault.jpg')"><span class="tb-play">▶</span></div>
+        <div class="tb-meta"><p class="tb-name">유수영 <span>아일랜드 출국</span></p><p class="tb-quote">"떠나기 전, 소통이 되는 회화를 느꼈어요."</p></div>
       </div>
-      <!-- 중급반 Before & After -->
-      <div class="before-after reveal" style="margin-bottom:48px">
-        <div class="ba-label" style="text-align:center;margin-bottom:16px">
-          <span class="text-base font-bold"
-            style="background:#6366f1;color:white;padding:6px 20px;border-radius:20px">📘
-            중급반 수강 후</span>
-          <p class="text-sm text-muted" style="margin-top:8px">문법은 아는데 말할 때 버벅이던 분 → 뉘앙스를 구분해서
-            자연스럽게 표현</p>
-        </div>
-        <div class="ba-grid">
-          <div class="ba-card ba-before">
-            <h3>❌ Before — 뉘앙스 없는 영어</h3>
-            <ul>
-              <li>🇰🇷 "거기 가본 적 있어"</li>
-              <li><strong>"I went there."</strong> 😐<br /><span class="text-sm" style="color:#999">(경험 vs
-                  과거 시제 혼동)</span></li>
-              <li style="margin-top:10px">🇰🇷 "나 피자 시켜야지"</li>
-              <li><strong>"I am going to order pizza."</strong><br /><span class="text-sm" style="color:#999">(즉흥적 결정엔
-                  will이 자연스러움)</span></li>
-              <li style="margin-top:10px">🇰🇷 "문이 잠겼어"</li>
-              <li><strong>"The door locked."</strong><br /><span class="text-sm" style="color:#999">(수동태
-                  미사용)</span></li>
-            </ul>
-          </div>
-          <div class="ba-arrow">→</div>
-          <div class="ba-card ba-after">
-            <h3>✅ After — 뉘앙스가 살아 있는 영어!</h3>
-            <ul>
-              <li>🇰🇷 "거기 가본 적 있어"</li>
-              <li><strong>"I've been there."</strong> ✨<br /><span class="text-sm text-primary">(현재완료로 경험
-                  표현)</span></li>
-              <li style="margin-top:10px">🇰🇷 "나 피자 시켜야지"</li>
-              <li><strong>"I'll order a pizza."</strong><br /><span class="text-sm text-primary">(즉흥적 의지 =
-                  will)</span></li>
-              <li style="margin-top:10px">🇰🇷 "문이 잠겼어"</li>
-              <li><strong>"The door was locked."</strong><br /><span class="text-sm text-primary">(수동태 완벽
-                  활용)</span></li>
-            </ul>
-          </div>
-        </div>
+      <div class="tb-card">
+        <div class="tb-video" data-yt="l35j8Zajegw" role="button" tabindex="0" aria-label="김예진 후기 영상 재생" style="background-image:url('https://i.ytimg.com/vi/l35j8Zajegw/maxresdefault.jpg')"><span class="tb-play">▶</span></div>
+        <div class="tb-meta"><p class="tb-name">김예진 <span>수능영어 → 회화</span></p><p class="tb-quote">"암기만 하던 영어에서, 진짜 원어민과 대화하는 지금."</p></div>
       </div>
-      <!-- 중상급반 Before & After -->
-      <div class="before-after reveal">
-        <div class="ba-label" style="text-align:center;margin-bottom:16px">
-          <span class="text-base font-bold"
-            style="background:#10b981;color:white;padding:6px 20px;border-radius:20px">🎓
-            중상급반 수강 후</span>
-          <p class="text-sm text-muted" style="margin-top:8px">영어가 되긴 하는데 교포처럼은 안 되던 분 → 원어민이 실제
-            쓰는 표현이 입에서 나옴</p>
-        </div>
-        <div class="ba-grid">
-          <div class="ba-card ba-before">
-            <h3>❌ Before — 교과서 영어</h3>
-            <ul>
-              <li>🇰🇷 "내가 부자라면..."</li>
-              <li><strong>"If I have money..."</strong> 😰<br /><span class="text-sm" style="color:#999">(가정법 과거형
-                  오류)</span></li>
-              <li style="margin-top:10px">🇰🇷 "결국 택시 타게 됐어"</li>
-              <li><strong>"Finally... taxi..."</strong><br /><span class="text-sm" style="color:#999">(구동사
-                  표현 못함)</span></li>
-              <li style="margin-top:10px">🇰🇷 "예전에는 매일 운동했었어"</li>
-              <li><strong>"Before I exercise every day."</strong><br /><span class="text-sm" style="color:#999">(used to
-                  미사용)</span></li>
-            </ul>
-          </div>
-          <div class="ba-arrow">→</div>
-          <div class="ba-card ba-after">
-            <h3>✅ After — 원어민급 자연스러움!</h3>
-            <ul>
-              <li>🇰🇷 "내가 부자라면..."</li>
-              <li><strong>"If I were rich, I would..."</strong> ✨<br /><span class="text-sm text-primary">(가정법 공식 완벽
-                  적용)</span></li>
-              <li style="margin-top:10px">🇰🇷 "결국 택시 탔어"</li>
-              <li><strong>"We ended up taking a taxi."</strong><br /><span class="text-sm text-primary">(구동사
-                  end up 활용)</span></li>
-              <li style="margin-top:10px">🇰🇷 "예전에는 매일 운동했었어"</li>
-              <li><strong>"I used to exercise every day."</strong><br /><span class="text-sm text-primary">(과거의 습관 used
-                  to)</span></li>
-            </ul>
-          </div>
-        </div>
+      <div class="tb-card">
+        <div class="tb-video" data-yt="jE5obiQ-iWE" role="button" tabindex="0" aria-label="김효정 후기 영상 재생" style="background-image:url('https://i.ytimg.com/vi/jE5obiQ-iWE/maxresdefault.jpg')"><span class="tb-play">▶</span></div>
+        <div class="tb-meta"><p class="tb-name">김효정 <span>호주 워홀 · Pia</span></p><p class="tb-quote">"호주로 워홀을 떠나며 남긴 진짜 후기."</p></div>
       </div>
-      <div class="info-banner reveal"
-        style="margin-top:40px;max-width:700px;margin-left:auto;margin-right:auto;text-align:center">
-        <p class="text-lg">🚀 <strong>왕기초 → 기초 → 중급 → 중상급</strong></p>
-        <p>한 단계씩 올라갈 때마다 <strong>"내가 이걸 영어로 말할 수 있게 됐어!"</strong>라는<br />확실한 성취감을 느끼실 수 있습니다.</p>
+      <div class="tb-card" style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#dc2626,#b91c1c);min-height:200px">
+        <a href="https://www.youtube.com/@thebox_busan" style="text-decoration:none;color:#fff;text-align:center;padding:24px">
+          <div style="font-size:30px;margin-bottom:8px">▶</div>
+          <div style="font-weight:800;font-size:17px">더박스TV에서<br>전체 후기 보기</div>
+        </a>
       </div>
     </div>
-  </section>
-  <!-- 아카데미 시간표 -->
-  <section class="section bg-light">
-    <div class="container" style="text-align:center">
-      <h2 class="reveal section-title">⏰ 아카데미 시간표 안내</h2>
-      <p class="reveal section-sub">주 2회, 1회 90분 수업으로 진행됩니다.</p>
-      <div class="schedule-grid reveal" style="margin-top:28px">
-        <div class="schedule-card">
-          <div class="schedule-day">평일 오전반</div>
-          <div class="schedule-time">월/수 11:00 ~ 12:30</div>
-          <div class="schedule-time">화/목 12:30 ~ 14:00</div>
-        </div>
-        <div class="schedule-card">
-          <div class="schedule-day">평일 저녁반</div>
-          <div class="schedule-time">월/수 18:50 ~ 20:20</div>
-          <div class="schedule-time">화/목 20:30 ~ 22:00</div>
-        </div>
-        <div class="schedule-card">
-          <div class="schedule-day">주말반</div>
-          <div class="schedule-time">토/일 11:00 ~ 12:30</div>
-          <div class="schedule-time">토/일 12:30 ~ 14:00</div>
-        </div>
-      </div>
-      <p class="reveal text-sm text-muted" style="margin-top:16px">
-        ※ 레벨/요일에 따라 반 구성이 달라질 수 있으며, <strong>정확한 시간표는 상담/레벨테스트 결과에 맞춰 안내드립니다.</strong>
-      </p>
-    </div>
-  </section>
-  <!-- 💳 수강 금액 (스터디 가격표 톤으로) -->
-  <section class="section bg-primary-gradient">
-    <div class="container" style="text-align:center">
-      <h2 class="reveal section-title" style="color:white">수강 금액</h2>
-      <p class="reveal section-sub" style="color:rgba(255,255,255,0.9)">교재비 등 추가 비용 없이, 수업료만으로 진행됩니다.</p>
-      <div class="price-grid reveal" style="margin-top:18px">
-        <div class="price-container">
-          <div class="price-row">
-            <span class="price-label">1달</span>
-            <span class="price-value">220,000원</span>
-          </div>
-          <div class="price-row">
-            <span class="price-label">2달</span>
-            <span class="price-value">380,000원</span>
-          </div>
-          <div class="price-row highlight-row">
-            <span class="price-label">3달</span><span class="badge-reco">추천</span>
-            <span class="price-value">530,000원</span>
-          </div>
-          <p class="price-note" style="margin-top:18px;color:rgba(0,0,0,0.6)">
-            * 연장/리뷰/후기/우수상/지인등록 등 <strong>추가 할인</strong> 제도가 있습니다. (자세한 내용은 추후 안내)
-          </p>
-        </div>
-      </div>
-      <div class="hint-box reveal" style="max-width:860px;margin:18px auto 0;text-align:left">
-        <ul style="margin:0">
-          <li><strong>교재비는 따로 받지 않습니다.</strong> (추가 비용 없음)</li>
-          <li>아카데미 수강생도 파티/행사 참여 가능하며, 일부 행사는 멤버 할인 가격으로 참여할 수 있습니다.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-  <!-- Level-up CTA (시간표 아래로 이동) -->
-  <section class="section bg-light">
-    <div class="container" style="text-align:center">
-      <h2 class="reveal section-title">아카데미에서 기초를 잡은 다음은?</h2>
-      <p class="reveal subtitle">아카데미에서 문법 정확도가 올라오면, 원어민 스터디에서<br /><strong>배운 것을 실전으로 써먹는 단계</strong>로 넘어갈 수 있습니다.
-      </p>
-      <p class="reveal text-muted text-sm" style="margin-bottom:30px">
-        중급 이상이라면 아카데미 + 스터디 동시 진행도 가능합니다.<br />
-        상담을 통해 나에게 맞는 시점을 안내받으세요.
-      </p>
-      <div class="reveal" style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
-        <a class="btn btn--large btn--primary" href="study.html">스터디 페이지 보기</a>
-        <a class="btn btn--large" href="https://m.booking.naver.com/booking/13/bizes/839473"
-          style="background:#F0F5FF;color:var(--primary)" target="_blank">상담
-          예약하기</a>
-      </div>
-    </div>
-  </section>
-  <footer style="background:#111;padding:48px 0;color:#aaa">
-    <div class="container footer__inner">
-      <div class="footer__brand" style="color:#fff">THE <span style="color:#ef4444">BOX</span></div>
-      <nav class="footer__nav">
-        <a href="index.html" style="color:#aaa">홈</a>
-        <a href="programs.html" style="color:#aaa">시스템 안내</a>
-        <a href="study.html" style="color:#aaa">스터디</a>
-        <a href="academy.html" style="color:#aaa">아카데미</a>
-        <a href="level-test.html" style="color:#aaa">레벨 테스트</a>
-      </nav>
-      <div class="footer__social">
-        <a href="https://www.instagram.com/thebox_busan" target="_blank" rel="noopener" aria-label="인스타그램"
-          style="color:#aaa">📸</a>
-        <a href="https://m.booking.naver.com/booking/13/bizes/839473" target="_blank" rel="noopener" aria-label="네이버 예약"
-          style="color:#aaa">📅</a>
-      </div>
-      <p class="footer__info" style="color:#666">부산 부산진구 서면 | THE BOX Busan English Community</p>
-      <p class="muted small" style="color:#555">© 2026 THEBOX. All rights reserved.</p>
-    </div>
-  </footer>
 
-  <div class="sticky-cta" aria-label="빠른 이동 버튼">
-    <a class="btn-primary" href="https://m.booking.naver.com/booking/13/bizes/839473" target="_blank" rel="noopener">⚡
-      지금 예약하기</a>
-    <a class="btn-outline" href="level-test.html">📝 레벨테스트</a>
+    <div class="tb-rating">
+      <span class="tb-stars">★★★★★</span>
+      <b>4.9</b>
+      <span style="color:#888;font-size:14px">네이버 실제 방문자 리뷰</span>
+      <a href="https://m.booking.naver.com/booking/13/bizes/839473">네이버 후기 전체 보기 →</a>
+    </div>
+    <div class="tb-cta">
+      <a class="tb-btn" href="https://m.booking.naver.com/booking/13/bizes/839473">⚡ 나도 상담 예약하기</a>
+    </div>
   </div>
 
   <script>
-    (function () {
-      "use strict";
-      if ("IntersectionObserver" in window) {
-        var obs = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-visible"); obs.unobserve(e.target); } });
-        }, { threshold: 0.1 });
-        document.querySelectorAll(".reveal, .reveal-left, .reveal-right, .reveal-up, .reveal-scale").forEach(function (el) { obs.observe(el); });
-        // stagger
-        var sObs = new IntersectionObserver(function (entries) {
-          entries.forEach(function (e) {
-            if (e.isIntersecting) {
-              var items = e.target.querySelectorAll('.stagger-item, .stagger-left');
-              items.forEach(function (item, i) { item.style.setProperty('--i', i); item.classList.add('is-visible'); });
-              sObs.unobserve(e.target);
-            }
-          });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.stagger-container').forEach(function (el) { sObs.observe(el); });
-      }
-    })();
+  (function(){
+    function play(el){
+      var id=el.getAttribute('data-yt'); if(!id||el.dataset.on)return; el.dataset.on=1;
+      el.innerHTML='<iframe src="https://www.youtube-nocookie.com/embed/'+id+'?autoplay=1&rel=0" title="더박스 수강생 후기" allow="accelerometer;autoplay;clipboard-write;encrypted-media;gyroscope;picture-in-picture" allowfullscreen></iframe>';
+    }
+    document.querySelectorAll('.tb-rv .tb-video[data-yt]').forEach(function(el){
+      el.addEventListener('click',function(){play(el);});
+      el.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();play(el);}});
+    });
+  })();
   </script>
-  <script src="animations.js"></script>
-  <script>
-    (function () {
-      const btn = document.getElementById('mobileMenuBtn');
-      const overlay = document.getElementById('mobileOverlay');
-      const panel = document.getElementById('mobileNav');
-      const close = document.getElementById('mobileNavClose');
-      if (!btn || !panel) return;
-      function open() { overlay.classList.add('is-open'); panel.classList.add('is-open'); document.body.style.overflow = 'hidden'; }
-      function shut() { overlay.classList.remove('is-open'); panel.classList.remove('is-open'); document.body.style.overflow = ''; }
-      btn.addEventListener('click', open);
-      overlay.addEventListener('click', shut);
-      close.addEventListener('click', shut);
-      panel.querySelectorAll('a').forEach(a => a.addEventListener('click', shut));
-    })();
-  </script>
-</body>
+</section>
+<!-- ============ /SECTION: 영상 후기 ============ -->
+<!-- ===== REDESIGN (손그림): 아카데미 시간표 안내 ===== -->
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap" rel="stylesheet">
+<section class="tt2">
+  <div class="tt2-wrap">
+    <p class="tt2-eyebrow">⏰ 시간표 안내</p>
+    <h2 class="tt2-title">언제 <span class="tt2-hl">오시나요?</span></h2>
+    <p class="tt2-sub"><b>주 2회 · 1회 90분</b> 수업으로 진행됩니다.</p>
 
-</html>
+    <div class="tt2-grid">
+      <div class="tt2-col" style="--c:#f59e0b">
+        <p class="tt2-name">🌅 평일 오전반</p>
+        <p class="tt2-slot">11:00 ~ 12:30</p>
+        <p class="tt2-slot">12:30 ~ 14:00</p>
+        <p class="tt2-days">월·수 / 화·목</p>
+      </div>
+      <div class="tt2-col" style="--c:#2D5BFF">
+        <p class="tt2-name">🌙 평일 저녁반</p>
+        <p class="tt2-slot">18:50 ~ 20:20</p>
+        <p class="tt2-slot">20:30 ~ 22:00</p>
+        <p class="tt2-days">월·수 / 화·목</p>
+      </div>
+      <div class="tt2-col" style="--c:#10b981">
+        <p class="tt2-name">☀️ 주말반</p>
+        <p class="tt2-slot">11:00 ~ 12:30</p>
+        <p class="tt2-slot">12:30 ~ 14:00</p>
+        <p class="tt2-days">토·일</p>
+      </div>
+    </div>
+    <p class="tt2-note">※ 레벨·요일에 따라 반 구성이 달라질 수 있으며, 정확한 시간표는 상담/레벨테스트 결과에 맞춰 안내드립니다.</p>
+  </div>
+</section>
+
+<style>
+.tt2{background:#fff;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.tt2 *{box-sizing:border-box}
+.tt2-wrap{max-width:880px;margin:0 auto;text-align:center}
+.tt2-eyebrow{color:#2D5BFF;font-weight:800;font-size:13px;letter-spacing:.16em;margin:0 0 14px}
+.tt2-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;margin:0 0 12px;color:#10131a}
+.tt2-hl{position:relative;white-space:nowrap}
+.tt2-hl::before{content:"";position:absolute;left:-3px;right:-5px;top:32%;bottom:8%;background:#ffce4d;opacity:.7;transform:rotate(-1.3deg);border-radius:48% 52% 50% 50%/62% 40% 60% 38%;z-index:-1;mix-blend-mode:multiply}
+.tt2-sub{color:#5a6680;font-size:16.5px;margin:0 auto 44px}.tt2-sub b{color:#10131a}
+.tt2-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;text-align:left}
+.tt2-col{border-top:3px solid var(--c);padding-top:16px}
+.tt2-name{font-family:'Pretendard',-apple-system,sans-serif;font-weight:700;font-size:22px;color:var(--c);margin:0 0 14px}
+.tt2-slot{font-size:17px;font-weight:700;color:#2b3240;margin:0 0 9px;font-variant-numeric:tabular-nums}
+.tt2-days{margin:14px 0 0;font-size:13.5px;font-weight:800;color:var(--c)}
+.tt2-note{font-size:13px;color:#9aa3af;margin:36px 0 0;line-height:1.6}
+@media(max-width:680px){.tt2{padding:64px 16px}.tt2-title{font-size:25px}.tt2-grid{grid-template-columns:1fr;gap:28px}}
+</style>
+<!-- ===== /REDESIGN (손그림): 시간표 ===== -->
+<!-- ===== REDESIGN: 아카데미 수강 금액 (academy.html @47517 교체) ===== -->
+<section class="acp">
+  <div class="acp-wrap">
+    <p class="acp-eyebrow">PRICING</p>
+    <h2 class="acp-title">수강 금액</h2>
+    <p class="acp-sub"><b>교재비 등 추가 비용 없이</b>, 수업료만으로 진행됩니다. (주 2회 · 회당 90분)</p>
+
+    <div class="acp-tiers">
+      <div class="acp-tier">
+        <div class="acp-head">1개월 <small>8회</small></div>
+        <div class="acp-per">회당 <b>27,500</b>원</div>
+        <div class="acp-was">&nbsp;</div>
+        <div class="acp-pay">220,000원</div>
+        <ul class="acp-feat"><li>주 2회 · 90분 수업</li><li>교재비 없음</li></ul>
+      </div>
+
+      <div class="acp-tier">
+        <div class="acp-head">2개월 <small>16회</small></div>
+        <div class="acp-per">회당 <b>23,750</b>원</div>
+        <div class="acp-was">440,000원</div>
+        <div class="acp-pay">380,000원 <span class="acp-save">60,000원↓</span></div>
+        <ul class="acp-feat"><li>주 2회 · 90분 수업</li><li>교재비 없음</li></ul>
+      </div>
+
+      <div class="acp-tier acp-tier--best">
+        <span class="acp-badge">추천</span>
+        <div class="acp-head">3개월 <small>24회</small></div>
+        <div class="acp-per">회당 약 <b>22,083</b>원</div>
+        <div class="acp-was">660,000원</div>
+        <div class="acp-pay">530,000원 <span class="acp-save">130,000원↓</span></div>
+        <ul class="acp-feat"><li>주 2회 · 90분 수업</li><li>교재비 없음 · 최대 할인</li></ul>
+      </div>
+    </div>
+
+    <p class="acp-extra">연장·리뷰·후기·우수상·지인등록 등 <b>추가 할인 제도</b>가 있어요. 아카데미 수강생도 파티·행사 참여 가능!</p>
+    <div class="acp-cta">
+      <a class="acp-btn acp-btn--ghost" href="https://www.instagram.com/thebox_busan" target="_blank">📸 인스타그램</a>
+      <a class="acp-btn acp-btn--solid" href="https://m.booking.naver.com/booking/13/bizes/839473" target="_blank">⚡ 상담 예약하기</a>
+    </div>
+  </div>
+</section>
+
+<style>
+.acp{background:radial-gradient(120% 120% at 50% 0%,#2D5BFF 0%,#1e3a8a 100%);padding:96px 20px;font-family:'Pretendard',-apple-system,sans-serif;color:#fff}
+.acp *{box-sizing:border-box}
+.acp-wrap{max-width:980px;margin:0 auto;text-align:center}
+.acp-eyebrow{color:#bcd0ff;font-weight:800;font-size:13px;letter-spacing:.2em;margin:0 0 14px}
+.acp-title{font-size:36px;font-weight:800;letter-spacing:-1px;margin:0 0 16px}
+.acp-sub{color:#d9e3ff;font-size:16px;line-height:1.7;margin:0 auto 48px;max-width:560px}
+.acp-sub b{color:#fff}
+.acp-tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
+.acp-tier{position:relative;background:#fff;color:#111;border-radius:20px;padding:32px 24px;text-align:left;box-shadow:0 12px 30px rgba(0,0,0,.2);display:flex;flex-direction:column;transition:transform .22s ease,box-shadow .22s ease}
+.acp-tier:hover{transform:translateY(-8px) scale(1.03);box-shadow:0 24px 50px rgba(0,0,0,.32);z-index:2}
+.acp-head{font-size:23px;font-weight:900;margin-bottom:16px}
+.acp-head small{display:block;font-size:12px;font-weight:600;color:#888;margin-top:4px}
+.acp-per{font-size:14px;color:#555;margin-bottom:12px}
+.acp-per b{font-size:23px;color:#2D5BFF;font-weight:900}
+.acp-was{font-size:13px;color:#aaa;text-decoration:line-through;margin-bottom:2px;min-height:18px}
+.acp-pay{font-size:20px;font-weight:800;color:#111;margin-bottom:18px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.acp-save{font-size:11px;font-weight:800;color:#ef4444;background:#fef2f2;padding:3px 8px;border-radius:20px}
+.acp-feat{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.acp-feat li{position:relative;padding-left:22px;font-size:14px;color:#444;line-height:1.5}
+.acp-feat li::before{content:"✓";position:absolute;left:0;color:#2D5BFF;font-weight:900}
+.acp-tier--best{transform:translateY(-12px);border:2px solid #2D5BFF;box-shadow:0 22px 50px rgba(0,0,0,.35)}
+.acp-tier--best:hover{transform:translateY(-18px) scale(1.04)}
+.acp-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#ef4444;color:#fff;font-weight:800;font-size:13px;padding:6px 18px;border-radius:20px;box-shadow:0 6px 16px rgba(239,68,68,.45);white-space:nowrap}
+.acp-extra{margin:40px 0 0;color:#d9e3ff;font-size:14.5px;line-height:1.6}
+.acp-extra b{color:#fff}
+.acp-cta{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.acp-btn{display:inline-flex;align-items:center;gap:8px;padding:16px 30px;border-radius:14px;font-weight:800;font-size:16px;text-decoration:none;transition:transform .15s}
+.acp-btn:hover{transform:translateY(-2px)}
+.acp-btn--solid{background:#fff;color:#2D5BFF}
+.acp-btn--ghost{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.35)}
+@media(max-width:820px){.acp-tiers{grid-template-columns:1fr}.acp-tier--best{transform:none}.acp-tier--best:hover{transform:translateY(-8px) scale(1.03)}}
+@media(max-width:560px){.acp{padding:64px 16px}.acp-title{font-size:27px}}
+</style>
+<!-- ===== /REDESIGN: 아카데미 수강 금액 ===== -->
+</body></html>
