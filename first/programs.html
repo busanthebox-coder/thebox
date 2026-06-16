@@ -16,43 +16,51 @@
 </head>
 
 <body>
-    <nav id="topbar" class="topbar">
-        <div class="container topbar__inner">
-            <a href="../intro/" class="logo">THE BOX</a>
-            <div class="topbar__actions">
-                <a href="programs.html" class="btn btn--secondary">프로그램</a>
-                <a href="academy.html" class="btn btn--secondary">아카데미</a>
-                <a href="study.html" class="btn btn--secondary">스터디</a>
-                <a href="level-test.html" class="btn btn--secondary">레벨 테스트</a>
-                <a href="https://m.booking.naver.com/booking/13/bizes/839473" class="btn btn--primary"
-                    target="_blank">상담 예약</a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="메뉴 열기">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M3 12h18M3 6h18M3 18h18" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <div class="mobile-nav-overlay" id="mobileOverlay"></div>
-    <div class="mobile-nav-panel" id="mobileNav">
-        <div class="mobile-nav-panel__header">
-            <a href="../intro/" class="logo">THE BOX</a>
-            <button class="mobile-nav-close" id="mobileNavClose" aria-label="메뉴 닫기">✕</button>
-        </div>
-        <div class="mobile-nav-panel__links">
-            <a href="../intro/">🏠 홈</a>
-            <a href="programs.html" class="active">🗺 프로그램</a>
-            <a href="study.html">🗣️ 원어민 스터디</a>
-            <a href="academy.html">📘 아카데미</a>
-            <a href="level-test.html">📝 레벨 테스트</a>
-        </div>
-        <div class="mobile-nav-panel__cta">
-            <a href="https://m.booking.naver.com/booking/13/bizes/839473" target="_blank">⚡ 상담 예약하기</a>
-        </div>
-    </div>
-
+    <style>
+.ub{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:13px 24px;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(12px);-webkit-backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid #eef0f4;font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif}
+.ub *{box-sizing:border-box}
+.ub-logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:20px;color:#111;text-decoration:none;letter-spacing:-.6px}
+.ub-logo i{color:#ef4444;font-style:normal}
+.ub-badge{font-size:11px;font-weight:700;background:#fff3f3;color:#ef4444;border:1px solid #ffd6d6;border-radius:20px;padding:2px 9px}
+.ub-nav{display:flex;align-items:center;gap:24px}
+.ub-link{font-size:15px;font-weight:700;color:#1a1a1a;text-decoration:none;white-space:nowrap;transition:color .15s}
+.ub-link:hover{color:#ef4444}
+.ub-cta{font-size:14px;font-weight:800;color:#fff;background:#111;padding:10px 19px;border-radius:11px;text-decoration:none;white-space:nowrap;transition:background .15s}
+.ub-cta:hover{background:#ef4444}
+.ub-burger{display:none;width:42px;height:42px;border:0;background:none;cursor:pointer;color:#111;align-items:center;justify-content:center}
+.ub-burger svg{width:26px;height:26px}
+.ub-scrim{position:fixed;inset:0;background:rgba(15,18,26,.42);opacity:0;visibility:hidden;transition:opacity .3s;z-index:600}
+.ub-scrim.on{opacity:1;visibility:visible}
+.ub-drawer{position:fixed;top:0;right:0;bottom:0;width:min(80vw,300px);background:#fff;box-shadow:-14px 0 44px rgba(20,23,31,.18);transform:translateX(100%);transition:transform .32s cubic-bezier(.2,.7,.2,1);z-index:610;display:flex;flex-direction:column;padding:18px 18px 24px;font-family:'Pretendard',-apple-system,sans-serif}
+.ub-drawer.on{transform:none}
+.ub-x{align-self:flex-end;border:0;background:none;font-size:22px;color:#9aa3b2;cursor:pointer;padding:4px 8px;line-height:1}
+.ub-drawer a{font-size:16px;font-weight:700;color:#1a1a1a;text-decoration:none;padding:13px 12px;border-radius:10px}
+.ub-drawer a:hover{background:#f6f7f9}
+.ub-drawer .ub-dcta{background:#ef4444;color:#fff;text-align:center;font-weight:800;margin-top:12px}
+@media(max-width:880px){.ub-nav{display:none}.ub-burger{display:flex}}
+</style>
+<!-- ===== UNIFIED TOP BAR ===== -->
+<div class="ub">
+  <a href="../intro/" class="ub-logo">THE <i>BOX</i> <span class="ub-badge">부산</span></a>
+  <nav class="ub-nav">
+    <a href="programs.html" class="ub-link">프로그램</a>
+    <a href="academy.html" class="ub-link">아카데미</a>
+    <a href="study.html" class="ub-link">스터디</a>
+    <a href="level-test.html" class="ub-link">레벨 테스트</a>
+    <a href="https://m.booking.naver.com/booking/13/bizes/839473" class="ub-cta" target="_blank" rel="noopener">상담 예약</a>
+  </nav>
+  <button class="ub-burger" aria-label="메뉴 열기" onclick="document.getElementById('ubDrawer').classList.add('on');document.getElementById('ubScrim').classList.add('on')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+</div>
+<div class="ub-scrim" id="ubScrim" onclick="document.getElementById('ubDrawer').classList.remove('on');this.classList.remove('on')"></div>
+<nav class="ub-drawer" id="ubDrawer">
+  <button class="ub-x" aria-label="메뉴 닫기" onclick="document.getElementById('ubDrawer').classList.remove('on');document.getElementById('ubScrim').classList.remove('on')">✕</button>
+  <a href="programs.html">프로그램</a>
+  <a href="academy.html">아카데미</a>
+  <a href="study.html">스터디</a>
+  <a href="level-test.html">레벨 테스트</a>
+  <a href="https://m.booking.naver.com/booking/13/bizes/839473" class="ub-dcta" target="_blank" rel="noopener">상담 예약</a>
+</nav>
+<!-- ===== /UNIFIED TOP BAR ===== -->
 
 <!-- ===== PROGRAMS(시스템 안내) 전체 재설계 v4 — 콘텐츠 영역(hero~CTA). intro/academy/study 디자인 언어. scoped pg- ===== -->
 <style>
