@@ -219,17 +219,24 @@
 .pg-phase:nth-child(3) .pg-phase-tag{color:#92600a;background:#fdf0d8}
 .pg-phase:nth-child(4) .pg-phase-tag{color:var(--grn-d);background:#e7f7f1}
 .pg-phase h3{font-size:20px;font-weight:800;letter-spacing:-.4px;margin:0 0 16px;word-break:keep-all}
-.pg-ba{background:#fff;border:1px solid var(--ln);border-radius:16px;padding:18px 20px}
-.pg-ba-row{display:flex;align-items:center;gap:12px}
-.pg-ba-row+.pg-ba-row{margin-top:12px;padding-top:12px;border-top:1px dashed var(--ln)}
-.pg-ba-lb{flex:none;font-size:11.5px;font-weight:800;letter-spacing:.06em;padding:4px 9px;border-radius:7px}
-.pg-ba-lb.b{color:#94a0b3;background:#f1f3f7}
-.pg-ba-lb.a{color:var(--grn-d);background:#e7f7f1}
-.pg-ba-txt{font-family:'Fraunces',serif;font-size:19px;font-weight:500;margin:0;letter-spacing:.1px;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;background-repeat:no-repeat;background-size:200% 100%;background-position:100% 0}
-.pg-ba-before .pg-ba-txt{font-style:italic;background-image:linear-gradient(to right,#9aa3b2 50%,#dde1e8 50%)}
-.pg-ba-after .pg-ba-txt{font-weight:900;background-image:linear-gradient(to right,#10131a 50%,#dde1e8 50%)}
-.pg-phase.pg-in .pg-ba-before .pg-ba-txt{background-position:0 0;transition:background-position 2s ease .3s}
-.pg-phase.pg-in .pg-ba-after .pg-ba-txt{background-position:0 0;transition:background-position .9s cubic-bezier(.2,.7,.2,1) 1s}
+.pg-ba{background:#fff;border:1px solid var(--ln);border-radius:16px;padding:16px 20px}
+.pg-ba-ko{font-size:14px;font-weight:700;color:var(--mut);margin:0 0 13px;padding-bottom:12px;border-bottom:1px solid #f0f1f5;word-break:keep-all}
+.pg-ba-ko span{display:inline-block;color:#aeb4c0;font-weight:700;font-size:11px;letter-spacing:.06em;background:#f4f5f8;padding:3px 8px;border-radius:6px;margin-right:8px;vertical-align:1.5px}
+.pg-ba-line{display:flex;align-items:center;gap:12px;min-height:36px}
+.pg-ba-ic{position:relative;flex:none;width:26px;height:26px}
+.pg-ba-ic i{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:900;font-size:13px;border-radius:50%;transition:opacity .45s ease}
+.pg-ba-ic .x{color:#d4574f;background:#fdeaea}
+.pg-ba-ic .v{color:var(--grn-d);background:#e7f7f1;opacity:0}
+.pg-ba-box{position:relative;flex:1;min-width:0}
+.pg-ba-wrong{display:inline-block;font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:18px;color:#9aa3b2;white-space:nowrap;letter-spacing:.1px}
+.pg-ba-wrong .ch{display:inline-block;white-space:pre;transition:transform .6s cubic-bezier(.22,.61,.36,1),opacity .45s ease .08s,filter .55s ease}
+.pg-ba-right{position:absolute;left:0;top:50%;transform:translateY(-50%) translateY(9px);white-space:nowrap;font-family:'Fraunces',serif;font-weight:900;font-size:18px;color:var(--ink);letter-spacing:.1px;opacity:0;transition:opacity .55s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+.pg-phase.pg-in .pg-ba-ic .x{opacity:0;transition-delay:1.75s}
+.pg-phase.pg-in .pg-ba-ic .v{opacity:1;transition-delay:1.88s}
+.pg-phase.pg-in .pg-ba-wrong{animation:pgShake .34s cubic-bezier(.36,.07,.19,.97) 1.3s}
+.pg-phase.pg-in .pg-ba-wrong .ch{transform:translate(var(--dx),var(--dy)) rotate(var(--rot)) scale(.6);opacity:0;filter:blur(2px)}
+.pg-phase.pg-in .pg-ba-right{opacity:1;transform:translateY(-50%) translateY(0);transition-delay:2.1s}
+@keyframes pgShake{12%{transform:translateX(-2.5px)}28%{transform:translateX(3px)}44%{transform:translateX(-3px)}60%{transform:translateX(2.5px)}76%{transform:translateX(-1.5px)}92%{transform:translateX(1px)}}
 
 /* ── GROWTH CURVE ── */
 .pg-curve{background:#fff;padding:96px 24px 110px}
@@ -267,7 +274,7 @@
 }
 @media(prefers-reduced-motion:reduce){
   .pg-reveal{opacity:1;transform:none}
-  .pg-ba-txt{background-position:0 0!important}
+  .pg-ba-wrong{display:none}.pg-ba-right{position:static;opacity:1;transform:none}.pg-ba-ic .x{opacity:0}.pg-ba-ic .v{opacity:1}
   .pg-cv-line{stroke-dashoffset:0!important}.pg-cv-dot{opacity:1!important}
   .pg-fl{stroke-dashoffset:0!important}.pg-fn{opacity:1!important}
   .pgp-body h3{background-size:100% 40%}
@@ -491,15 +498,18 @@
   <div class="pg-wrap">
     <p class="pg-eyebrow">10-MONTH ROADMAP</p>
     <h2 class="pg-h2">10개월, 영어가 이렇게 바뀝니다</h2>
-    <p class="pg-sub">아카데미로 토대를 만들고 스터디로 실전. 단계마다 회색 영어가 또렷하게 채워져요.</p>
+    <p class="pg-sub">아카데미로 토대를 만들고 스터디로 실전. 단계마다 더듬던 영어가 부서지고, 자연스러운 표현으로 다시 써져요.</p>
     <div class="pg-road-list">
       <div class="pg-phase pg-reveal">
         <div class="pg-phase-dot">1–3<small>개월</small></div>
         <span class="pg-phase-tag">영어 회로 공사</span>
         <h3>'문장'이라는 개념이 생깁니다</h3>
         <div class="pg-ba">
-          <div class="pg-ba-row pg-ba-before"><span class="pg-ba-lb b">전</span><p class="pg-ba-txt">"Yesterday… I… um… go home?"</p></div>
-          <div class="pg-ba-row pg-ba-after"><span class="pg-ba-lb a">후</span><p class="pg-ba-txt">"I went straight home yesterday."</p></div>
+          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"어제 회사에 지각했어"</div>
+          <div class="pg-ba-line">
+            <span class="pg-ba-ic"><i class="x">✕</i><i class="v">✓</i></span>
+            <span class="pg-ba-box"><span class="pg-ba-wrong">"Work… yesterday… I… late…?"</span><span class="pg-ba-right">"I was running late for work yesterday."</span></span>
+          </div>
         </div>
       </div>
       <div class="pg-phase pg-reveal">
@@ -507,8 +517,11 @@
         <span class="pg-phase-tag">디테일 교정</span>
         <h3>콩글리쉬 습관이 차단됩니다</h3>
         <div class="pg-ba">
-          <div class="pg-ba-row pg-ba-before"><span class="pg-ba-lb b">전</span><p class="pg-ba-txt">"I very like this movie."</p></div>
-          <div class="pg-ba-row pg-ba-after"><span class="pg-ba-lb a">후</span><p class="pg-ba-txt">"I really enjoyed this movie."</p></div>
+          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"오늘 몸이 좀 안 좋아"</div>
+          <div class="pg-ba-line">
+            <span class="pg-ba-ic"><i class="x">✕</i><i class="v">✓</i></span>
+            <span class="pg-ba-box"><span class="pg-ba-wrong">"Today my condition is not good."</span><span class="pg-ba-right">"I'm a bit under the weather today."</span></span>
+          </div>
         </div>
       </div>
       <div class="pg-phase pg-reveal">
@@ -516,8 +529,11 @@
         <span class="pg-phase-tag">유창성 폭발</span>
         <h3>영어가 '대화 수단'이 됩니다</h3>
         <div class="pg-ba">
-          <div class="pg-ba-row pg-ba-before"><span class="pg-ba-lb b">전</span><p class="pg-ba-txt">"How to say… umm…"</p></div>
-          <div class="pg-ba-row pg-ba-after"><span class="pg-ba-lb a">후</span><p class="pg-ba-txt">"How do I put this… let me think."</p></div>
+          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"그 단어가 생각이 안 나"</div>
+          <div class="pg-ba-line">
+            <span class="pg-ba-ic"><i class="x">✕</i><i class="v">✓</i></span>
+            <span class="pg-ba-box"><span class="pg-ba-wrong">"Umm… the word… I don't know…"</span><span class="pg-ba-right">"Ugh, it's on the tip of my tongue."</span></span>
+          </div>
         </div>
       </div>
       <div class="pg-phase pg-reveal">
@@ -525,8 +541,11 @@
         <span class="pg-phase-tag">뉘앙스 마스터</span>
         <h3>원어민처럼 생각하고 말합니다</h3>
         <div class="pg-ba">
-          <div class="pg-ba-row pg-ba-before"><span class="pg-ba-lb b">전</span><p class="pg-ba-txt">"I'm fine. Thank you."</p></div>
-          <div class="pg-ba-row pg-ba-after"><span class="pg-ba-lb a">후</span><p class="pg-ba-txt">"Honestly, I'm hanging in there."</p></div>
+          <div class="pg-ba-ko"><span>말하고 싶은 말</span>"그건 좀 하고 싶지 않은데"</div>
+          <div class="pg-ba-line">
+            <span class="pg-ba-ic"><i class="x">✕</i><i class="v">✓</i></span>
+            <span class="pg-ba-box"><span class="pg-ba-wrong">"No. I don't want."</span><span class="pg-ba-right">"I'd rather not, if that's okay."</span></span>
+          </div>
         </div>
       </div>
     </div>
@@ -572,6 +591,18 @@
 <script>
 (function(){
   function init(){
+    [].slice.call(document.querySelectorAll('.pg-ba-wrong')).forEach(function(w){
+      var t=w.textContent; w.textContent='';
+      var rnd=function(n){var x=Math.sin(n*97.13)*43758.5453;return x-Math.floor(x);};
+      for(var i=0;i<t.length;i++){
+        var s=document.createElement('span'); s.className='ch'; s.textContent=t.charAt(i);
+        s.style.setProperty('--dx',(rnd(i*3+1)*132-66).toFixed(1)+'px');
+        s.style.setProperty('--dy',(rnd(i*3+2)*108-30).toFixed(1)+'px');
+        s.style.setProperty('--rot',(rnd(i*3+3)*176-88).toFixed(1)+'deg');
+        s.style.transitionDelay=(1.65+i*0.005).toFixed(3)+'s';
+        w.appendChild(s);
+      }
+    });
     var els=[].slice.call(document.querySelectorAll('.pg-reveal'));
     if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('pg-in')});return;}
     var io=new IntersectionObserver(function(entries){
