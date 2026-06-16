@@ -187,6 +187,37 @@
     <p class="ss-eyebrow">ONE SESSION · 90분</p>
     <h2 class="ss-title">세션은 <span class="ss-hl">이렇게</span> 진행됩니다</h2>
     <p class="ss-sub">가볍게 입을 열고, 본격 토론으로 깊어집니다.</p>
+    <div class="ss-bar"><div class="ss-fill"></div></div>
+    <div class="ss-bar-lb"><span>0분</span><span>90분</span></div>
+    <style>
+    .ss-bar{position:relative;height:10px;background:#eef0f5;border-radius:999px;overflow:hidden;max-width:900px;margin:8px auto 7px}
+    .ss-fill{position:absolute;inset:0 auto 0 0;width:0;background:linear-gradient(90deg,#f59e0b,#6366f1,#ef4444);border-radius:999px;transition:width .05s linear}
+    .ss-bar-lb{max-width:900px;margin:0 auto 40px;display:flex;justify-content:space-between;font-size:11.5px;color:#9aa3b2;font-weight:700}
+    .ss-step{position:relative;transition:opacity .3s ease}
+    .ss-flow.ss-go .ss-step:not(.ss-active){opacity:.5}
+    .ss-step .ss-no{transition:transform .25s ease,box-shadow .25s ease}
+    .ss-step.ss-active .ss-no{transform:scale(1.12);box-shadow:0 0 0 6px color-mix(in srgb,var(--c) 20%,transparent),0 6px 16px rgba(0,0,0,.2)}
+    .ss-now{display:none;font-size:11px;font-weight:800;color:var(--c);margin-left:8px;vertical-align:middle}
+    .ss-step.ss-active .ss-now{display:inline}
+    @media(prefers-reduced-motion:reduce){.ss-fill{width:100%!important}.ss-flow.ss-go .ss-step{opacity:1}}
+    </style>
+    <script>
+    (function(){
+      function init(){
+        var fill=document.querySelector('.ss-fill'), flow=document.querySelector('.ss-flow');
+        if(!fill||!flow) return;
+        var steps=[].slice.call(flow.querySelectorAll('.ss-step'));
+        steps.forEach(function(s){var tm=s.querySelector('.ss-time');if(tm){var b=document.createElement('span');b.className='ss-now';b.textContent='▶ 진행중';tm.insertAdjacentElement('afterend',b);}});
+        var p=0,timer=null;
+        function tick(){ p=(p+0.4)%104; var pp=Math.min(p,100); fill.style.width=pp+'%';
+          var act=pp<50?0:(pp<56?1:2); steps.forEach(function(s,i){ s.classList.toggle('ss-active', i===act); }); }
+        function start(){ if(timer)return; flow.classList.add('ss-go'); timer=setInterval(tick,40); tick(); }
+        if('IntersectionObserver' in window){ var io=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting&&e.intersectionRatio>=0.25){ start(); io.disconnect(); } });},{threshold:[0,0.25]}); io.observe(flow); }
+        else start();
+      }
+      if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+    })();
+    </script>
     <div class="ss-flow">
       <div class="ss-step" style="--c:#f59e0b"><span class="ss-no">1</span><div><span class="ss-time">45분</span><h3>Small Talk &amp; 가벼운 주제</h3><p>가볍게 분위기를 풀고, 부담 없는 일상·가벼운 주제로 자연스럽게 입을 엽니다.</p></div></div>
       <span class="ss-ar">→</span>
