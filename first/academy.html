@@ -7,9 +7,23 @@
 <style>body{margin:0;background:#fff}</style>
 </head>
 <body>
+<style>
+.tbx-nav{display:flex;align-items:center;gap:24px}
+.tbx-link{font-size:15px;font-weight:700;color:#1a1a1a;text-decoration:none;white-space:nowrap;transition:color .15s}
+.tbx-link:hover{color:#ef4444}
+.tbx-cta{font-size:14px;font-weight:800;color:#fff;background:#111;padding:10px 20px;border-radius:11px;text-decoration:none;white-space:nowrap;transition:background .15s}
+.tbx-cta:hover{background:#ef4444}
+@media(max-width:880px){.tbx-link{display:none}}
+</style>
 <header style="position:sticky;top:0;z-index:200;background:rgba(255,255,255,.93);backdrop-filter:saturate(160%) blur(10px);-webkit-backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid #eef0f4;display:flex;align-items:center;justify-content:space-between;padding:14px 24px;font-family:'Pretendard',-apple-system,sans-serif">
   <a href="../intro/" style="font-weight:800;font-size:21px;color:#111;text-decoration:none;letter-spacing:-.6px">THE <span style="color:#ef4444">BOX</span></a>
-  <a href="https://busanthebox-coder.github.io/consultation/" style="font-weight:800;font-size:14px;color:#fff;background:#111;padding:10px 20px;border-radius:11px;text-decoration:none">상담 예약</a>
+  <nav class="tbx-nav">
+    <a href="programs.html" class="tbx-link">프로그램</a>
+    <a href="academy.html" class="tbx-link">아카데미</a>
+    <a href="study.html" class="tbx-link">스터디</a>
+    <a href="level-test.html" class="tbx-link">레벨 테스트</a>
+    <a href="https://busanthebox-coder.github.io/consultation/" class="tbx-cta">상담 예약</a>
+  </nav>
 </header>
 <!-- ===== academy: 메인 히어로 (수업 사진 + 카피) — 흰 배경 ===== -->
 <section class="ah">
