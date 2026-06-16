@@ -1210,6 +1210,7 @@
         }
     </style>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+<style>.hdr-nav{display:flex;align-items:center;gap:26px}.hdr-link{font-size:15px;font-weight:700;color:#1a1a1a;text-decoration:none;transition:color .15s;white-space:nowrap}.hdr-link:hover{color:#ef4444}.hdr-cta{font-size:15px;font-weight:800;color:#fff;background:#111;padding:11px 22px;border-radius:12px;text-decoration:none;transition:background .15s;white-space:nowrap}.hdr-cta:hover{background:#ef4444}#header{display:flex;align-items:center;justify-content:space-between}@media(max-width:880px){.hdr-link{display:none}}</style>
 </head>
 
 <body>
@@ -1217,11 +1218,13 @@
     <!-- HEADER -->
     <header id="header">
         <a href="#" class="logo">THE <span>BOX</span> <span class="header-badge">부산</span></a>
-        <div style="display:flex;align-items:center;gap:12px;">
-            <a href="https://www.instagram.com/thebox_busan" target="_blank" rel="noopener"
-                style="font-size:20px;text-decoration:none;">📷</a>
-            <a href="https://busanthebox-coder.github.io/consultation/" class="header-cta">무료 상담하기</a>
-        </div>
+        <nav class="hdr-nav">
+            <a href="#system" class="hdr-link">시스템 안내</a>
+            <a href="../first/study.html" class="hdr-link">스터디</a>
+            <a href="../first/academy.html" class="hdr-link">아카데미</a>
+            <a href="../first/level-test.html" class="hdr-link">레벨 테스트</a>
+            <a href="https://busanthebox-coder.github.io/consultation/" class="hdr-cta">상담 예약</a>
+        </nav>
     </header>
 
     <!-- HERO -->
@@ -1453,7 +1456,7 @@
 <!-- ===== /G 에디토리얼 (4줄) ===== -->
 
 <!-- ===== intro 'THE BOX 시스템' 3D 커버플로우 캐러셀 (옆으로 돌아가는 카드) ===== -->
-<section class="sx">
+<section class="sx" id="system">
   <div class="sx-head">
     <p class="sx-eyebrow">THE BOX SYSTEM</p>
     <h2 class="sx-title">더박스는 이렇게 <span class="sx-hl">영어를 바꿉니다</span></h2>
@@ -1489,7 +1492,7 @@
   <div class="sx-dots" id="sxDots"><span></span><span></span><span></span><span></span><span></span></div>
 </section>
 <style>
-.sx{background:#0d0e13;padding:100px 16px 90px;font-family:'Pretendard',-apple-system,sans-serif;overflow:hidden}
+.sx{background:#0d0e13;padding:100px 16px 90px;font-family:'Pretendard',-apple-system,sans-serif;overflow:hidden;scroll-margin-top:84px}
 .sx *{box-sizing:border-box}
 .sx-head{text-align:center;max-width:760px;margin:0 auto 54px}
 .sx-eyebrow{color:#f87171;font-weight:800;font-size:13px;letter-spacing:.18em;margin:0 0 12px}
