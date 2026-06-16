@@ -2450,43 +2450,44 @@
             el.style.transitionDelay = (i * 80) + 'ms';
         });
     </script>
-<!-- ===== intro 히어로: 큰 글자 줌아웃(이목 끌기) → 스크램블(이목 유지) — </body> 앞 주입 ===== -->
+<!-- ===== intro 히어로: 스크램블+줌아웃 동시 진행, 끝으로 갈수록 감속(궁금증) — </body> 앞 주입 ===== -->
 <style>
-.hero h1 .scr-dud{opacity:.6;font-weight:inherit}
+.hero h1 .scr-dud{opacity:.55;font-weight:inherit}
 .hero h1 .scr-hide{opacity:0}
 .hero h1{transform-origin:center center;will-change:transform,opacity}
-.hero h1.hs-zoom{animation:heroZoom 2s cubic-bezier(.22,1,.36,1) both}
-@keyframes heroZoom{0%{transform:scale(1.55);opacity:0}22%{opacity:1}100%{transform:scale(1);opacity:1}}
+.hero h1.hs-zoom{animation:heroZoom 2.5s cubic-bezier(.22,1,.3,1) both}
+@keyframes heroZoom{0%{transform:scale(1.55);opacity:0}16%{opacity:1}100%{transform:scale(1);opacity:1}}
 @media(prefers-reduced-motion:reduce){.hero h1.hs-zoom{animation:none}}
 </style>
 <script>
 (function(){
   var POOL="가나다라마바사아자차카타파하거너더러머버서어저처커터퍼허고노도로모보소오조초코토포호구누두루무부수우주추쿠투푸후그느드르므브스으즈크트프흐기니디리미비시이지치키티피히영재밌박공부감각말문장구조반복실수교정원생활일상";
   function rChar(){ return POOL.charAt(Math.floor(Math.random()*POOL.length)); }
-  function scramble(el,text,delay){
-    var q=[],i;
-    for(i=0;i<text.length;i++){
-      var st=delay+i*5+Math.floor(Math.random()*24);
-      var en=st+30+Math.floor(Math.random()*40);
-      q.push({to:text[i],st:st,en:en,ch:null});
-    }
-    var frame=0,raf;
-    function update(){
+  function easeOutCubic(t){ return 1-Math.pow(1-t,3); }
+  // 시간기반 스크램블: ease-out 진행 → 끝으로 갈수록 글자 정착이 느려짐(감속)
+  function scramble(el,text,dur,delay){
+    dur=dur||2200; delay=delay||0;
+    var n=text.length, cur=[], start=null;
+    function tick(ts){
+      if(start===null) start=ts;
+      var raw=(ts-start-delay)/dur;
+      if(raw<0){
+        var o0=""; for(var z=0;z<n;z++){ o0+= text[z]===" "?" ":'<span class="scr-hide">'+text[z]+'</span>'; }
+        el.innerHTML=o0; requestAnimationFrame(tick); return;
+      }
+      raw=Math.min(raw,1); var e=easeOutCubic(raw);
       var out="",done=0;
-      for(var k=0;k<q.length;k++){
-        var it=q[k];
-        if(it.to===" "){out+=" ";done++;continue;}
-        if(frame>=it.en){out+=it.to;done++;}
-        else if(frame>=it.st){
-          if(!it.ch||Math.random()<0.12)it.ch=rChar();
-          out+='<span class="scr-dud">'+it.ch+'</span>';
-        } else out+='<span class="scr-hide">'+it.to+'</span>';
+      for(var k=0;k<n;k++){
+        var ch=text[k];
+        if(ch===" "){ out+=" "; done++; continue; }
+        var rAt=(k+0.6)/n;            // 왼→오 순서로 정착
+        if(e>=rAt){ out+=ch; done++; }
+        else { var fp=0.16*(1-e*0.6); if(!cur[k]||Math.random()<fp) cur[k]=rChar(); out+='<span class="scr-dud">'+cur[k]+'</span>'; }
       }
       el.innerHTML=out;
-      if(done===q.length)return;
-      frame++; raf=requestAnimationFrame(update);
+      if(raw<1) requestAnimationFrame(tick); else el.textContent=text;
     }
-    update();
+    requestAnimationFrame(tick);
   }
   function init(){
     var h1=document.querySelector('.hero h1'); if(!h1||h1.dataset.scr) return; h1.dataset.scr="1";
@@ -2495,21 +2496,20 @@
     var line1="";
     for(var n=h1.firstChild;n;n=n.nextSibling){ if(n.nodeName==="BR")break; if(n.nodeType===3)line1+=n.textContent; }
     line1=line1.trim()||"더박스에서는";
-    var s1=document.createElement("span"); s1.textContent=line1;
+    var s1=document.createElement("span"); s1.textContent="";
     h1.innerHTML=""; h1.appendChild(s1); h1.appendChild(document.createElement("br"));
-    if(!em){em=document.createElement("em");} em.textContent=line2; h1.appendChild(em);
-    // 1) 큰 글자에서 작아지며 등장 (이목 끌기)
+    if(!em){em=document.createElement("em");} em.textContent=""; h1.appendChild(em);
+    function run(){ scramble(s1,line1,2100,0); scramble(em,line2,2450,300); }
+    // 줌아웃 + 스크램블 동시 시작
     h1.classList.add("hs-zoom");
-    // 2) 줌이 끝난 뒤 스크램블 (이목 유지), 이후 주기적 반복
-    setTimeout(function(){
-      scramble(s1,line1,0); scramble(em,line2,12);
-      setInterval(function(){ scramble(s1,line1,0); scramble(em,line2,12); }, 7000);
-    }, 1150);
+    run();
+    // 이후 주기적 재스크램블(이목 유지, 줌 없음)
+    setInterval(run, 8000);
   }
   if(document.readyState==="loading") document.addEventListener("DOMContentLoaded",init); else init();
 })();
 </script>
-<!-- ===== /히어로 줌아웃→스크램블 ===== -->
+<!-- ===== /히어로 스크램블+줌 동시, 감속 ===== -->
 
 </body>
 
