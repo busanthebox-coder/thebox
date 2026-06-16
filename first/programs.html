@@ -216,7 +216,7 @@
 .pg-road{background:var(--bg);padding:104px 24px}
 .pg-road-h{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px;align-items:stretch}
 .pg-phase{position:relative;display:flex;flex-direction:column;background:#fff;border:1px solid var(--ln);border-radius:18px;padding:20px 18px 18px;box-shadow:0 10px 28px rgba(20,23,31,.06)}
-.pg-phase-dot{width:58px;height:58px;border-radius:50%;background:#fff;border:2px solid var(--ln);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:17px;line-height:1;color:var(--ink);margin-bottom:13px;box-shadow:0 6px 16px rgba(20,23,31,.07)}
+.pg-phase-dot{width:58px;height:58px;border-radius:50%;background:#fff;border:2px solid var(--ln);display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900;font-size:17px;line-height:1;color:var(--ink);margin:0 auto 13px;box-shadow:0 6px 16px rgba(20,23,31,.07)}
 .pg-phase-dot small{font-size:9.5px;font-weight:700;color:var(--mut);margin-top:2px}
 .pg-phase:nth-child(1) .pg-phase-dot{border-color:var(--red);color:var(--red)}
 .pg-phase:nth-child(2) .pg-phase-dot{border-color:#f87171;color:#ef5350}
@@ -253,11 +253,17 @@
 
 /* ── GROWTH CURVE ── */
 .pg-curve-box{margin:38px 0 0}
-.pg-curve-box+.pg-road-h{margin-top:20px}
+.pg-curve-box+.pg-road-h{margin-top:-26px}
 .pg-curve svg{width:100%;height:auto;display:block;overflow:visible}
 .pg-cv-line{stroke-dasharray:1;stroke-dashoffset:1;transition:stroke-dashoffset 2.4s cubic-bezier(.4,0,.2,1) .2s}
 .pg-curve-box.pg-in .pg-cv-line{stroke-dashoffset:0}
 .pg-cv-dot{opacity:0;transition:opacity .4s ease}
+.pg-cv-conn{opacity:0;transition:opacity .5s ease}
+.pg-curve-box.pg-in .pg-cc1{opacity:.42;transition-delay:1s}
+.pg-curve-box.pg-in .pg-cc2{opacity:.42;transition-delay:1.45s}
+.pg-curve-box.pg-in .pg-cc3{opacity:.42;transition-delay:1.9s}
+.pg-curve-box.pg-in .pg-cc4{opacity:.42;transition-delay:2.35s}
+.pg-phase.pg-notrans,.pg-phase.pg-notrans *{transition:none!important;animation:none!important}
 .pg-curve-box.pg-in .pg-cv-d1{transition-delay:.7s;opacity:1}
 .pg-curve-box.pg-in .pg-cv-d2{transition-delay:1.2s;opacity:1}
 .pg-curve-box.pg-in .pg-cv-d3{transition-delay:1.7s;opacity:1}
@@ -496,11 +502,14 @@
     <h2 class="pg-h2">10개월, 영어가 이렇게 바뀝니다</h2>
     <p class="pg-sub">토대가 쌓이면 어느 순간 유창성이 가파르게 올라가요. 단계마다 더듬던 영어가 자연스러운 표현으로 다시 써집니다.</p>
     <div class="pg-curve-box pg-reveal">
-      <svg viewBox="0 0 1000 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="단계가 쌓일수록 가파르게 상승하는 영어 실력 성장 곡선">
-        <line x1="46" y1="24" x2="46" y2="210" stroke="#e7e9ef" stroke-width="2"/>
-        <line x1="46" y1="210" x2="980" y2="210" stroke="#e7e9ef" stroke-width="2"/>
+      <svg viewBox="0 0 1000 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="단계가 쌓일수록 가파르게 상승하는 영어 실력 성장 곡선, 각 지점이 아래 단계 카드로 연결됨">
+        <line x1="46" y1="24" x2="46" y2="206" stroke="#e7e9ef" stroke-width="2"/>
         <text x="36" y="40" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12.5" font-weight="700" fill="#9aa3b2">유창</text>
-        <text x="36" y="208" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12.5" font-weight="700" fill="#9aa3b2">시작</text>
+        <text x="36" y="200" text-anchor="end" font-family="Pretendard,sans-serif" font-size="12.5" font-weight="700" fill="#9aa3b2">시작</text>
+        <line class="pg-cv-conn pg-cc1" x1="120" y1="202" x2="120" y2="294" stroke="#ef4444" stroke-width="2.4" stroke-dasharray="3 6" stroke-linecap="round"/>
+        <line class="pg-cv-conn pg-cc2" x1="373" y1="179" x2="373" y2="294" stroke="#f87171" stroke-width="2.4" stroke-dasharray="3 6" stroke-linecap="round"/>
+        <line class="pg-cv-conn pg-cc3" x1="627" y1="98" x2="627" y2="294" stroke="#f59e0b" stroke-width="2.4" stroke-dasharray="3 6" stroke-linecap="round"/>
+        <line class="pg-cv-conn pg-cc4" x1="880" y1="52" x2="880" y2="294" stroke="#10b981" stroke-width="2.4" stroke-dasharray="3 6" stroke-linecap="round"/>
         <path class="pg-cv-line" pathLength="1" d="M120,194 C232,189 300,181 373,171 C490,157 545,114 627,90 C722,62 802,50 880,44" fill="none" stroke="#ef4444" stroke-width="4.5" stroke-linecap="round"/>
         <g class="pg-cv-dot pg-cv-d1"><circle cx="120" cy="194" r="6.5" fill="#ef4444"/></g>
         <g class="pg-cv-dot pg-cv-d2"><circle cx="373" cy="171" r="6.5" fill="#f87171"/></g>
@@ -603,7 +612,14 @@
     var road=document.querySelector('.pg-road-h');
     if(road){
       var phs=[].slice.call(road.querySelectorAll('.pg-phase'));
-      var rio=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ phs.forEach(function(p,i){ setTimeout(function(){p.classList.add('pg-in');}, i*300); }); rio.disconnect(); } });},{threshold:.2});
+      function playRoad(){
+        phs.forEach(function(p){p.classList.add('pg-notrans');p.classList.remove('pg-in');});
+        requestAnimationFrame(function(){requestAnimationFrame(function(){
+          phs.forEach(function(p){p.classList.remove('pg-notrans');});
+          phs.forEach(function(p,i){setTimeout(function(){p.classList.add('pg-in');}, i*300);});
+        });});
+      }
+      var rio=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ playRoad(); setInterval(playRoad, 8500); rio.disconnect(); } });},{threshold:.2});
       rio.observe(road);
     }
   }
