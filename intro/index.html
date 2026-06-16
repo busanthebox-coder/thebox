@@ -1262,7 +1262,7 @@
     </div>
 
     <!-- WHY THE BOX -->
-<!-- ===== intro 문제→해결 (제목 타이핑 → 임팩트 → 🎁 키네틱 Before→After 피날레) ===== -->
+<!-- ===== intro 문제→해결 (제목 타이핑 → 임팩트 → 🎁 키네틱 Before→After 무한반복) ===== -->
 <section class="ps">
   <div class="ps-wrap">
     <div class="ps-head">
@@ -1272,7 +1272,6 @@
 
     <p class="ps-impact">이건 <b>능력 부족</b>이 아닙니다.<br><b class="ps-hl">제대로 된 회화 훈련</b>을 받지 못했을 뿐이에요.</p>
 
-    <!-- 🎁 키네틱 Before → After (해결 피날레) -->
     <div class="ps-kin" id="psKin">
       <div class="ps-kin-q">“어제 뭐 했어?”를 <b>영어로</b> 말하면?</div>
       <div class="ps-kin-stage">
@@ -1292,64 +1291,58 @@
 .ps-wrap{max-width:840px;margin:0 auto}
 .ps-head{text-align:center;margin-bottom:30px}
 .ps-eyebrow{display:inline-block;background:#fdecec;color:#dc2626;font-size:12px;font-weight:800;letter-spacing:.14em;padding:7px 16px;border-radius:999px;margin-bottom:20px}
-.ps-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;line-height:1.4;margin:0;color:#0c1322}
+.ps-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;line-height:1.4;margin:0;color:#0c1322;word-break:keep-all}
 .ps-type{color:#ef4444}
 .ps-cur{display:inline-block;width:3px;height:1.05em;background:#ef4444;margin-left:1px;vertical-align:-.16em;animation:pscur 1.05s steps(1) infinite}
 @keyframes pscur{50%{opacity:0}}
-.ps-impact{text-align:center;font-size:26px;line-height:1.6;font-weight:700;color:#10131a;margin:0 auto 46px;letter-spacing:-.5px}
+.ps-impact{text-align:center;font-size:26px;line-height:1.6;font-weight:700;color:#10131a;margin:0 auto 46px;letter-spacing:-.5px;word-break:keep-all}
 .ps-impact b{font-weight:800}
 .ps-hl{background:linear-gradient(transparent 55%,#ffe07a 55%);font-weight:800;padding:0 3px}
-/* 🎁 키네틱 Before→After 피날레 */
+/* 🎁 키네틱 Before→After (무한 반복) */
 .ps-kin{position:relative;max-width:720px;margin:0 auto;background:#fff;border:1px solid #eef0f4;border-radius:24px;padding:44px 34px 38px;text-align:center;overflow:hidden;box-shadow:0 24px 60px rgba(20,30,60,.1)}
 .ps-kin-q{font-size:14px;color:#94a0b3;font-weight:700;margin-bottom:6px}
 .ps-kin-q b{color:#ef4444}
 .ps-kin-stage{position:relative;height:160px;display:flex;align-items:center;justify-content:center}
 .ps-kin-line{position:absolute;left:0;right:0;font-family:'Fraunces',Georgia,serif;font-size:clamp(22px,5vw,34px);letter-spacing:-.5px;line-height:1.25}
-.ps-kin-before{color:#aeb6c4;clip-path:inset(0 0 0 0)}
+.ps-kin-before{color:#aeb6c4;clip-path:inset(0 0 0 0);animation:pskBefore 7s linear infinite;animation-play-state:paused}
 .ps-kin-before s{text-decoration-color:#e0788f;text-decoration-thickness:2px}
-.ps-kin-after{color:#10131a;font-weight:600;clip-path:inset(0 100% 0 0)}
+.ps-kin-after{color:#10131a;font-weight:600;clip-path:inset(0 100% 0 0);animation:pskAfter 7s linear infinite;animation-play-state:paused}
 .ps-kin-hl{position:relative;white-space:nowrap}.ps-kin-hl i{font-style:normal}
-.ps-kin-ul{position:absolute;left:0;right:0;bottom:-4px;height:10px;background:#ffe07a;border-radius:6px;transform:scaleX(0);transform-origin:left;z-index:-1}
-.ps-kin-gift{position:absolute;top:50%;left:0;font-size:48px;line-height:1;filter:drop-shadow(0 8px 16px rgba(239,68,68,.35));opacity:0;transform:translateX(-50%) translateY(-50%);z-index:5}
+.ps-kin-ul{position:absolute;left:0;right:0;bottom:-4px;height:10px;background:#ffe07a;border-radius:6px;transform:scaleX(0);transform-origin:left;z-index:-1;animation:pskUL 7s ease infinite;animation-play-state:paused}
+.ps-kin-gift{position:absolute;top:50%;left:0;font-size:48px;line-height:1;filter:drop-shadow(0 8px 16px rgba(239,68,68,.35));opacity:0;transform:translateX(-50%) translateY(-50%);z-index:5;animation:pskGift 7s linear infinite;animation-play-state:paused}
 .ps-kin-gift::before{content:"";position:absolute;right:96%;top:44%;width:50px;height:7px;background:linear-gradient(90deg,transparent,rgba(239,68,68,.42));border-radius:4px}
-.ps-kin-chk{position:absolute;right:18px;top:6px;display:flex;align-items:center;gap:7px;opacity:0;transform:scale(.5)}
+.ps-kin-chk{position:absolute;right:18px;top:6px;display:flex;align-items:center;gap:7px;opacity:0;transform:scale(.5);animation:pskChk 7s ease infinite;animation-play-state:paused}
 .ps-kin-chk span{width:30px;height:30px;border-radius:50%;background:#10b981;color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900}
 .ps-kin-chk b{color:#10b981;font-weight:900;font-size:17px}
-.ps-kin-tags{display:flex;justify-content:center;gap:8px;margin-top:4px;height:24px}
-.ps-kin-tag{font-size:11px;font-weight:800;letter-spacing:.12em;padding:5px 12px;border-radius:999px}
-.ps-kin-tb{background:#f1f3f7;color:#9aa3b2}
-.ps-kin-ta{background:#fdecec;color:#dc2626;opacity:0}
-.ps-kin-foot{margin:26px 0 0;padding-top:22px;border-top:1px solid #f0f1f5;font-size:15.5px;color:#5a6680;font-weight:600}
-.ps-kin-foot-hl{color:#ef4444;font-weight:800}
-.ps-kin.play .ps-kin-before{animation:pskBefore 3.4s linear forwards}
-.ps-kin.play .ps-kin-after{animation:pskAfter 3.4s linear forwards}
-.ps-kin.play .ps-kin-gift{animation:pskGift 3.4s linear forwards}
-.ps-kin.play .ps-kin-ul{animation:pskUL 3.4s ease forwards}
-.ps-kin.play .ps-kin-chk{animation:pskChk 3.4s ease forwards}
-.ps-kin.play .ps-kin-tb{animation:pskTagB 3.4s ease forwards}
-.ps-kin.play .ps-kin-ta{animation:pskTagA 3.4s ease forwards}
-@keyframes pskBefore{0%,12%{clip-path:inset(0 0 0 0)}72%,100%{clip-path:inset(0 0 0 100%)}}
-@keyframes pskAfter{0%,12%{clip-path:inset(0 100% 0 0)}72%,100%{clip-path:inset(0 0 0 0)}}
+.ps-kin-tags{position:relative;height:26px;margin-top:6px}
+.ps-kin-tag{position:absolute;left:50%;top:0;transform:translateX(-50%);white-space:nowrap;font-size:11px;font-weight:800;letter-spacing:.12em;padding:5px 12px;border-radius:999px}
+.ps-kin-tb{background:#f1f3f7;color:#9aa3b2;animation:pskTagB 7s ease infinite;animation-play-state:paused}
+.ps-kin-ta{background:#fdecec;color:#dc2626;opacity:0;animation:pskTagA 7s ease infinite;animation-play-state:paused}
+.ps-kin.play .ps-kin-before,.ps-kin.play .ps-kin-after,.ps-kin.play .ps-kin-gift,.ps-kin.play .ps-kin-ul,.ps-kin.play .ps-kin-chk,.ps-kin.play .ps-kin-tb,.ps-kin.play .ps-kin-ta{animation-play-state:running}
+@keyframes pskBefore{0%,14%{clip-path:inset(0 0 0 0)}43%,100%{clip-path:inset(0 0 0 100%)}}
+@keyframes pskAfter{0%,14%{clip-path:inset(0 100% 0 0)}43%,100%{clip-path:inset(0 0 0 0)}}
 @keyframes pskGift{
  0%{left:-10%;opacity:0;transform:translateX(-50%) translateY(-50%) rotate(-22deg) scale(.85)}
- 6%{opacity:1}
- 12%{left:0%;transform:translateX(-50%) translateY(-130%) rotate(15deg) scale(1.1)}
- 24%{transform:translateX(-50%) translateY(26%) rotate(-17deg) scale(1.12)}
- 36%{transform:translateX(-50%) translateY(-124%) rotate(15deg) scale(1.14)}
- 48%{transform:translateX(-50%) translateY(22%) rotate(-17deg) scale(1.14)}
- 60%{transform:translateX(-50%) translateY(-118%) rotate(13deg) scale(1.1)}
- 72%{left:100%;opacity:1;transform:translateX(-50%) translateY(-22%) rotate(-10deg) scale(1.05)}
- 82%{left:112%;opacity:0;transform:translateX(-50%) translateY(-55%) rotate(9deg) scale(1)}
+ 7%{opacity:1}
+ 14%{left:0%;transform:translateX(-50%) translateY(-130%) rotate(15deg) scale(1.1)}
+ 22%{transform:translateX(-50%) translateY(26%) rotate(-17deg) scale(1.12)}
+ 30%{transform:translateX(-50%) translateY(-124%) rotate(15deg) scale(1.14)}
+ 38%{transform:translateX(-50%) translateY(22%) rotate(-17deg) scale(1.14)}
+ 43%{left:100%;opacity:1;transform:translateX(-50%) translateY(-22%) rotate(-10deg) scale(1.05)}
+ 47%{left:112%;opacity:0;transform:translateX(-50%) translateY(-55%) rotate(9deg) scale(1)}
  100%{left:112%;opacity:0}
 }
-@keyframes pskUL{0%,74%{transform:scaleX(0)}90%,100%{transform:scaleX(1)}}
-@keyframes pskChk{0%,78%{opacity:0;transform:scale(.5)}88%{opacity:1;transform:scale(1.15)}96%,100%{opacity:1;transform:scale(1)}}
-@keyframes pskTagB{0%,58%{opacity:1}68%,100%{opacity:0}}
-@keyframes pskTagA{0%,66%{opacity:0}72%,100%{opacity:1}}
+@keyframes pskUL{0%,45%{transform:scaleX(0)}56%,100%{transform:scaleX(1)}}
+@keyframes pskChk{0%,48%{opacity:0;transform:scale(.5)}56%{opacity:1;transform:scale(1.15)}62%,100%{opacity:1;transform:scale(1)}}
+@keyframes pskTagB{0%,38%{opacity:1}44%,100%{opacity:0}}
+@keyframes pskTagA{0%,44%{opacity:0}48%,100%{opacity:1}}
+.ps-kin-foot{margin:26px 0 0;padding-top:22px;border-top:1px solid #f0f1f5;font-size:15.5px;color:#5a6680;font-weight:600;word-break:keep-all}
+.ps-kin-foot-hl{color:#ef4444;font-weight:800}
 @media(prefers-reduced-motion:reduce){
   .ps-kin-before{clip-path:inset(0 0 0 100%)}.ps-kin-after{clip-path:inset(0 0 0 0)}
   .ps-kin-gift{display:none}.ps-kin-ul{transform:scaleX(1)}.ps-kin-chk{opacity:1;transform:none}
   .ps-kin-tb{opacity:0}.ps-kin-ta{opacity:1}
+  .ps-kin-before,.ps-kin-after,.ps-kin-gift,.ps-kin-ul,.ps-kin-chk,.ps-kin-tb,.ps-kin-ta{animation:none!important}
 }
 @media(max-width:680px){
   .ps{padding:64px 16px}.ps-title{font-size:25px}.ps-impact{font-size:20px}
@@ -1369,9 +1362,8 @@
     var kin=document.getElementById('psKin');
     if(kin&&'IntersectionObserver'in window){
       var io=new IntersectionObserver(function(es){es.forEach(function(e){
-        if(e.isIntersecting&&e.intersectionRatio>=0.45){ if(!kin.classList.contains('play')) kin.classList.add('play'); }
-        else if(e.intersectionRatio===0){ kin.classList.remove('play'); }
-      });},{threshold:[0,0.45]});
+        if(e.isIntersecting&&e.intersectionRatio>=0.35){ kin.classList.add('play'); io.disconnect(); }
+      });},{threshold:[0,0.35]});
       io.observe(kin);
     } else if(kin){ kin.classList.add('play'); }
   }
@@ -1446,10 +1438,10 @@
 .wg-row:hover .wg-ph img{transform:scale(1.04)}
 .wg-tx{padding:4px 8px}
 .wg-no{display:inline-block;font-size:15px;font-weight:900;color:#c7d0e6;letter-spacing:1px;margin-bottom:14px}
-.wg-tx h3{font-size:29px;font-weight:800;letter-spacing:-.8px;line-height:1.32;margin:0 0 16px;color:#10131a}
+.wg-tx h3{font-size:29px;font-weight:800;letter-spacing:-.8px;line-height:1.32;margin:0 0 16px;color:#10131a;word-break:keep-all}
 .wg-tx h3 b{color:#ef4444;font-weight:800}
 .wg-accent{color:#ef4444}
-.wg-tx p{font-size:16.5px;line-height:1.78;color:#52607a;margin:0}.wg-tx p b{color:#10131a;font-weight:700}
+.wg-tx p{font-size:16.5px;line-height:1.78;color:#52607a;margin:0;word-break:keep-all}.wg-tx p b{color:#10131a;font-weight:700}
 @media(max-width:760px){
   .wg{padding:68px 16px}.wg-head{margin-bottom:48px}.wg-title{font-size:30px;letter-spacing:-1px}
   .wg-rows{gap:48px}
@@ -1475,7 +1467,7 @@
         <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">영어 회로 만들기</h3><p class="sx-desc">문장 구조부터 탄탄하게, 말 멈춤을 줄여요.</p><div class="sx-step">STEP 01</div></div>
       </article>
       <article class="sx-card">
-        <div class="sx-img" style="background-image:url('../first/images/study/session9.jpg');background-position:center 72%"><span class="sx-cat">NATIVE STUDY</span><span class="sx-num">02</span></div>
+        <div class="sx-img" style="background-image:url('../first/images/study/session9.jpg');background-position:center 50%"><span class="sx-cat">NATIVE STUDY</span><span class="sx-num">02</span></div>
         <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">원어민과 90분 실전</h3><p class="sx-desc">소그룹 대화량으로 자신감까지 한 번에.</p><div class="sx-step">STEP 02</div></div>
       </article>
       <article class="sx-card">
@@ -2510,6 +2502,45 @@
 })();
 </script>
 <!-- ===== /히어로 스크램블+줌 동시, 감속 ===== -->
+
+<!-- ===== intro 하이라이트 페인트(스크롤 진입 시 형광 칠해짐): ③ program-card 헤더 / ④ why-points 강조 — </body> 앞 주입 ===== -->
+<style>
+/* ④ why-points 노란 강조를 페인트인으로 (인라인 background 덮어쓰기) */
+.why-point-text strong{background-color:transparent!important;background-image:linear-gradient(#ffe066,#ffe066)!important;background-repeat:no-repeat!important;background-position:0 92%!important;background-size:0% 80%!important;color:#111!important;transition:background-size .5s cubic-bezier(.4,0,.2,1)}
+.why-point-text strong.hl-lit{background-size:100% 80%!important}
+/* ③ program-card 헤더에 형광 페인트 */
+.program-card .program-body h3{background-image:linear-gradient(#ffe066,#ffe066);background-repeat:no-repeat;background-position:0 88%;background-size:0% 42%;transition:background-size .55s cubic-bezier(.4,0,.2,1);border-radius:2px}
+.program-card .program-body h3.hl-lit{background-size:100% 42%}
+@media(prefers-reduced-motion:reduce){.why-point-text strong{background-size:100% 80%!important}.program-card .program-body h3{background-size:100% 42%}}
+</style>
+<script>
+(function(){
+  function watch(el,cb){
+    if(!('IntersectionObserver' in window)){cb();return;}
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting&&e.intersectionRatio>=0.3){ cb(); io.disconnect(); }
+    });},{threshold:[0,0.3]});
+    io.observe(el);
+  }
+  function init(){
+    // ④ why-points 컨테이너 진입 → 강조 순차 페인트
+    [].slice.call(document.querySelectorAll('.why-points')).forEach(function(c){
+      watch(c,function(){
+        [].slice.call(c.querySelectorAll('.why-point-text strong')).forEach(function(s,i){
+          setTimeout(function(){ s.classList.add('hl-lit'); }, i*170);
+        });
+      });
+    });
+    // ③ program-card 헤더 진입 → 페인트
+    [].slice.call(document.querySelectorAll('.program-card')).forEach(function(card){
+      var h3=card.querySelector('.program-body h3'); if(!h3) return;
+      watch(card,function(){ h3.classList.add('hl-lit'); });
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init); else init();
+})();
+</script>
+<!-- ===== /하이라이트 페인트 ===== -->
 
 </body>
 
