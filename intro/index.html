@@ -1262,7 +1262,7 @@
     </div>
 
     <!-- WHY THE BOX -->
-<!-- ===== intro 문제→해결 (제목 타이핑 + 🎁 키네틱 Before→After + 다크 솔루션) ===== -->
+<!-- ===== intro 문제→해결 (제목 타이핑 → 임팩트 → 🎁 키네틱 Before→After 피날레) ===== -->
 <section class="ps">
   <div class="ps-wrap">
     <div class="ps-head">
@@ -1270,7 +1270,9 @@
       <h2 class="ps-title">10년을 공부했는데,<br>왜 외국인 앞에선 <span class="ps-type" id="psType">&nbsp;</span><span class="ps-cur" aria-hidden="true"></span></h2>
     </div>
 
-    <!-- 🎁 키네틱 Before → After -->
+    <p class="ps-impact">이건 <b>능력 부족</b>이 아닙니다.<br><b class="ps-hl">제대로 된 회화 훈련</b>을 받지 못했을 뿐이에요.</p>
+
+    <!-- 🎁 키네틱 Before → After (해결 피날레) -->
     <div class="ps-kin" id="psKin">
       <div class="ps-kin-q">“어제 뭐 했어?”를 <b>영어로</b> 말하면?</div>
       <div class="ps-kin-stage">
@@ -1280,35 +1282,7 @@
         <div class="ps-kin-chk"><span>✓</span><b>딱!</b></div>
       </div>
       <div class="ps-kin-tags"><span class="ps-kin-tag ps-kin-tb">BEFORE · 지금</span><span class="ps-kin-tag ps-kin-ta">AFTER · 더박스 후</span></div>
-    </div>
-
-    <p class="ps-impact">이건 능력 부족이 아닙니다.<br><b class="ps-hl">제대로 된 회화 훈련을 받지 못했기 때문</b>입니다.</p>
-
-    <div class="ps-sol">
-      <p class="ps-sol-eyebrow">THE BOX SOLUTION</p>
-      <h3 class="ps-sol-title"><span class="ps-sol-mk">더박스</span>에서 해결됩니다.</h3>
-      <p class="ps-sol-sub">나에게 맞는 시스템을 충분히 활용하면, 영어가 생활이 됩니다.</p>
-      <div class="ps-tracks">
-        <div class="ps-track ps-track--aca">
-          <div class="ps-track-emo">📘</div>
-          <div class="ps-track-cat">ACADEMY</div>
-          <div class="ps-track-name">영어 회로 만들기</div>
-          <div class="ps-track-list"><span>✓ 문장 구조 완성</span><span>✓ 반복 실수 교정</span><span>✓ 숙제 → 피드백 루프</span></div>
-        </div>
-        <div class="ps-track ps-track--study">
-          <div class="ps-track-emo">🗣️</div>
-          <div class="ps-track-cat">NATIVE STUDY</div>
-          <div class="ps-track-name">실전 감각 키우기</div>
-          <div class="ps-track-list"><span>✓ 원어민과 90분 대화</span><span>✓ 자연스러운 교정</span><span>✓ 자신감 완성</span></div>
-        </div>
-      </div>
-      <div class="ps-result">
-        <span class="ps-flag">🇬🇧</span>
-        <div class="ps-result-tx">
-          <div class="ps-result-t">영어가 ‘생활’이 된다</div>
-          <div class="ps-result-d">말이 막히지 않고, 외국인 앞에서 자연스럽게</div>
-        </div>
-      </div>
+      <p class="ps-kin-foot"><b class="ps-kin-foot-hl">더박스</b>에서 제대로 훈련하면, 이렇게 바뀝니다.</p>
     </div>
   </div>
 </section>
@@ -1316,18 +1290,21 @@
 .ps{background:#fff;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f;overflow:visible}
 .ps *{box-sizing:border-box}
 .ps-wrap{max-width:840px;margin:0 auto}
-.ps-head{text-align:center;margin-bottom:40px}
+.ps-head{text-align:center;margin-bottom:30px}
 .ps-eyebrow{display:inline-block;background:#fdecec;color:#dc2626;font-size:12px;font-weight:800;letter-spacing:.14em;padding:7px 16px;border-radius:999px;margin-bottom:20px}
 .ps-title{font-size:36px;font-weight:800;letter-spacing:-1.2px;line-height:1.4;margin:0;color:#0c1322}
 .ps-type{color:#ef4444}
 .ps-cur{display:inline-block;width:3px;height:1.05em;background:#ef4444;margin-left:1px;vertical-align:-.16em;animation:pscur 1.05s steps(1) infinite}
 @keyframes pscur{50%{opacity:0}}
-/* 🎁 키네틱 Before→After */
-.ps-kin{position:relative;max-width:680px;margin:0 auto;background:#fff;border:1px solid #eef0f4;border-radius:20px;padding:40px 30px;text-align:center;overflow:hidden;box-shadow:0 16px 40px rgba(20,30,60,.06)}
+.ps-impact{text-align:center;font-size:26px;line-height:1.6;font-weight:700;color:#10131a;margin:0 auto 46px;letter-spacing:-.5px}
+.ps-impact b{font-weight:800}
+.ps-hl{background:linear-gradient(transparent 55%,#ffe07a 55%);font-weight:800;padding:0 3px}
+/* 🎁 키네틱 Before→After 피날레 */
+.ps-kin{position:relative;max-width:720px;margin:0 auto;background:#fff;border:1px solid #eef0f4;border-radius:24px;padding:44px 34px 38px;text-align:center;overflow:hidden;box-shadow:0 24px 60px rgba(20,30,60,.1)}
 .ps-kin-q{font-size:14px;color:#94a0b3;font-weight:700;margin-bottom:6px}
 .ps-kin-q b{color:#ef4444}
 .ps-kin-stage{position:relative;height:160px;display:flex;align-items:center;justify-content:center}
-.ps-kin-line{position:absolute;left:0;right:0;font-family:'Fraunces',Georgia,serif;font-size:clamp(22px,5vw,33px);letter-spacing:-.5px;line-height:1.25}
+.ps-kin-line{position:absolute;left:0;right:0;font-family:'Fraunces',Georgia,serif;font-size:clamp(22px,5vw,34px);letter-spacing:-.5px;line-height:1.25}
 .ps-kin-before{color:#aeb6c4;clip-path:inset(0 0 0 0)}
 .ps-kin-before s{text-decoration-color:#e0788f;text-decoration-thickness:2px}
 .ps-kin-after{color:#10131a;font-weight:600;clip-path:inset(0 100% 0 0)}
@@ -1335,14 +1312,15 @@
 .ps-kin-ul{position:absolute;left:0;right:0;bottom:-4px;height:10px;background:#ffe07a;border-radius:6px;transform:scaleX(0);transform-origin:left;z-index:-1}
 .ps-kin-gift{position:absolute;top:50%;left:0;font-size:48px;line-height:1;filter:drop-shadow(0 8px 16px rgba(239,68,68,.35));opacity:0;transform:translateX(-50%) translateY(-50%);z-index:5}
 .ps-kin-gift::before{content:"";position:absolute;right:96%;top:44%;width:50px;height:7px;background:linear-gradient(90deg,transparent,rgba(239,68,68,.42));border-radius:4px}
-.ps-kin-chk{position:absolute;right:18px;top:8px;display:flex;align-items:center;gap:7px;opacity:0;transform:scale(.5)}
+.ps-kin-chk{position:absolute;right:18px;top:6px;display:flex;align-items:center;gap:7px;opacity:0;transform:scale(.5)}
 .ps-kin-chk span{width:30px;height:30px;border-radius:50%;background:#10b981;color:#fff;display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900}
 .ps-kin-chk b{color:#10b981;font-weight:900;font-size:17px}
-.ps-kin-tags{display:flex;justify-content:center;gap:8px;margin-top:6px;height:24px}
+.ps-kin-tags{display:flex;justify-content:center;gap:8px;margin-top:4px;height:24px}
 .ps-kin-tag{font-size:11px;font-weight:800;letter-spacing:.12em;padding:5px 12px;border-radius:999px}
 .ps-kin-tb{background:#f1f3f7;color:#9aa3b2}
 .ps-kin-ta{background:#fdecec;color:#dc2626;opacity:0}
-/* play (스크롤 진입 시 .play 부여) */
+.ps-kin-foot{margin:26px 0 0;padding-top:22px;border-top:1px solid #f0f1f5;font-size:15.5px;color:#5a6680;font-weight:600}
+.ps-kin-foot-hl{color:#ef4444;font-weight:800}
 .ps-kin.play .ps-kin-before{animation:pskBefore 3.4s linear forwards}
 .ps-kin.play .ps-kin-after{animation:pskAfter 3.4s linear forwards}
 .ps-kin.play .ps-kin-gift{animation:pskGift 3.4s linear forwards}
@@ -1373,36 +1351,9 @@
   .ps-kin-gift{display:none}.ps-kin-ul{transform:scaleX(1)}.ps-kin-chk{opacity:1;transform:none}
   .ps-kin-tb{opacity:0}.ps-kin-ta{opacity:1}
 }
-.ps-impact{text-align:center;font-size:20px;line-height:1.7;font-weight:600;color:#10131a;margin:46px auto 0}
-.ps-hl{background:linear-gradient(transparent 55%,#ffe07a 55%);font-weight:800;padding:0 3px}
-/* 다크 솔루션 */
-.ps-sol{margin:50px auto 0;background:linear-gradient(135deg,#0f0f1a 0%,#1e1b3a 100%);border-radius:28px;padding:48px 40px;text-align:center}
-.ps-sol-eyebrow{color:rgba(255,255,255,.45);font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;margin:0 0 10px}
-.ps-sol-title{color:#fff;font-size:27px;font-weight:900;margin:0 0 10px;letter-spacing:-.5px}
-.ps-sol-mk{border-bottom:4px solid #ffe07a;padding-bottom:3px}
-.ps-sol-sub{color:rgba(255,255,255,.5);font-size:14.5px;margin:0 0 34px;line-height:1.6}
-.ps-tracks{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
-.ps-track{border-radius:20px;padding:28px 20px}
-.ps-track--aca{background:rgba(239,68,68,.09);border:1px solid rgba(239,68,68,.28)}
-.ps-track--study{background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.26)}
-.ps-track-emo{font-size:34px;margin-bottom:12px}
-.ps-track-cat{font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
-.ps-track--aca .ps-track-cat{color:#f87171}
-.ps-track--study .ps-track-cat{color:#6ee7b7}
-.ps-track-name{color:#fff;font-size:16px;font-weight:800;margin-bottom:16px;line-height:1.4}
-.ps-track-list{display:flex;flex-direction:column;gap:7px}
-.ps-track-list span{background:rgba(255,255,255,.06);border-radius:9px;padding:8px 11px;font-size:13px;color:rgba(255,255,255,.72)}
-.ps-result{margin-top:16px;background:linear-gradient(90deg,rgba(248,113,113,.16),rgba(110,231,183,.16));border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 24px;display:flex;align-items:center;justify-content:center;gap:14px}
-.ps-flag{font-size:26px}.ps-result-tx{text-align:left}
-.ps-result-t{color:#fff;font-weight:800;font-size:15px}
-.ps-result-d{color:rgba(255,255,255,.55);font-size:13px;margin-top:2px}
 @media(max-width:680px){
-  .ps{padding:64px 16px}.ps-title{font-size:25px}
+  .ps{padding:64px 16px}.ps-title{font-size:25px}.ps-impact{font-size:20px}
   .ps-kin{padding:28px 18px}.ps-kin-stage{height:150px}
-  .ps-impact{font-size:17px}
-  .ps-sol{padding:36px 22px;border-radius:22px}.ps-sol-title{font-size:22px}
-  .ps-tracks{grid-template-columns:1fr;gap:12px}
-  .ps-result{flex-direction:column;text-align:center}.ps-result-tx{text-align:center}
 }
 </style>
 <script>
