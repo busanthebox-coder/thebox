@@ -169,6 +169,7 @@
             color: #555;
             font-weight: 400;
             margin-bottom: 12px;
+            word-break: keep-all;
         }
 
         .hero-location {
@@ -2420,8 +2421,8 @@
 
         window.addEventListener('scroll', () => {
             const s = window.scrollY;
-            header.style.boxShadow = s > 50 ? '0 2px 20px rgba(0,0,0,0.08)' : '';
-            fabGroup.classList.toggle('show', s > 200);
+            if (header) header.style.boxShadow = s > 50 ? '0 2px 20px rgba(0,0,0,0.08)' : '';
+            if (fabGroup) fabGroup.classList.toggle('show', s > 200);
         });
 
         // COUNTER ANIMATION
