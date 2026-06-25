@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THE BOX 부산 | 더박스 영어회화 — 부산 원어민 영어 커뮤니티</title>
     <meta name="description" content="부산에서 영어권 원어민과 함께하는 진짜 영어. 월 10만원대로 어학연수급 환경을 경험하세요." />
+    <!-- Meta Pixel -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+            document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '4426366044305903');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=4426366044305903&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -2579,6 +2596,41 @@
 })();
 </script>
 <!-- ===== /하이라이트 페인트 ===== -->
+
+<script>
+    (function () {
+        var leadPattern = /(booking\.naver\.com|m\.booking\.naver\.com|busanthebox-coder\.github\.io\/consultation\/)/;
+        var labelPattern = /(무료\s*상담|상담\s*예약|상담지)/;
+
+        function trackLead() {
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead');
+            }
+        }
+
+        document.addEventListener('click', function (event) {
+            var link = event.target.closest && event.target.closest('a[href]');
+            if (!link) return;
+
+            var href = link.href || '';
+            var label = link.textContent || '';
+            var shouldTrack = leadPattern.test(href) || labelPattern.test(label);
+            if (!shouldTrack) return;
+
+            trackLead();
+
+            var opensNewContext = link.target && link.target.toLowerCase() !== '_self';
+            if (opensNewContext || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || event.defaultPrevented) {
+                return;
+            }
+
+            event.preventDefault();
+            window.setTimeout(function () {
+                window.location.href = href;
+            }, 300);
+        }, true);
+    })();
+</script>
 
 </body>
 
