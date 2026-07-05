@@ -2,7 +2,7 @@
 // 일괄 채점 버튼 클릭 시 모달 표시
 
 // 구글 시트 연동 설정
-const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyBPnoyKxmhqQrIk6ZE5ex2enFrRxu3N5iO-j52eVzx6rA0GZuLnv01x8cIHh-K0U5twQ/exec';
 
 // ────────────────────────────────────────────────
 // ✅ 초기화
@@ -259,12 +259,13 @@ async function sendToGoogleSheet(name, phone, results) {
         wrongQuestions: JSON.stringify(getAllWrongQuestions(results))
     };
 
-    await fetch(GOOGLE_SCRIPT_URL, {
+    const res = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/json' },
+        redirect: 'follow',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
         body: JSON.stringify(data)
     });
+    if (!res.ok) throw new Error('server ' + res.status);
 }
 
 function getAllWrongQuestions(results) {
