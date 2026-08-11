@@ -1195,6 +1195,15 @@
 
         /* ── RESPONSIVE ── */
         @media (max-width: 768px) {
+            .fab-group {
+                right: 16px;
+                bottom: max(16px, env(safe-area-inset-bottom));
+            }
+
+            .fab {
+                min-height: 44px;
+            }
+
             .stat-item {
                 padding: 12px 20px;
             }
