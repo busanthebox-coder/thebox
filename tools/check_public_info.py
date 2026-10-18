@@ -3,12 +3,10 @@ import json
 from html.parser import HTMLParser
 from pathlib import Path
 import re
-import sys
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(ROOT / 'tools'))
-from build_public_info import INFO, ORIGIN
+ORIGIN = 'https://busanthebox-coder.github.io'
 
 
 class Page(HTMLParser):
@@ -28,7 +26,7 @@ class Page(HTMLParser):
         if tag=='script' and self.in_ld:self.ld.append(json.loads(''.join(self.buf)));self.in_ld=False
 
 
-names=['intro/index.html','first/academy.html','first/study.html','first/programs.html','first/level-test.html','guide/index.html']
+names=['intro/index.html','first/academy.html','first/study.html','first/programs.html','first/level-test.html']
 titles=[]
 for name in names:
     s=(ROOT/name).read_text();p=Page();p.feed(s)
@@ -38,21 +36,24 @@ for name in names:
     assert '부산' in ''.join(p.titles),(name,'region')
     nodes=p.ld[0]['@graph'];ids=[n['@id'] for n in nodes]
     assert len(ids)==len(set(ids)),(name,'duplicate identities')
-    for kind in ['study','academy']:
-        n=next(n for n in nodes if n['@id']==ORIGIN+'/#'+kind+'-business')
-        assert n['taxID']==INFO[kind]['tax_id'] and n['telephone'] in s,(name,'business identity')
+    assert '/thebox/guide/' not in s,(name,'removed guide link')
+    assert 'tb-quick-title' not in s and 'tb-comparison-title' not in s,(name,'unrequested visible sections')
+    if name=='intro/index.html':
+        businesses=[n for n in nodes if n.get('@type') in ['LocalBusiness','EducationalOrganization']]
+        assert {n['taxID'] for n in businesses}=={'822-18-01665','486-93-01976'}
+        assert all(n['telephone'] in s for n in businesses),(name,'visible business data')
+    else:
+        assert not any(n.get('taxID') for n in nodes),(name,'unnecessary duplicated business data')
     titles.append(''.join(p.titles))
 assert len(set(titles))==len(titles),'duplicate titles'
-academy=(ROOT/'first/academy.html').read_text();study=(ROOT/'first/study.html').read_text()
-for row in INFO['academy_prices']:assert f"{row['new_price']:,}원" in academy
-for row in INFO['study_prices']:assert f"{row['price']:,}원" in study
-assert INFO['study_limited']['condition'].split(' · ')[0] in (ROOT/'guide/index.html').read_text()
+assert not (ROOT/'guide/index.html').exists(),'unrequested public guide must stay removed'
+assert not (ROOT/'content/public-info.json').exists(),'consolidated extra pricing data must stay removed'
 ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
 urls=[x.text for x in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)]
-assert len(urls)==6 and len(set(urls))==6
-assert ORIGIN+'/thebox/guide/' in urls
+assert len(urls)==5 and len(set(urls))==5
+assert not any('/guide/' in x for x in urls)
 assert not any('/consultation/' in x for x in urls)
 for url in urls:
     rel=url.split('/thebox/')[1]
     assert (ROOT/(rel+'index.html' if rel.endswith('/') else rel)).is_file()
-print('PASS 6 pages: distinct metadata, canonical, initial HTML, business identities, official price consistency and sitemap')
+print('PASS 5 existing pages: metadata, canonical, public business facts, no extra guide links or disclosures, five-URL sitemap')

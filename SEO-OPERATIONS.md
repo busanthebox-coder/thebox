@@ -1,19 +1,18 @@
-# Public information and search measurement
+# Search metadata and consultation measurement
 
-Official facts are recorded in `content/public-info.json` with source URLs and the date of the public-source check. This date is not an operator guarantee that every listed class is recruiting. Actual class assignments remain subject to consultation.
+The owner requested removal of the extra public information guide on 2026-10-18. Do not recreate a guide page, expose additional price or operating conditions, or add information menus without a specific request. Keep the scope of public information within the existing pages. The consolidated pricing data and guide generator were removed along with the public guide.
 
-Regenerate the guide and optional host root:
+Validate the existing pages and consultation measurement:
 
 ```sh
-python3 tools/build_public_info.py --root-site ../busanthebox-coder.github.io
 python3 tools/check_public_info.py
 node tests/measurement.test.cjs
 node ../consultation/tests/submit.test.cjs
 ```
 
-When facts change, update both the data and the original academy/study price cards, regenerate the guide, and synchronize the business nodes in existing pages. Keep each business `@id`, phone and tax ID distinct. The checker rejects disagreement with the original price cards. Update sitemap `lastmod` only for changed pages. Do not add unverified member counts or ratings to structured data.
+Keep the existing public price cards under the owner's control. Structured business data on the introduction page must match its already-visible business facts, with distinct IDs for the two businesses. Other pages reference these entities without repeating additional business disclosures. Update sitemap `lastmod` only for changed pages. Do not add unverified member counts or ratings to structured data.
 
-The host root is deployed from the separate `busanthebox-coder.github.io` repository. The main site remains in `thebox`; the application form remains in `consultation`. The root sitemap is an index covering the root and the main site. The application form keeps its `noindex` policy and is excluded from the sitemaps.
+The host root is deployed from the separate `busanthebox-coder.github.io` repository and provides a minimal introduction with links to existing programs and consultation. The main site remains in `thebox`; the application form remains in `consultation`. The root sitemap is an index covering the root and the five existing main pages. The application form keeps its `noindex` policy and is excluded from the sitemaps. The removed `/thebox/guide/` URL must return 404.
 
 ## Account setup required
 
@@ -43,4 +42,4 @@ Deployment date: 2026-10-18 (KST). Export the 28 days before deployment from Sea
 
 Initial recheck: 2026-11-01. 28-day comparison: 2026-11-15. These are proposed check dates, not scheduled automations. Search ranks and AI citations remain unmeasured until the relevant engines are checked.
 
-Next content candidates, subject to actual search and consultation data: beginner program selection (expand existing comparison page), evening/weekend attendance (expand guide), and a real conversation-topic sample with the operator's publication approval. Avoid duplicating thin city/keyword pages.
+Further visible content changes require the owner's request. Improve search metadata and discoverability using existing public content; do not make additional operational information more public merely for SEO.
