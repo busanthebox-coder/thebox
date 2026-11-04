@@ -835,7 +835,7 @@
 </style>
 <!-- ===== /REDESIGN (손그림): 시간표 ===== -->
 <!-- ===== REDESIGN: 아카데미 수강 금액 (academy.html @47517 교체) ===== -->
-<section class="acp">
+<section class="acp" id="pricing">
   <div class="acp-wrap">
     <p class="acp-eyebrow">PRICING</p>
     <h2 class="acp-title">수강 금액</h2>
@@ -843,30 +843,31 @@
 
     <div class="acp-tiers">
       <div class="acp-tier">
-        <div class="acp-head">1개월 <small>8회</small></div>
-        <div class="acp-per">회당 <b>27,500</b>원</div>
-        <div class="acp-was">&nbsp;</div>
-        <div class="acp-pay">220,000원</div>
-        <ul class="acp-feat"><li>주 2회 · 90분 수업</li></ul>
-      </div>
-
-      <div class="acp-tier">
-        <div class="acp-head">2개월 <small>16회</small></div>
-        <div class="acp-per">회당 <b>23,750</b>원</div>
-        <div class="acp-was">440,000원</div>
-        <div class="acp-pay">380,000원 <span class="acp-save">60,000원↓</span></div>
+        <div class="acp-head">2개월</div>
+        <div class="acp-per">월 환산 <b>190,000</b>원</div>
+        <div class="acp-was">480,000원</div>
+        <div class="acp-pay">380,000원 <span class="acp-save">100,000원↓</span></div>
         <ul class="acp-feat"><li>주 2회 · 90분 수업</li></ul>
       </div>
 
       <div class="acp-tier acp-tier--best">
         <span class="acp-badge">추천</span>
-        <div class="acp-head">3개월 <small>24회</small></div>
-        <div class="acp-per">회당 약 <b>22,083</b>원</div>
-        <div class="acp-was">660,000원</div>
-        <div class="acp-pay">530,000원 <span class="acp-save">130,000원↓</span></div>
+        <div class="acp-head">3개월</div>
+        <div class="acp-per">월 환산 약 <b>176,667</b>원</div>
+        <div class="acp-was">720,000원</div>
+        <div class="acp-pay">530,000원 <span class="acp-save">190,000원↓</span></div>
+        <ul class="acp-feat"><li>주 2회 · 90분 수업</li></ul>
+      </div>
+
+      <div class="acp-tier">
+        <div class="acp-head">6개월</div>
+        <div class="acp-per">월 환산 <b>165,000</b>원</div>
+        <div class="acp-was">1,440,000원</div>
+        <div class="acp-pay">990,000원 <span class="acp-save">450,000원↓</span></div>
         <ul class="acp-feat"><li>주 2회 · 90분 수업</li></ul>
       </div>
     </div>
+    <p class="acp-basis">월 환산 금액은 기간별 비교를 위한 금액입니다.<br>절약 금액은 1개월 환산 기준가 240,000원 대비 기준입니다. 등록은 2개월부터 가능합니다.</p>
 
     <p class="acp-extra">연장·리뷰·후기·우수상·지인등록 등 <b>추가 할인 제도</b>가 있어요. 아카데미 수강생도 파티·행사 참여 가능!</p>
     <div class="acp-cta">
@@ -900,6 +901,7 @@
 .acp-tier--best{transform:translateY(-12px);border:2px solid #2D5BFF;box-shadow:0 22px 50px rgba(0,0,0,.35)}
 .acp-tier--best:hover{transform:translateY(-18px) scale(1.04)}
 .acp-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#ef4444;color:#fff;font-weight:800;font-size:13px;padding:6px 18px;border-radius:20px;box-shadow:0 6px 16px rgba(239,68,68,.45);white-space:nowrap}
+.acp-basis{margin:24px 0 0;color:#d9e3ff;font-size:13px;line-height:1.7}
 .acp-extra{margin:40px 0 0;color:#d9e3ff;font-size:14.5px;line-height:1.6}
 .acp-extra b{color:#fff}
 .acp-cta{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
