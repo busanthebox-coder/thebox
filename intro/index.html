@@ -37,7 +37,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
     <style>
         *,
         *::before,
@@ -54,7 +54,7 @@
             --gray-bg: #F5F5F5;
             --gray-line: #E8E8E8;
             --white: #FFFFFF;
-            --font-ko: 'Pretendard', -apple-system, sans-serif;
+            --font-ko: 'Pretendard Variable', -apple-system, sans-serif;
             --font-en: 'DM Sans', sans-serif;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -847,8 +847,7 @@
             justify-content: center;
             text-align: center;
             padding: 80px 24px;
-            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-                url('events/global_community.webp') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)) center/cover no-repeat;
             background-color: #222;
         }
 
@@ -1248,7 +1247,7 @@
 <body>
 
     <style>
-.ub{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:13px 24px;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(12px);-webkit-backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid #eef0f4;font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif}
+.ub{position:sticky;top:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:13px 24px;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(12px);-webkit-backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid #eef0f4;font-family:'Pretendard Variable',-apple-system,BlinkMacSystemFont,sans-serif}
 .ub *{box-sizing:border-box}
 .ub-logo{display:flex;align-items:center;gap:8px;font-weight:800;font-size:20px;color:#111;text-decoration:none;letter-spacing:-.6px}
 .ub-logo i{color:#ef4444;font-style:normal}
@@ -1262,7 +1261,7 @@
 .ub-burger svg{width:26px;height:26px}
 .ub-scrim{position:fixed;inset:0;background:rgba(15,18,26,.42);opacity:0;visibility:hidden;transition:opacity .3s;z-index:600}
 .ub-scrim.on{opacity:1;visibility:visible}
-.ub-drawer{position:fixed;top:0;right:0;bottom:0;width:min(80vw,300px);background:#fff;box-shadow:-14px 0 44px rgba(20,23,31,.18);transform:translateX(100%);transition:transform .32s cubic-bezier(.2,.7,.2,1);z-index:610;display:flex;flex-direction:column;padding:18px 18px 24px;font-family:'Pretendard',-apple-system,sans-serif}
+.ub-drawer{position:fixed;top:0;right:0;bottom:0;width:min(80vw,300px);background:#fff;box-shadow:-14px 0 44px rgba(20,23,31,.18);transform:translateX(100%);transition:transform .32s cubic-bezier(.2,.7,.2,1);z-index:610;display:flex;flex-direction:column;padding:18px 18px 24px;font-family:'Pretendard Variable',-apple-system,sans-serif}
 .ub-drawer.on{transform:none}
 .ub-x{align-self:flex-end;border:0;background:none;font-size:22px;color:#9aa3b2;cursor:pointer;padding:4px 8px;line-height:1}
 .ub-drawer a{font-size:16px;font-weight:700;color:#1a1a1a;text-decoration:none;padding:13px 12px;border-radius:10px}
@@ -1355,7 +1354,7 @@
   </div>
 </section>
 <style>
-.ps{background:#fff;padding:100px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f;overflow:visible}
+.ps{background:#fff;padding:100px 24px;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171f;overflow:visible}
 .ps *{box-sizing:border-box}
 .ps-wrap{max-width:840px;margin:0 auto}
 .ps-head{text-align:center;margin-bottom:30px}
@@ -1490,7 +1489,7 @@
   </div>
 </section>
 <style>
-.wg{background:#fff;padding:108px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.wg{background:#fff;padding:108px 24px;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171f}
 .wg *{box-sizing:border-box}
 .wg-wrap{max-width:1040px;margin:0 auto}
 .wg-head{text-align:center;margin-bottom:72px}
@@ -1532,23 +1531,23 @@
   <div class="sx-wrap">
     <div class="sx-stage" id="sxStage">
       <article class="sx-card">
-        <div class="sx-img" style="background-image:url('../first/images/academy/academy_main.webp')"><span class="sx-cat">ACADEMY</span><span class="sx-num">01</span></div>
+        <div class="sx-img" data-bg="url('../first/images/academy/academy_main.webp')"><span class="sx-cat">ACADEMY</span><span class="sx-num">01</span></div>
         <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">영어 회로 만들기</h3><p class="sx-desc">문장 구조부터 탄탄하게, 말 멈춤을 줄여요.</p><div class="sx-step">STEP 01</div></div>
       </article>
       <article class="sx-card">
-        <div class="sx-img" style="background-image:url('../first/images/study/session8.webp');background-position:center 42%"><span class="sx-cat">NATIVE STUDY</span><span class="sx-num">02</span></div>
+        <div class="sx-img" data-bg="url('../first/images/study/session8.webp')" style="background-position:center 42%"><span class="sx-cat">NATIVE STUDY</span><span class="sx-num">02</span></div>
         <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">원어민과 90분 실전</h3><p class="sx-desc">소그룹 대화량으로 자신감까지 한 번에.</p><div class="sx-step">STEP 02</div></div>
       </article>
       <article class="sx-card">
-        <div class="sx-img" style="background-image:url('../first/images/study/party2.webp')"><span class="sx-cat">COMMUNITY</span><span class="sx-num">03</span></div>
+        <div class="sx-img" data-bg="url('../first/images/study/party2.webp')"><span class="sx-cat">COMMUNITY</span><span class="sx-num">03</span></div>
         <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">파티·아웃팅·이벤트</h3><p class="sx-desc">수업 밖에서도 영어가 생활이 됩니다.</p><div class="sx-step">STEP 03</div></div>
       </article>
       <article class="sx-card">
-        <div class="sx-img" style="background-image:url('../first/images/study/study_main.webp')"><span class="sx-cat">VALUE</span><span class="sx-num">04</span></div>
+        <div class="sx-img" data-bg="url('../first/images/study/study_main.webp')"><span class="sx-cat">VALUE</span><span class="sx-num">04</span></div>
         <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">어학연수 1/10 비용</h3><p class="sx-desc">월 10만원대로 같은 환경을 그대로.</p><div class="sx-step">STEP 04</div></div>
       </article>
       <article class="sx-card">
-        <div class="sx-img" style="background-image:url('../first/images/study/together.webp')"><span class="sx-cat">REVIEWS</span><span class="sx-num">05</span></div>
+        <div class="sx-img" data-bg="url('../first/images/study/together.webp')"><span class="sx-cat">REVIEWS</span><span class="sx-num">05</span></div>
         <div class="sx-body"><div class="sx-brand">THE BOX SYSTEM</div><h3 class="sx-ctitle">실제 멤버 ★4.9</h3><p class="sx-desc">검증된 40여 명의 생생한 후기.</p><div class="sx-step">STEP 05</div></div>
       </article>
     </div>
@@ -1558,7 +1557,7 @@
   <div class="sx-dots" id="sxDots"><span></span><span></span><span></span><span></span><span></span></div>
 </section>
 <style>
-.sx{background:#0d0e13;padding:100px 16px 90px;font-family:'Pretendard',-apple-system,sans-serif;overflow:hidden;scroll-margin-top:84px}
+.sx{background:#0d0e13;padding:100px 16px 90px;font-family:'Pretendard Variable',-apple-system,sans-serif;overflow:hidden;scroll-margin-top:84px}
 .sx *{box-sizing:border-box}
 .sx-head{text-align:center;max-width:760px;margin:0 auto 54px}
 .sx-eyebrow{color:#f87171;font-weight:800;font-size:13px;letter-spacing:.18em;margin:0 0 12px}
@@ -1627,7 +1626,7 @@
 
 
     <!-- YOUR FIRST & LAST STOP -->
-    <div class="first-last-stop fade-up">
+    <div class="first-last-stop fade-up" data-bg="linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('events/global_community.webp')">
         <div>
             <h2>YOUR FIRST &amp; LAST STOP</h2>
             <p>영어회화의 시작부터 목표하는 마지막 지점까지 더박스에서 끝내세요</p>
@@ -1821,7 +1820,7 @@
   </div>
 </section>
 <style>
-.dm{background:#fff;padding:96px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.dm{background:#fff;padding:96px 24px;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171f}
 .dm *{box-sizing:border-box}
 .dm-wrap{max-width:1000px;margin:0 auto}
 .dm-eyebrow{color:#ef4444;font-weight:800;font-size:13px;letter-spacing:.18em;margin:0 0 12px}
@@ -1837,21 +1836,21 @@
 .dm-before{font-size:17px;color:#9aa3b2;margin:0;font-style:italic}
 .dm-wrong{text-decoration:line-through;text-decoration-color:#ef4444;color:#cf6b64;font-style:normal}
 .dm-fade{opacity:.6}
-.dm-arr{font-family:'Pretendard',sans-serif;font-size:12px;font-weight:800;color:#b3bccd;letter-spacing:.04em;margin:9px 0;font-style:normal}
+.dm-arr{font-family:'Pretendard Variable',sans-serif;font-size:12px;font-weight:800;color:#b3bccd;letter-spacing:.04em;margin:9px 0;font-style:normal}
 .dm-after{font-size:18.5px;color:#1c2330;margin:0;font-weight:600}
-.dm-gloss{font-family:'Pretendard',sans-serif;font-size:12.5px;color:#8a93a3;margin:12px 0 0;padding-top:12px;border-top:1px dashed #dfe5f0}
+.dm-gloss{font-family:'Pretendard Variable',sans-serif;font-size:12.5px;color:#8a93a3;margin:12px 0 0;padding-top:12px;border-top:1px dashed #dfe5f0}
 .dm-gloss b{color:#ef4444;font-weight:800}
-.dm-x{font-family:'Pretendard',sans-serif;color:#d4574f;font-weight:900;font-size:13px;font-style:normal;margin-right:3px}
-.dm-o{font-family:'Pretendard',sans-serif;color:#0f9d58;font-weight:900;font-size:13px;font-style:normal;margin-right:3px}
-.dm-lv{font-family:'Pretendard',sans-serif;font-style:normal;font-size:11px;font-weight:800;color:#8a93a3;background:#e9edf4;padding:2px 8px;border-radius:6px;margin-right:6px;vertical-align:middle}
+.dm-x{font-family:'Pretendard Variable',sans-serif;color:#d4574f;font-weight:900;font-size:13px;font-style:normal;margin-right:3px}
+.dm-o{font-family:'Pretendard Variable',sans-serif;color:#0f9d58;font-weight:900;font-size:13px;font-style:normal;margin-right:3px}
+.dm-lv{font-family:'Pretendard Variable',sans-serif;font-style:normal;font-size:11px;font-weight:800;color:#8a93a3;background:#e9edf4;padding:2px 8px;border-radius:6px;margin-right:6px;vertical-align:middle}
 .dm-lv2{color:#fff;background:#ef4444}
 .hl{background:linear-gradient(#ffe07a,#ffe07a);background-repeat:no-repeat;background-size:0% 62%;background-position:0 78%;border-radius:2px;animation:dmsweep 3.6s ease infinite}
 .dm-item:nth-child(2) .hl{animation-delay:.45s}.dm-item:nth-child(3) .hl{animation-delay:.9s}.dm-item:nth-child(4) .hl{animation-delay:1.35s}
 @keyframes dmsweep{0%,16%{background-size:0% 62%}50%,92%{background-size:100% 62%}100%{background-size:0% 62%}}
-.dm-item h3{font-family:'Pretendard',sans-serif;font-size:19px;font-weight:800;letter-spacing:-.4px;color:#10131a;margin:0 0 8px}
+.dm-item h3{font-family:'Pretendard Variable',sans-serif;font-size:19px;font-weight:800;letter-spacing:-.4px;color:#10131a;margin:0 0 8px}
 .dm-key{position:relative;color:#ef4444;white-space:nowrap}
 .dm-key::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:6px;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='10'><path d='M3,6 C30,2 70,9 117,4' fill='none' stroke='%23ef4444' stroke-width='2.6' stroke-linecap='round'/></svg>") no-repeat center/100% 100%;opacity:.6}
-.dm-item>p{font-family:'Pretendard',sans-serif;font-size:14.5px;line-height:1.65;color:#5a6273;margin:0}
+.dm-item>p{font-family:'Pretendard Variable',sans-serif;font-size:14.5px;line-height:1.65;color:#5a6273;margin:0}
 .dm-cta{text-align:center;margin-top:48px}
 .dm-btn{display:inline-flex;align-items:center;gap:8px;background:#ef4444;color:#fff;font-weight:800;font-size:16px;padding:16px 32px;border-radius:13px;text-decoration:none;box-shadow:0 12px 28px rgba(239,68,68,.3);transition:transform .15s}
 .dm-btn:hover{transform:translateY(-2px)}
@@ -1921,7 +1920,7 @@
   </div>
 </section>
 <style>
-.sd{background:#fff;padding:96px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.sd{background:#fff;padding:96px 24px;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171f}
 .sd *{box-sizing:border-box}
 .sd-wrap{max-width:1000px;margin:0 auto}
 .sd-eyebrow{color:#ef4444;font-weight:800;font-size:13px;letter-spacing:.18em;margin:0 0 12px}
@@ -1983,12 +1982,12 @@
     <!-- 영상 후기 -->
     <p class="rv2-lab">🎬 영상으로 보는 후기</p>
     <div class="rv2-vgrid">
-      <div class="rv2-v" data-yt="fc5fy1bt33E" role="button" tabindex="0" aria-label="장민서 후기 재생" style="background-image:url('https://i.ytimg.com/vi/fc5fy1bt33E/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">장민서 · 워킹홀리데이</span></div>
-      <div class="rv2-v" data-yt="gCWZJMvBCTA" role="button" tabindex="0" aria-label="이명제 후기 재생" style="background-image:url('https://i.ytimg.com/vi/gCWZJMvBCTA/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">이명제 · Reily반</span></div>
-      <div class="rv2-v" data-yt="Zv8nsj-0V5w" role="button" tabindex="0" aria-label="유수영 후기 재생" style="background-image:url('https://i.ytimg.com/vi/Zv8nsj-0V5w/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">유수영 · 아일랜드 출국</span></div>
-      <div class="rv2-v" data-yt="l35j8Zajegw" role="button" tabindex="0" aria-label="김예진 후기 재생" style="background-image:url('https://i.ytimg.com/vi/l35j8Zajegw/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">김예진 · 수능영어→회화</span></div>
-      <div class="rv2-v" data-yt="Ylu8JwwgZXw" role="button" tabindex="0" aria-label="백지원 후기 재생" style="background-image:url('https://i.ytimg.com/vi/Ylu8JwwgZXw/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">백지원 · 워킹홀리데이 준비</span></div>
-      <div class="rv2-v" data-yt="ZAIIx79HDlw" role="button" tabindex="0" aria-label="이주연 후기 재생" style="background-image:url('https://i.ytimg.com/vi/ZAIIx79HDlw/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">이주연 · 취업 영어</span></div>
+      <div class="rv2-v" data-yt="fc5fy1bt33E" role="button" tabindex="0" aria-label="장민서 후기 재생" data-bg="url('https://i.ytimg.com/vi/fc5fy1bt33E/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">장민서 · 워킹홀리데이</span></div>
+      <div class="rv2-v" data-yt="gCWZJMvBCTA" role="button" tabindex="0" aria-label="이명제 후기 재생" data-bg="url('https://i.ytimg.com/vi/gCWZJMvBCTA/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">이명제 · Reily반</span></div>
+      <div class="rv2-v" data-yt="Zv8nsj-0V5w" role="button" tabindex="0" aria-label="유수영 후기 재생" data-bg="url('https://i.ytimg.com/vi/Zv8nsj-0V5w/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">유수영 · 아일랜드 출국</span></div>
+      <div class="rv2-v" data-yt="l35j8Zajegw" role="button" tabindex="0" aria-label="김예진 후기 재생" data-bg="url('https://i.ytimg.com/vi/l35j8Zajegw/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">김예진 · 수능영어→회화</span></div>
+      <div class="rv2-v" data-yt="Ylu8JwwgZXw" role="button" tabindex="0" aria-label="백지원 후기 재생" data-bg="url('https://i.ytimg.com/vi/Ylu8JwwgZXw/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">백지원 · 워킹홀리데이 준비</span></div>
+      <div class="rv2-v" data-yt="ZAIIx79HDlw" role="button" tabindex="0" aria-label="이주연 후기 재생" data-bg="url('https://i.ytimg.com/vi/ZAIIx79HDlw/hqdefault.jpg')"><span class="rv2-play">▶</span><span class="rv2-vname">이주연 · 취업 영어</span></div>
     </div>
 
     <!-- 글 후기 -->
@@ -2019,7 +2018,7 @@
   </script>
 </section>
 <style>
-.rv2{background:#f6f7f9;padding:104px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.rv2{background:#f6f7f9;padding:104px 24px;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171f}
 .rv2 *{box-sizing:border-box}
 .rv2-wrap{max-width:1080px;margin:0 auto}
 .rv2-head{text-align:center;margin-bottom:48px}
@@ -2096,7 +2095,7 @@
   </div>
 </section>
 <style>
-.fy{background:#f6f7f9;padding:96px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.fy{background:#f6f7f9;padding:96px 24px;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171f}
 .fy *{box-sizing:border-box}
 .fy-wrap{max-width:920px;margin:0 auto}
 .fy-eyebrow{color:#ef4444;font-weight:800;font-size:13px;letter-spacing:.18em;margin:0 0 12px}
@@ -2214,7 +2213,7 @@
   </div>
 </section>
 <style>
-.dx{background:#f6f7f9;padding:96px 24px;font-family:'Pretendard',-apple-system,sans-serif;color:#14171f}
+.dx{background:#f6f7f9;padding:96px 24px;font-family:'Pretendard Variable',-apple-system,sans-serif;color:#14171f}
 .dx *{box-sizing:border-box}
 .dx-wrap{max-width:760px;margin:0 auto}
 .dx-head{text-align:center;margin-bottom:40px}
@@ -2670,6 +2669,26 @@
     })();
 </script>
 
+<!-- 화면 아래쪽 배경 사진은 첫 화면(메인 사진·글꼴)이 먼저 오도록 나중에 받는다 -->
+<script>
+(function () {
+  var els = [].slice.call(document.querySelectorAll('[data-bg]'));
+  if (!els.length) return;
+  function show(el) { var v = el.getAttribute('data-bg'); if (v === null) return; el.style.backgroundImage = v; el.removeAttribute('data-bg'); }
+  function showAll() { els.forEach(show); }
+  if (!('IntersectionObserver' in window)) { showAll(); return; }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      show(e.target);
+      [].forEach.call(e.target.querySelectorAll('[data-bg]'), show);
+    });
+  }, { rootMargin: '1000px 0px' });
+  els.forEach(function (el) { io.observe(el.closest('.sx, .rv2') || el); });
+  window.addEventListener('load', function () { setTimeout(showAll, 300); });
+})();
+</script>
 </body>
 
 </html>
